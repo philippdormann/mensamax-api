@@ -1,6 +1,8 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
+var start = new Date();
+
 async function loadPage() {
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
@@ -15,6 +17,9 @@ async function loadPage() {
 		}
 
 		console.log('The file was saved!');
+
+		var end = new Date() - start;
+		console.info('Execution time: %dms', end);
 	});
 	await browser.close();
 }

@@ -4,7 +4,9 @@ const puppeteer = require('puppeteer');
 
 app.get('/', function(req, res) {
 	async function loadPage() {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({
+			args: [ '--no-sandbox', '--disable-setuid-sandbox' ]
+		});
 		const page = await browser.newPage();
 		await page.goto('https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz');
 		// await page.screenshot({ path: 'mensa01.png' });
