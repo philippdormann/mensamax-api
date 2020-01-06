@@ -1,21 +1,9 @@
 {
-	"name": "gymh-mensa-nodejs",
+	"name": "gymh-mensa",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "MIT",
 	"dependencies": {
-		"clipboardy": "^2.0.0",
-		"express": "^4.16.4",
-		"https": "^1.0.0",
-		"light-server": "^2.6.2",
-		"request": "^2.88.0",
-		"unirest": "^0.6.0"
+		"express": "^4.17.1",
+		"puppeteer": "^2.0.0",
+		"rimraf": "^3.0.0"
 	}
 }
