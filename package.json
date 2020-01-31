@@ -2,7 +2,8 @@
 	"name": "gymh-mensa",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "node app.js"
+		"start": "node app.js",
+		"build": "next build"
 	},
 	"dependencies": {
 		"express": "^4.17.1",
