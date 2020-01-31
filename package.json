@@ -2,12 +2,10 @@
 	"name": "gymh-mensa",
 	"version": "1.0.0",
 	"scripts": {
-		"start": "node app.js",
-		"build": "next build"
+		"start": "node ."
 	},
 	"dependencies": {
 		"express": "^4.17.1",
-		"puppeteer": "^2.0.0",
-		"rimraf": "^3.0.0"
+		"puppeteer": "^2.0.0"
 	}
 }
