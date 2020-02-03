@@ -7,6 +7,9 @@
 </pre>
 
 ## 📚 dependencies
+![David](https://img.shields.io/david/philippd1/gymhmensa)
+[![deployment](https://img.shields.io/badge/deployment-ZEIT%20Now-brightgreen)](https://gymhmensa.now.sh/)
+
 - NodeJS
   - [express](https://www.npmjs.com/package/express) (minimalist web framework for node)
     - serve the API via web server
@@ -18,7 +21,7 @@
     - remove whitespace, format html to simplify scraping
 
 ## 🚀 deployment
-- this script is deployed as a serverless function on [ZEIT Now](https://zeit.co/) ☁️
+- this script is deployed as a serverless function on the url <https://gymhmensa.now.sh/> with [ZEIT Now](https://zeit.co/) ☁️
 - the code to this function is found in the `/api` folder 📁
 
 ## ❔ HOWTO: run this function without `ZEIT Now`
@@ -56,6 +59,6 @@ normally, you would run this with `now dev` - as of Now CLI 16.7.3 dev (beta) th
 - STEP 05 (`optional`): serve via express/ output to file
 
 ## 🛠️ development
-- as we dont want to ddos anyone's server, please use `node load-from-server.js` to load the current plan
+- because we don't want to ddos anyone's server, please use `node load-from-server.js` to load the current plan
 - it will create a file `test.html` in the root dir
 - then, use `node parsing.js` for testing with parsing the file `test.html`
