@@ -1,56 +1,10 @@
+const fs = require('fs');
 const cheerio = require('cheerio');
 let minify = require('html-minifier').minify;
-let request = require('request');
-let express = require('express');
-let app = express();
-request = request.defaults({ jar: true });
 
-app.get('*', function(req, res) {
-	if (req.url == '/docs') {
-		docs(req, res);
-	} else {
-		start_it_up(req, res);
-	}
-});
-app.post('*', function(req, res) {
-	if (req.url == '/docs') {
-		docs(req, res);
-	} else {
-		start_it_up(req, res);
-	}
-});
-let docs = (req, res) => {
-	res.redirect('https://github.com/philippd1/gymhmensa');
-};
-
-let start_it_up = (req, res) => {
-	request(
-		{
-			followAllRedirects: true,
-			method: 'POST',
-			url: 'https://mensadigital.de/LOGINPLAN.ASPX',
-			qs: { P: 'FO111', E: 'herz' },
-			headers: { 'content-type': 'multipart/form-data; boundary=---011000010111000001101001' },
-			formData: {
-				__VIEWSTATE:
-					'G0W5d68B7sQw5+/Q3SXg4OK2k1Tj0FOKG65lU7PQ2OFbtyRUiMicA/M7mVzMyg3315D2xsJw9iECgEYY/fiSRvFwKIde0dUT05/a/saXN4yRgmFS5c3TTgCEhMUd8pejthsVoQYxDhwYyEz4ArewBw==',
-				__VIEWSTATEGENERATOR: 'D5B5CA0F',
-				btnLogin: ''
-			}
-		},
-		function(error, response, body) {
-			if (error) throw new Error(error);
-
-			console.log("ALL GOOD, LET'S GO");
-			console.log('****************');
-
-			parse_it(body, response, req, res);
-		}
-	);
-};
-
-let parse_it = (body, response, req, res) => {
-	let html = body;
+fs.readFile('test.html', function(err, data) {
+	if (err) return console.error(err);
+	let html = data.toString();
 	let $ = cheerio.load(html);
 	$('[style*="color:red"]').remove();
 	$('[style*="width:30%"]').remove();
@@ -163,6 +117,7 @@ let parse_it = (body, response, req, res) => {
 	parsed = parsed.replace(/<tbody><title><title-item>/g, '{"titles":["');
 	parsed = parsed.replace(/<category>/g, '{"category":"');
 	parsed = parsed.replace(/<\/category>/g, '","days":[');
+	// parsed = parsed.replace(/<day>/g, '{');
 	parsed = parsed.replace(/<\/essen><\/day><day><essen>/g, '"],["');
 	parsed = parsed.replace(/<day><essen>/g, '["');
 	parsed = parsed.replace(/<\/essen><essen>/g, '","');
@@ -181,7 +136,7 @@ let parse_it = (body, response, req, res) => {
 	mensaplan_details.kw = mensaplan_details.kw[1];
 	mensaplan_details.kw = mensaplan_details.kw.replace(/\)/g, '');
 
-	let server_data = { headers: response.headers, request: response.request };
+	let server_data = {};
 	server_data = JSON.stringify(server_data);
 
 	let appended_info =
@@ -199,12 +154,16 @@ let parse_it = (body, response, req, res) => {
 
 	parsed = parsed.replace(/,<END>/g, appended_info);
 
-	send_it(parsed, req, res);
-};
+	log_it(parsed, 'parsed.json');
+});
 
-let send_it = (parsed, req, res) => {
-	res.setHeader('Content-Type', 'application/json');
-	res.status(200).send(parsed);
+let log_it = (data, file) => {
+	fs.writeFile(file, data, function(err) {
+		if (err) {
+			return console.log(err);
+		}
+		console.log(`The file ${file} was saved!`);
+	});
 };
 
 let minifyHTML = (html) => {
@@ -217,7 +176,3 @@ let minifyHTML = (html) => {
 		removeEmptyAttributes: true
 	});
 };
-
-app.listen(3000, function() {
-	console.log('Example app listening on port 3000!');
-});

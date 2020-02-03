@@ -1,27 +1,17 @@
 const cheerio = require('cheerio');
 let minify = require('html-minifier').minify;
 let request = require('request');
-let express = require('express');
-let app = express();
+// let express = require('express');
+// let app = express();
 request = request.defaults({ jar: true });
 
-app.get('*', function(req, res) {
-	if (req.url == '/docs') {
-		docs(req, res);
-	} else {
-		start_it_up(req, res);
-	}
-});
-app.post('*', function(req, res) {
-	if (req.url == '/docs') {
-		docs(req, res);
-	} else {
-		start_it_up(req, res);
-	}
-});
-let docs = (req, res) => {
-	res.redirect('https://github.com/philippd1/gymhmensa');
+module.exports = (req, res) => {
+	start_it_up(req, res);
 };
+
+// app.get('*', (req, res) => {
+// 	start_it_up(req, res);
+// });
 
 let start_it_up = (req, res) => {
 	request(
@@ -203,7 +193,9 @@ let parse_it = (body, response, req, res) => {
 };
 
 let send_it = (parsed, req, res) => {
-	res.setHeader('Content-Type', 'application/json');
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	res.header('Content-Type', 'application/json');
 	res.status(200).send(parsed);
 };
 
@@ -218,6 +210,6 @@ let minifyHTML = (html) => {
 	});
 };
 
-app.listen(3000, function() {
-	console.log('Example app listening on port 3000!');
-});
+// app.listen(3000, function() {
+// 	console.log('Example app listening on port 3000!');
+// });
