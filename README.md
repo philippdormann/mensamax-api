@@ -18,10 +18,9 @@
     - remove whitespace, format html to simplify scraping
 
 ## 🚀 deployment
-- this script is deployed as a serverless function on [ZEIT Now](https://zeit.co/) ☁️
-- the code to this function is found in the `/api` folder 📁
+- this script is deployed on [Heroku](https://gymhmensa.herokuapp.com/) ☁️
 
-## ❔ HOWTO: run this function without `ZEIT Now`
+## ❔ HOWTO: run this
 - `npm i` / `yarn install`
 - `node all.js`
 
