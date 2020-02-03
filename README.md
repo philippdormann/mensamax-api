@@ -18,9 +18,14 @@
     - remove whitespace, format html to simplify scraping
 
 ## 🚀 deployment
-- this script is deployed on [Heroku](https://gymhmensa.herokuapp.com/) ☁️
+- this script is deployed as a serverless function on [ZEIT Now](https://zeit.co/) ☁️
+- the code to this function is found in the `/api` folder 📁
 
-## ❔ HOWTO: run this
+## ❔ HOWTO: run this function without `ZEIT Now`
+```
+little heads up:
+normally, you would run this with `now dev` - as of Now CLI 16.7.3 dev (beta) this does not work with @now/node
+```
 - `npm i` / `yarn install`
 - `node all.js`
 

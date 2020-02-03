@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"description": "GymH-Mensa-Parser",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node server.js"
 	},
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.3",
