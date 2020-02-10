@@ -1,0 +1,543 @@
+
+
+
+<html>
+<head>
+    <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/datagrid.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/Dateireiter.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/terminkalender.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/rating.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        font#strDetails:hover {
+            color: Black;
+            font-weight: bold;
+        }
+    </style>
+    <script src="../../javascript/jquery.js" type="text/javascript"></script>
+    <script src="../../javascript/BitteWarten.js" type="text/javascript"></script>
+    <script src="../../javascript/MenueDetailBox.js" type="text/javascript"> </script>
+    <script src="../../javascript/rating.js" type="text/javascript"> </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$(window).load(function () {
+            try {
+                var maxheight = 0;
+                var tmpheight;
+                //tmpheight = $("#td0_201").height();
+                //maximale Höhe aller td's bestimmen
+                for (var i = 0; i < 7; i++) {
+                    //$('input[id^="chk_"]').each
+                    $('td[id^="td' + i + '"]').each(
+                        function () {
+                            tmpheight = $(this).height();
+                            if (tmpheight > maxheight) { maxheight = tmpheight; }
+                        });
+                }
+                for (var i = 0; i < 7; i++) {
+                    $('td[id^="td' + i + '"]').each(
+                        function () {
+                            $(this).height(maxheight);
+                        });
+                }
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+    </script>
+</head>
+<body>
+    <form name="Form1" method="post" action="./WochenPlanExternForm.aspx" id="Form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZFBJ9ZVe87NfdRC2L2FArdMOAUzclw3-AjBkUOPGyFFqqHBpIykLz-_1kpn3LUVv5A2&amp;t=637100866300000000" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="188062C9" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4bw8Vup+pVh7nyeWKAzT49GufYjbP/8KKXyRbwBk6Xx+A7Tgr1+I0Bz47A7dY2K3exAduAOMYlTvxphTKVXe6hIe1gMuG9fDoX08I4o2MGEX9h7FSH+QymyazLlaHVO5I/mM+U0GAp5NrpcEVmzLK7czi4SzIdWjlgSlvvgDkFw=" />
+</div>
+        <center>
+<div id="divNavigation" style="width: 780px;"></div>
+
+                    <table class="Outertable" style="width: 705px">
+                        <tbody>
+                            
+                            <tr>
+                                <td class="tdHeaderTop" valign="top" align="center" style="width: 97%">
+                                    <input type="submit" name="btnZurueck" value="&lt;" id="btnZurueck" class="button" style="width:25px;" />
+                                    &nbsp;
+                                    <span id="lblWoche" style="font-weight:bold;">03.02.2020 - 09.02.2020 (KW6)</span>
+                                    &nbsp;
+                                    <input type="submit" name="btnVor" value=">" id="btnVor" class="button" style="width:25px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="submit" name="btnHideImage" value="Bilder ausblenden" id="btnHideImage" class="button" style="width:120px;" />
+
+                                    <span id="lblLegende1" class="tdselected" style="display:inline-block;height:20px;width:20px;"></span>
+                                    &nbsp;=&nbsp;
+                                    <span id="lblMeineBestellungen">meine Bestellungen</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span id="lblHinweis" class="hinweis"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table id="tblMain" cellspacing="10" border="0" style="width:768px;">
+	<tr class="tdHeader">
+		<th style="width:10%;background-color:#F0F0FF;"></th><th align="center" style="width:100px;">Mo, 03.02.2020</th><th align="center" style="width:100px;">Di, 04.02.2020</th><th align="center" style="width:100px;">Mi, 05.02.2020</th><th align="center" style="width:100px;">Do, 06.02.2020</th>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Mittagsgericht 1</td><td id="td0_97674" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">160 Fischstäbchen paniert und vorgebacken <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Fisch und Fischerzeugnisse" alt="Fisch und Fischerzeugnisse" style="color:red">D</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3901 Béchamelkartoffeln (Kartoffelscheiben in heller Soße) <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Fisch.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97674&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_97675" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3523 Chicken Crossies in knuspriger Panade, aus Hähnchenbruststücken <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61301 Kartoffelpüree <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61755 Fruchtige Tomatensoße verfeinert mit Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Huhn.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97675&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_97676" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3110 Tortellini gefüllte Nudelteigringe in Mascarpone-Kräutersoße, mit gekochtem Vorderschinken, garniert mit Käse <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Nitritpökelsalz und Nitrat" alt="Nitritpökelsalz und Nitrat">16</span>, <span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="Schweinefleisch" alt="Schweinefleisch" style="color:red">Sw</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97676&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td3_97677" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3229 Delikates Rahmgulasch herzhaft gewürzt <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="Schweinefleisch" alt="Schweinefleisch" style="color:red">Sw</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">944 Langkornreis <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97677&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Mittagsgericht 2</td><td id="td0_97857" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61905 Kirschenmichel süßer Brötchen-Sauerkirschauflauf, mit Zucker und Zimt garniert <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Gluten-Gerste" alt="Gluten-Gerste" style="color:red">A3</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Mandeln" alt="Mandeln" style="color:red">H1</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3820 Vanillesoße <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97857&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_97858" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3711 Gemüsesoße "Bologneser Art" mit Karotten, Tomaten, Zucchini und ital. Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3947 Bunte Nudeln <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97858&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_97859" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3758 Grießbrei <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3823 Fruchtsoße aus Erdbeeren, Sauerkirschen, Äpfel, Heidelbeeren und Himbeeren <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Aehre.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97859&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td3_97860" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">3730 BIO Kartoffelauflauf mit Gemüse, Karotten, Erbsen und Gewürze, mit Käse garniert <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="vegetarisch" alt="vegetarisch" style="color:red">v</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Gemuese.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=97860&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nachtisch</td><td id="td0_118191" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Muffin oder Donut <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Antioxidationsmittel" alt="Antioxidationsmittel">01</span>, <span title="Emulgatoren" alt="Emulgatoren">02</span>, <span title="Farbstoff" alt="Farbstoff">03</span>, <span title="Stabilisatoren" alt="Stabilisatoren">07</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Schalenfrüchte und Schalenfrüchteerzeugnisse" alt="Schalenfrüchte und Schalenfrüchteerzeugnisse" style="color:red">H</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=118191&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_118192" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Eis <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=118192&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_118193" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Muffin oder Donut <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Antioxidationsmittel" alt="Antioxidationsmittel">01</span>, <span title="Emulgatoren" alt="Emulgatoren">02</span>, <span title="Farbstoff" alt="Farbstoff">03</span>, <span title="Stabilisatoren" alt="Stabilisatoren">07</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Schalenfrüchte und Schalenfrüchteerzeugnisse" alt="Schalenfrüchte und Schalenfrüchteerzeugnisse" style="color:red">H</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=118193&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td align="center" valign="middle"></td>
+	</tr><tr class="tdFooter" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nachtisch alternativ</td><td align="center" valign="middle"></td><td align="center" valign="middle"></td><td align="center" valign="middle"></td><td id="td3_118194" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Wackelpudding 002 <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Farbstoff" alt="Farbstoff">03</span>, <span title="Säuerungsmittel / Säurungsregulatoren" alt="Säuerungsmittel / Säurungsregulatoren">06</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Essen.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=118194&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Schnitzelsandwich</td><td id="td0_98040" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Schnitzelsandwich <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sesam und Sesamerzeugnisse" alt="Sesam und Sesamerzeugnisse" style="color:red">N</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98040&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_98041" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Schnitzelsandwich <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sesam und Sesamerzeugnisse" alt="Sesam und Sesamerzeugnisse" style="color:red">N</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98041&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_98042" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Schnitzelsandwich <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sesam und Sesamerzeugnisse" alt="Sesam und Sesamerzeugnisse" style="color:red">N</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98042&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td3_98043" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Schnitzelsandwich <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten" alt="Gluten" style="color:red">A</span>, <span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Soja und Sojaerzeugnisse" alt="Soja und Sojaerzeugnisse" style="color:red">F</span>, <span title="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" alt="Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose)" style="color:red">G</span>, <span title="Sesam und Sesamerzeugnisse" alt="Sesam und Sesamerzeugnisse" style="color:red">N</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Schwein.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98043&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nudelbox</td><td id="td0_98223" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61755 Fruchtige Tomatensoße verfeinert mit Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98223&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_98224" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61760 Rinderhackfleischsoße "Bologneser Art" verfeinert mit Karotten- u. Selleriewürfeln <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="mit Rindfleisch" alt="mit Rindfleisch" style="color:red">Ri</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98224&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_98225" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61755 Fruchtige Tomatensoße verfeinert mit Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98225&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td3_98226" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61760 Rinderhackfleischsoße "Bologneser Art" verfeinert mit Karotten- u. Selleriewürfeln <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="mit Rindfleisch" alt="mit Rindfleisch" style="color:red">Ri</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=98226&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nudelbox XL</td><td id="td0_108315" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox XL <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61755 Fruchtige Tomatensoße verfeinert mit Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=108315&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td1_108316" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox XL <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61760 Rinderhackfleischsoße "Bologneser Art" verfeinert mit Karotten- u. Selleriewürfeln <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="mit Rindfleisch" alt="mit Rindfleisch" style="color:red">Ri</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=108316&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td2_108317" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox XL <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61755 Fruchtige Tomatensoße verfeinert mit Kräutern <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=108317&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td><td id="td3_108318" style="border-collapse:collapse;padding:0px;"><table cellpadding="1" border="0" style="height:100%;width:100%;border-collapse:collapse;padding:0px;">
+			<tr class="tdFooter3" style="height:auto;">
+				<td valign="top" colspan="3"><table cellpadding="1" border="0" style="width:99%;">
+					<tr class="tdFooter3">
+						<td colspan="2" style="height:5px;"></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">Nudelbox XL <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Gluten-Weizen" alt="Gluten-Weizen" style="color:red">A1</span>, <span title="Hühnereiweiß, Eier und Eierzeugnisse" alt="Hühnereiweiß, Eier und Eierzeugnisse" style="color:red">C</span>, <span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>)</sub></div></td>
+					</tr><tr class="tdFooter3">
+						<td valign="top" style="border-spacing:0px;padding:0px;">&bull;&nbsp;</td><td valign="top" style="border-spacing:0px;padding:0px;"><div style="width:100%; overflow:hidden">61760 Rinderhackfleischsoße "Bologneser Art" verfeinert mit Karotten- u. Selleriewürfeln <sub style="font-size:8px;vertical-align:top;top: -2px;position: relative;line-height:10px">(<span title="Sellerie und Sellerieerzeugnisse" alt="Sellerie und Sellerieerzeugnisse" style="color:red">L</span>, <span title="mit Rindfleisch" alt="mit Rindfleisch" style="color:red">Ri</span>)</sub></div></td>
+					</tr>
+				</table></td>
+			</tr><tr class="tdFooter3" style="height:45px;">
+				<td style="width:30%;"></td><td align="center" valign="bottom" style="width:30%;"><img src="../../img/Speisen/Pastateller.png" style="height:40px;border-width:0px;width:auto;" /></td><td align="center" valign="middle" onclick="showMenueBox(&#39;../../Menue/MenueDetails2Form.aspx?ID=108318&#39;);" style="width:30%;"><span id="strDetails" style="cursor:pointer;color:black;">Details</span></td>
+			</tr>
+		</table></td>
+	</tr><tr class="tdFooter">
+		<td valign="top" style="background-color:#F0F0FF;"></td><td valign="top" style="text-align:left;background-color:#F0F0FF;"></td><td valign="top" style="text-align:left;background-color:#F0F0FF;"></td><td valign="top" style="text-align:left;background-color:#F0F0FF;"></td><td valign="top" style="text-align:left;background-color:#F0F0FF;"></td>
+	</tr>
+</table>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td style="height:30px; vertical-align:bottom;">
+                                <span id="lblSpeiesplanHinweis">Das Essen für das Gymnasium Herzogenaurach wird zubereitet durch:<br />
+<br /><font color=”#0000FF″><big><b><u>Die Menü-Manufaktur Hofmann</b> </u></big></font> <br /><br /><br />
+<u> Zusatzstoffe:</u><br /></big>
+<sup>(01)</sup>mit Antioxidationsmitteln, 
+<sup>(02)</sup>mit Emulgatoren, 
+<sup>(03)</sup>mit Farbstoff, 
+<sup>(04)</sup> mit Geschmacksverstärker, 
+<sup>(05)</sup> mit Konservierungsstoff, 
+<sup>(06)</sup> mit Säuerungsmittel / Säurungsregulatoren, 
+<sup>(07)</sup> mit Stabilisatoren, 
+<sup>(09)</sup> mit Süßstoff / Süßungsmittel,
+<sup>(10)</sup> mit Verdickungsmittel, 
+<sup>(11)</sup>geschwärzt,
+<sup>(12)</sup> gewachst,
+<sup>(113)</sup> mit Fruktose,
+<sup>(14)</sup> mit Acesulfam K,
+<sup>(15)</sup> mit Benzoesäure,
+<sup>(16)</sup> mit Nitritpökelsalz und Nitrat, 
+<sup>(17)</sup> mit Phosphat, 
+<sup>(18)</sup> geschwefelt, 
+<sup>(19)</sup> mit Phenylalainquelle, 
+<sup>(X)</sup> mit Alkohol,
+<br><b>
+
+<br /><u>Allergene:</u><br /></big>
+<sup>(A)</sup>Gluten,
+<sup>(A1)</sup> enthält Gluten-Weizen,
+<sup>(A2)</sup> enthält Gluten- Roggen,
+<sup>(A3)</sup> enthält Gluten- Gerste,
+<sup>(A4)</sup> enthält Gluten- Hafer, 
+<sup>(A5)</sup> enthält Gluten- Dinkel,
+<sup>(A6)</sup>enthält Kamut,
+<sup>(B)</sup>enthält  Krebstiere und Krebstiererzeugnisse,
+<sup>(C)</sup>enthält Hühnereiweiß, Eier und Eierzeugnisse,
+<sup>(D)</sup>enthält Fisch und Fischerzeugnisse,
+<sup>(E)</sup>enthält Erdnüsse und Erdnusserzeugnisse,
+<sup>(F)</sup>enthält Soja und Sojaerzeugnisse,
+<sup>(G)</sup>enthält Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose),
+<sup>(GL)</sup>enthält Glutenhaltigem Getreide,
+<sup>(H)</sup>enthält Schalenfrüchte und Schalenfrüchteerzeugnisse,
+<sup>(H1)</sup>enthält Mandeln,
+<sup>(H2)</sup>enthält Haselnuss,
+<sup>(H3)</sup>enthält Wallnüsse,
+<sup>(H4)</sup>enthält Cashewnüsse,
+<sup>(H5)</sup>enthält Pecanüsse,
+<sup>(6)</sup>enthält Paranüsse,
+<sup>(H7)</sup>enthält Pistazien,
+<sup>(H8)</sup>enthält Macadamia / Queenslandnüsse,
+<sup>(L)</sup>enthält Sellerie und Sellerieerzeugnisse,
+<sup>(M)</sup>enthält Senf und Senferzeugnisse,
+<sup>(N)</sup>enthält Sesam und Sesamerzeugnisse,
+<sup>(O)</sup>enthält Schwefeldioxid und Sulfite,
+<sup>(oSw)</sup>ohne Schweinefleisch,
+<sup>(P)</sup>enthält Lupinen und Lupinenerzeugnisse,
+<sup>(Ri)</sup>mit Rindfleisch,
+<sup>(R)</sup>enthält Weichtiere und Weichtiererzeugnisse,
+<sup>(Sw)</sup>enthält Schweinefleisch,
+<sup>(To)</sup>enthält Tomatenprodukte,
+<sup>(v)</sup>vegetarisch,
+</big><b><b>
+<b><b>Änderungen vorbehalten</b></span>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </center>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+</body>
+</html>

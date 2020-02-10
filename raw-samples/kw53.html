@@ -1,0 +1,221 @@
+
+
+
+<html>
+<head>
+    <link href="../../css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/datagrid.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/Dateireiter.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/terminkalender.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/rating.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        font#strDetails:hover {
+            color: Black;
+            font-weight: bold;
+        }
+    </style>
+    <script src="../../javascript/jquery.js" type="text/javascript"></script>
+    <script src="../../javascript/BitteWarten.js" type="text/javascript"></script>
+    <script src="../../javascript/MenueDetailBox.js" type="text/javascript"> </script>
+    <script src="../../javascript/rating.js" type="text/javascript"> </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$(window).load(function () {
+            try {
+                var maxheight = 0;
+                var tmpheight;
+                //tmpheight = $("#td0_201").height();
+                //maximale Höhe aller td's bestimmen
+                for (var i = 0; i < 7; i++) {
+                    //$('input[id^="chk_"]').each
+                    $('td[id^="td' + i + '"]').each(
+                        function () {
+                            tmpheight = $(this).height();
+                            if (tmpheight > maxheight) { maxheight = tmpheight; }
+                        });
+                }
+                for (var i = 0; i < 7; i++) {
+                    $('td[id^="td' + i + '"]').each(
+                        function () {
+                            $(this).height(maxheight);
+                        });
+                }
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+    </script>
+</head>
+<body>
+    <form name="Form1" method="post" action="./WochenPlanExternForm.aspx" id="Form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZFBJ9ZVe87NfdRC2L2FArdMOAUzclw3-AjBkUOPGyFFqqHBpIykLz-_1kpn3LUVv5A2&amp;t=637100866300000000" type="text/javascript"></script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="188062C9" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9x+KNdKWz4hQU2gO14LnlvIGhyaKM3SYhr12/yDylKVKSBfmbFI2g74dEcu4jmSaYfcOTOPxJpgbSH+9UUVSI79ymbwlvwzuJWClgSwFMf4bseZrhWLEm413mwd1dI866qix8hs7JCx4lpouM703XSj9QUkbl4OYCsH6IKMIU7k=" />
+</div>
+        <center>
+<div id="divNavigation" style="width: 780px;"></div>
+
+                    <table class="Outertable" style="width: 705px">
+                        <tbody>
+                            
+                            <tr>
+                                <td class="tdHeaderTop" valign="top" align="center" style="width: 97%">
+                                    <input type="submit" name="btnZurueck" value="&lt;" id="btnZurueck" class="button" style="width:25px;" />
+                                    &nbsp;
+                                    <span id="lblWoche" style="font-weight:bold;">30.12.2019 - 05.01.2020 (KW53)</span>
+                                    &nbsp;
+                                    <input type="submit" name="btnVor" value=">" id="btnVor" class="button" style="width:25px;" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="submit" name="btnHideImage" value="Bilder ausblenden" id="btnHideImage" class="button" style="width:120px;" />
+
+                                    <span id="lblLegende1" class="tdselected" style="display:inline-block;height:20px;width:20px;"></span>
+                                    &nbsp;=&nbsp;
+                                    <span id="lblMeineBestellungen">meine Bestellungen</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span id="lblHinweis" class="hinweis"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table id="tblMain" cellspacing="10" border="0" style="width:768px;">
+	<tr class="tdHeader">
+		<th style="width:10%;background-color:#F0F0FF;"></th><th align="center" style="width:100px;">Mo, 30.12.2019</th><th align="center" style="width:100px;">Di, 31.12.2019</th><th align="center" style="width:100px;">Mi, 01.01.2020</th><th align="center" style="width:100px;">Do, 02.01.2020</th>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Mittagsgericht 1</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td>
+	</tr><tr class="tdFooter" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Mittagsgericht 2</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Schnitzelsandwich</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td>
+	</tr><tr class="tdFooter" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nudelbox</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td>
+	</tr><tr class="tdFooter2" style="background-color:#D0E0FF;">
+		<td style="font-weight:bold;">Nudelbox XL</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td><td align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag" style="width:120px;cursor:url('../img/noclick.gif'),default;width:120px;">Keine Ausgabe <br/> <br/> Bemerkung: Weihnachtsferien 2019/2020</td>
+	</tr><tr class="tdFooter">
+		<td valign="top" style="background-color:#F0F0FF;"></td><td style="background-color:#F0F0FF;"></td><td style="background-color:#F0F0FF;"></td><td style="background-color:#F0F0FF;"></td><td style="background-color:#F0F0FF;"></td>
+	</tr>
+</table>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td style="height:30px; vertical-align:bottom;">
+                                <span id="lblSpeiesplanHinweis">Das Essen für das Gymnasium Herzogenaurach wird zubereitet durch:<br />
+<br /><font color=”#0000FF″><big><b><u>Die Menü-Manufaktur Hofmann</b> </u></big></font> <br /><br /><br />
+<u> Zusatzstoffe:</u><br /></big>
+<sup>(01)</sup>mit Antioxidationsmitteln, 
+<sup>(02)</sup>mit Emulgatoren, 
+<sup>(03)</sup>mit Farbstoff, 
+<sup>(04)</sup> mit Geschmacksverstärker, 
+<sup>(05)</sup> mit Konservierungsstoff, 
+<sup>(06)</sup> mit Säuerungsmittel / Säurungsregulatoren, 
+<sup>(07)</sup> mit Stabilisatoren, 
+<sup>(09)</sup> mit Süßstoff / Süßungsmittel,
+<sup>(10)</sup> mit Verdickungsmittel, 
+<sup>(11)</sup>geschwärzt,
+<sup>(12)</sup> gewachst,
+<sup>(113)</sup> mit Fruktose,
+<sup>(14)</sup> mit Acesulfam K,
+<sup>(15)</sup> mit Benzoesäure,
+<sup>(16)</sup> mit Nitritpökelsalz und Nitrat, 
+<sup>(17)</sup> mit Phosphat, 
+<sup>(18)</sup> geschwefelt, 
+<sup>(19)</sup> mit Phenylalainquelle, 
+<sup>(X)</sup> mit Alkohol,
+<br><b>
+
+<br /><u>Allergene:</u><br /></big>
+<sup>(A)</sup>Gluten,
+<sup>(A1)</sup> enthält Gluten-Weizen,
+<sup>(A2)</sup> enthält Gluten- Roggen,
+<sup>(A3)</sup> enthält Gluten- Gerste,
+<sup>(A4)</sup> enthält Gluten- Hafer, 
+<sup>(A5)</sup> enthält Gluten- Dinkel,
+<sup>(A6)</sup>enthält Kamut,
+<sup>(B)</sup>enthält  Krebstiere und Krebstiererzeugnisse,
+<sup>(C)</sup>enthält Hühnereiweiß, Eier und Eierzeugnisse,
+<sup>(D)</sup>enthält Fisch und Fischerzeugnisse,
+<sup>(E)</sup>enthält Erdnüsse und Erdnusserzeugnisse,
+<sup>(F)</sup>enthält Soja und Sojaerzeugnisse,
+<sup>(G)</sup>enthält Milcheiweiß, Milch und Milcherzeugnisse (einschließlich Laktose),
+<sup>(GL)</sup>enthält Glutenhaltigem Getreide,
+<sup>(H)</sup>enthält Schalenfrüchte und Schalenfrüchteerzeugnisse,
+<sup>(H1)</sup>enthält Mandeln,
+<sup>(H2)</sup>enthält Haselnuss,
+<sup>(H3)</sup>enthält Wallnüsse,
+<sup>(H4)</sup>enthält Cashewnüsse,
+<sup>(H5)</sup>enthält Pecanüsse,
+<sup>(6)</sup>enthält Paranüsse,
+<sup>(H7)</sup>enthält Pistazien,
+<sup>(H8)</sup>enthält Macadamia / Queenslandnüsse,
+<sup>(L)</sup>enthält Sellerie und Sellerieerzeugnisse,
+<sup>(M)</sup>enthält Senf und Senferzeugnisse,
+<sup>(N)</sup>enthält Sesam und Sesamerzeugnisse,
+<sup>(O)</sup>enthält Schwefeldioxid und Sulfite,
+<sup>(oSw)</sup>ohne Schweinefleisch,
+<sup>(P)</sup>enthält Lupinen und Lupinenerzeugnisse,
+<sup>(Ri)</sup>mit Rindfleisch,
+<sup>(R)</sup>enthält Weichtiere und Weichtiererzeugnisse,
+<sup>(Sw)</sup>enthält Schweinefleisch,
+<sup>(To)</sup>enthält Tomatenprodukte,
+<sup>(v)</sup>vegetarisch,
+</big><b><b>
+<b><b>Änderungen vorbehalten</b></span>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </center>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+</body>
+</html>
