@@ -95,6 +95,15 @@ exports.Mensaplan_Parser = {
 
 		parsed = parsed.replace(/<tbody>/g, ''); // tbody
 
+		//-- locked days support [WIP]
+		parsed = parsed.replace(/ style="[^\"]*"/gi, '');
+		parsed = parsed.replace(
+			/ align="center" valign="middle" title="gesperrter Tag" alt="gesperrter Tag"/gi,
+			' lockedDay'
+		);
+		parsed = parsed.replace(/<td lockedDay>Keine Ausgabe<br><br>(.+?)<\/category>/gi, '<day><food>$1</food>');
+		//-- locked days support [WIP]
+
 		parsed = this.Mensaplan_Parser.encode_umlauts(parsed);
 		parsed = this.Mensaplan_Parser.to_json(parsed);
 
