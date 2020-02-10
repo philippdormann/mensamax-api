@@ -102,6 +102,7 @@ exports.Mensaplan_Parser = {
 			' lockedDay'
 		);
 		parsed = parsed.replace(/<td lockedDay>Keine Ausgabe<br><br>(.+?)<\/category>/gi, '<day><food>$1</food>');
+		parsed = parsed.replace(/<\/food><day>/gi, '</food></day><day>');
 		//-- locked days support [WIP]
 
 		parsed = this.Mensaplan_Parser.encode_umlauts(parsed);
