@@ -2,10 +2,6 @@ let request = require('request');
 let mensaplan_parser = require('./mensaplan-parser');
 request = request.defaults({ jar: true });
 
-module.exports = (req, res) => {
-	start_it_up(req, res);
-};
-
 let start_it_up = (req, res) => {
 	request(
 		{
@@ -35,12 +31,16 @@ let start_it_up = (req, res) => {
 	);
 };
 
-let parse_it = (body, response, req, res) => {
-	let parsed = mensaplan_parser.Mensaplan_Parser.parse(body);
+const parse_it = (body, response, req, res) => {
+	const parsed = mensaplan_parser.Mensaplan_Parser.parse(body);
 	send_it(parsed, req, res);
 };
 
-let send_it = (parsed, req, res) => {
+const send_it = (parsed, req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
 	res.setHeader('Content-Type', 'application/json');
 	res.status(200).send(parsed);
 };
+
+module.exports = start_it_up;
