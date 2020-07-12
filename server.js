@@ -7,9 +7,6 @@ app.use('/institutions-json', (req, res) =>
 	res.sendFile('./institutions.json', { root: './' })
 );
 app.use(['/institutions-ui'], (req, res) => {
-	// return res.send(
-	// 	'TODO: this should be a nice new.css page with a parsed list'
-	// );
 	fs.readFile('./web-template.html', 'utf8', function read(
 		err,
 		templateData
@@ -59,6 +56,27 @@ app.use(['/institutions-ui'], (req, res) => {
 	});
 });
 app.use('/api', (req, res) => main(req, res));
-app.use('*', (req, res) => res.sendFile('./index.html', { root: './' }));
+app.use('*', (req, res) => {
+	fs.readFile('./web-template.html', 'utf8', function read(
+		err,
+		templateData
+	) {
+		if (err) {
+			res.status(500).end();
+		} else {
+			fs.readFile('./index.html', 'utf8', function read(err, content) {
+				if (err) {
+					res.status(500).end();
+				} else {
+					const rendered = templateData.replace(
+						/{{{content}}}/gi,
+						content
+					);
+					res.send(rendered);
+				}
+			});
+		}
+	});
+});
 
 app.listen(80, () => console.log('listening on port 80!'));
