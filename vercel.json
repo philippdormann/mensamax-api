@@ -12,6 +12,14 @@
 		{
 			"src": "/institutions-ui",
 			"dest": "/api/institutions.js"
+		},
+		{
+			"src": "/web-template.html",
+			"dest": "/web-template.html"
+		},
+		{
+			"src": "/index.html",
+			"dest": "/index.html"
 		}
 	]
 }

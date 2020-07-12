@@ -1,7 +1,6 @@
 const fs = require('fs');
-
-const institutions = (req, res) => {
-	fs.readFile('./web-template.html', 'utf8', function read(
+module.exports = (rel = '/', req, res) => {
+	fs.readFile(rel + 'web-template.html', 'utf8', function read(
 		err,
 		templateData
 	) {
@@ -9,7 +8,10 @@ const institutions = (req, res) => {
 			console.log(err);
 			return res.status(500).end();
 		} else {
-			fs.readFile('./index.html', 'utf8', function read(err, content) {
+			fs.readFile(rel + 'index.html', 'utf8', function read(
+				err,
+				content
+			) {
 				if (err) {
 					console.log(err);
 					return res.status(500).end();
@@ -24,4 +26,3 @@ const institutions = (req, res) => {
 		}
 	});
 };
-module.exports = institutions;
