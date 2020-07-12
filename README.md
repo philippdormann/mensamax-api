@@ -63,8 +63,8 @@ normally, you would run this with `now dev` - as of Now CLI 16.7.3 dev (beta) th
 - it will create a file `test.html` in the root dir
 - then, use `node parsing.js` for testing with parsing the file `test.html`
 
-## bekannte Institutionen
-Link | Institut
+## Known institutions
+mensa menu url | institution
 -|-
 https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=dts | "Dr.-Theo-Schöller-Mittelschule in Nürnberg"
 https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=DSK | "Dreiberg Schule Knetzgau"
