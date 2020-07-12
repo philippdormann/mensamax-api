@@ -1,0 +1,198 @@
+[
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=dts",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "dts",
+		"name": "Dr.-Theo-Schöller-Mittelschule in Nürnberg",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=DSK",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "DSK",
+		"name": "Dreiberg Schule Knetzgau",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ghr",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "ghr",
+		"name": "Georg-Hartmann-Realschule Forchheim",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hoch",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "hoch",
+		"name": "Gymnasium Höchstadt a.d.Aisch",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "herz",
+		"name": "Gymnasium Herzogenaurach",
+		"tested": true,
+		"tested_on": "12.07.2020"
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=mscadolzburg",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "mscadolzburg",
+		"name": "Mittelschule Cadolzburg",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=frid",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "frid",
+		"name": "Gymnasium Fridericianum",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "msf",
+		"name": "Grund und Mittelschule Feucht",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=feu",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "feu",
+		"name": "Realschule Feucht",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=SLM",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "SLM",
+		"name": "Mittelschule St. Leonhard Nürnberg",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=gpa",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "gpa",
+		"name": "Georg-Paul-Amberger Grundschule",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "msf",
+		"name": "Kinderhort St. Jakob in Feucht ",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=Schulhaus",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "Schulhaus",
+		"name": "Evangelisches Montessori Kinderhaus Röttenbach",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ggo",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "ggo",
+		"name": "Grundschule Großgründlach",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=sjw",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "sjw",
+		"name": "St. Josef Kinderhaus",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=drb",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "drb",
+		"name": "Dientzenhofer Realschule in Brannenburg",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=gsr",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "gsr",
+		"name": "Graf-Stauffenberg-Realschule in Bamberg",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=lurf",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "lurf",
+		"name": "Leopold-Ullstein-Realschule Fürth",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hlg",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "hlg",
+		"name": "Helene-Lange-Gymnasium in Fürth",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=kat",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "kat",
+		"name": "Grund- und Mittelschule Nürnberg-Katzwang",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=sfh",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "sfh",
+		"name": "St. Franziskus Kinderhaus",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=GSHerzogenaurach",
+		"provider": "mensadigital.de",
+		"project": "FO111",
+		"facility": "GSHerzogenaurach",
+		"name": "Grundschule Herzogenaurach",
+		"tested": true,
+		"tested_on": "12.07.2020"
+	},
+	{
+		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=KEH111&E=ggm",
+		"provider": "mensapoint.de",
+		"project": "KEH111",
+		"facility": "ggm",
+		"name": "Gabelsberger-Gymnasium Mainburg",
+		"tested": true,
+		"tested_on": "12.07.2020"
+	},
+	{
+		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=LL124&E=FWS",
+		"provider": "mensapoint.de",
+		"project": "LL124",
+		"facility": "FWS",
+		"name": "Freie Waldorfschule Landsberg",
+		"tested": true,
+		"tested_on": "12.07.2020"
+	}
+]
