@@ -27,7 +27,11 @@ const start_it_up = (req, res) => {
 						e.project == req.query.p && e.facility == req.query.e
 					);
 				});
-				if (found.provider) {
+				if (
+					found.provider &&
+					found.verified__VIEWSTATEGENERATOR &&
+					found.tested === true
+				) {
 					request(
 						{
 							followAllRedirects: true,
@@ -35,13 +39,10 @@ const start_it_up = (req, res) => {
 							url: `https://${found.provider}/LOGINPLAN.ASPX`,
 							qs: { P: req.query.p, E: req.query.e },
 							formData: {
-								// TODO: we need to handle the viewstate
-								__VIEWSTATE:
-									found.verified__VIEWSTATE ||
-									'G0W5d68B7sQw5+/Q3SXg4OK2k1Tj0FOKG65lU7PQ2OFbtyRUiMicA/M7mVzMyg3315D2xsJw9iECgEYY/fiSRvFwKIde0dUT05/a/saXN4yRgmFS5c3TTgCEhMUd8pejthsVoQYxDhwYyEz4ArewBw==',
+								// TODO: we need to handle the viewstate.
+								__VIEWSTATE: found.verified__VIEWSTATE,
 								__VIEWSTATEGENERATOR:
-									found.verified__VIEWSTATEGENERATOR ||
-									'D5B5CA0F',
+									found.verified__VIEWSTATEGENERATOR,
 								btnLogin: ''
 							}
 						},
@@ -68,7 +69,9 @@ const start_it_up = (req, res) => {
 					);
 				} else {
 					// TODO: more error handling
-					res.send('öalsdfj');
+					res.send(
+						`https://${found.provider}/LOGINPLAN.ASPX?p=${req.query.p}&e=${req.query.e}`
+					);
 				}
 				console.log(found);
 			}
