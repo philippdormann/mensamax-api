@@ -8,10 +8,6 @@ const start_it_up = (req, res) => {
 			method: 'POST',
 			url: 'https://mensadigital.de/LOGINPLAN.ASPX',
 			qs: { P: 'FO111', E: 'herz' },
-			headers: {
-				'content-type':
-					'multipart/form-data; boundary=---011000010111000001101001'
-			},
 			formData: {
 				__VIEWSTATE:
 					'G0W5d68B7sQw5+/Q3SXg4OK2k1Tj0FOKG65lU7PQ2OFbtyRUiMicA/M7mVzMyg3315D2xsJw9iECgEYY/fiSRvFwKIde0dUT05/a/saXN4yRgmFS5c3TTgCEhMUd8pejthsVoQYxDhwYyEz4ArewBw==',
@@ -29,14 +25,12 @@ const start_it_up = (req, res) => {
 					res
 				);
 			}
-			return parse_it(body, response, req, res);
+			const parsed = JSON.parse(
+				mensaplan_parser.Mensaplan_Parser.parse(body)
+			);
+			return send_it(200, { status: 'ok', payload: parsed }, req, res);
 		}
 	);
-};
-
-const parse_it = (body, response, req, res) => {
-	const parsed = JSON.parse(mensaplan_parser.Mensaplan_Parser.parse(body));
-	send_it(200, { status: 'ok', payload: parsed }, req, res);
 };
 
 const send_it = (status, body, req, res) => {
