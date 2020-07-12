@@ -72,4 +72,4 @@
 -   then, use `node parsing.js` for testing with parsing the file `test.html`
 
 ## Known institutions
-see [institutions.md](./institutions.md)
+see [institutions.json](./institutions.json)
