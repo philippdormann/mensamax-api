@@ -11,7 +11,15 @@ const start_it_up = (req, res) => {
 			institutions
 		) {
 			if (err) {
-				res.status(500).end();
+				return send_it(
+					500,
+					{
+						status: 'fail',
+						payload: 'could not read institutions.json : '
+					},
+					req,
+					res
+				);
 			} else {
 				institutions = JSON.parse(institutions);
 				let found = institutions.find(function (e) {
