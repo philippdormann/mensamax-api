@@ -1,6 +1,6 @@
-# gymhmensa-API
+# MensaMax-API
 
-### scraper for `mensadigital.de`
+### Scraper for MensaMax products (like `mensadigital.de`/ `mensamax.de`/ `mensapoint.de`)
 
 <pre style="text-align:center">
 🍲🥘🥡🍛🍜🦐🥔

@@ -1,8 +1,8 @@
 {
-	"name": "gymh-mensa",
+	"name": "mensamax-api",
 	"version": "1.0.0",
 	"license": "MIT",
-	"description": "Mensamax-Parser",
+	"description": "MensaMax-API",
 	"main": "server.js",
 	"scripts": {
 		"start": "node .",
