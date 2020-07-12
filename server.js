@@ -48,6 +48,8 @@ let parse_it = (body, response, req, res) => {
 };
 
 let send_it = (parsed, req, res) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
 	res.setHeader('Content-Type', 'application/json');
 	res.status(200).send(parsed);
 };
