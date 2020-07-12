@@ -1,8 +1,7 @@
-let request = require('request');
-let mensaplan_parser = require('./mensaplan-parser');
-request = request.defaults({ jar: true });
+const request = require('request').defaults({ jar: true });
+const mensaplan_parser = require('./mensaplan-parser');
 
-let start_it_up = (req, res) => {
+const start_it_up = (req, res) => {
 	request(
 		{
 			followAllRedirects: true,
