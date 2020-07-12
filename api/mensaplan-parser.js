@@ -34,8 +34,14 @@ exports.Mensaplan_Parser = {
 		parsed = parsed.replace(/ colspan="2" style="height:5px"/g, '');
 		parsed = parsed.replace(/ style="width:100%;overflow:hidden"/g, '');
 		parsed = parsed.replace(/padding:0"><div>[\d]+ /g, 'padding:0"><div>');
-		parsed = parsed.replace(/ valign="top" style="border-spacing:0;padding:0"/g, '');
-		parsed = parsed.replace(/ cellpadding="1" border="0" style="width:99%"/g, '');
+		parsed = parsed.replace(
+			/ valign="top" style="border-spacing:0;padding:0"/g,
+			''
+		);
+		parsed = parsed.replace(
+			/ cellpadding="1" border="0" style="width:99%"/g,
+			''
+		);
 		parsed = parsed.replace(/ style="height:45px"/g, '');
 		parsed = parsed.replace(
 			/<tr class="tdFooter" style="background-color:#d0e0ff"><td style="font-weight:700">/g,
@@ -47,19 +53,37 @@ exports.Mensaplan_Parser = {
 			'<category>'
 		);
 
-		parsed = parsed.replace(/<th style="width:10%;background-color:#f0f0ff"><\/th>/g, '');
-		parsed = parsed.replace(/<\/th><th align="center" style="width:100px">/g, '</title-item><title-item>');
+		parsed = parsed.replace(
+			/<th style="width:10%;background-color:#f0f0ff"><\/th>/g,
+			''
+		);
+		parsed = parsed.replace(
+			/<\/th><th align="center" style="width:100px">/g,
+			'</title-item><title-item>'
+		);
 		parsed = parsed.replace(/<\/th><\/tr>/g, '</title-item></title>');
-		parsed = parsed.replace(/<tr class="tdHeader"><th align="center" style="width:100px">/g, '<title><title-item>');
+		parsed = parsed.replace(
+			/<tr class="tdHeader"><th align="center" style="width:100px">/g,
+			'<title><title-item>'
+		);
 		parsed = parsed.replace(/ [\d]+<\/div>/g, '</div>'); // Wackelpudding 002, 003 'n' stuff
-		parsed = parsed.replace(/<tr class="tdFooter">(?:.*)<\/tr><\/tbody>/g, '</tbody>'); //remove footer
+		parsed = parsed.replace(
+			/<tr class="tdFooter">(?:.*)<\/tr><\/tbody>/g,
+			'</tbody>'
+		); //remove footer
 
 		//
-		parsed = parsed.replace(/ style="border-collapse:collapse;padding:0"/g, '');
+		parsed = parsed.replace(
+			/ style="border-collapse:collapse;padding:0"/g,
+			''
+		);
 		parsed = parsed.replace(/ (id=("[^"]*"|))/g, ''); //remove IDs
 		//
 		parsed = parsed.replace(/<td>&#x2022;&#xA0;<\/td>/g, '');
-		parsed = parsed.replace(/<td align="center" valign="middle"><\/td>/g, '<food></food>');
+		parsed = parsed.replace(
+			/<td align="center" valign="middle"><\/td>/g,
+			'<food></food>'
+		);
 		parsed = parsed.replace(
 			/<\/div><\/td><\/tr><\/tbody><\/table><\/td><\/tr><tr><\/tr><\/tbody><\/table><\/td><food><\/food><td><table><tbody><tr><td><table><tbody><tr><td><\/td><\/tr><tr><td><div>/g,
 			'</food></day><day><food></food></day><day><food>'
@@ -82,7 +106,10 @@ exports.Mensaplan_Parser = {
 			'</food></day><day><food>'
 		);
 		// multiple food per category in day
-		parsed = parsed.replace(/<\/div><\/td><\/tr><tr><td><div>/g, '</food><food>');
+		parsed = parsed.replace(
+			/<\/div><\/td><\/tr><tr><td><div>/g,
+			'</food><food>'
+		);
 		// next day
 		parsed = parsed.replace(
 			/<td><table><tbody><tr><td><table><tbody><tr><td><\/td><\/tr><tr><td><div>/g,
@@ -102,7 +129,10 @@ exports.Mensaplan_Parser = {
 			' lockedDay'
 		);
 		parsed = parsed.replace(/ width="120"/gi, '');
-		parsed = parsed.replace(/<td lockedDay>Keine Ausgabe<br><br>(.+?)<\/category>/gi, '<day><food>$1</food>');
+		parsed = parsed.replace(
+			/<td lockedDay>Keine Ausgabe<br><br>(.+?)<\/category>/gi,
+			'<day><food>$1</food>'
+		);
 		parsed = parsed.replace(/<\/food><day>/gi, '</food></day><day>');
 		//-- locked days support [WIP]
 

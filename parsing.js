@@ -1,7 +1,7 @@
 const fs = require('fs');
 const mensaplan_parser = require('./api/mensaplan-parser');
 
-fs.readFile('test.html', function(err, data) {
+fs.readFile('test.html', function (err, data) {
 	if (err) return console.error(err);
 	let html = data.toString();
 
@@ -12,7 +12,7 @@ fs.readFile('test.html', function(err, data) {
 });
 
 let log_it = (data, file) => {
-	fs.writeFile(file, data, function(err) {
+	fs.writeFile(file, data, function (err) {
 		if (err) {
 			return console.log(err);
 		}
