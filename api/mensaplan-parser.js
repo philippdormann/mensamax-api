@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-let minify = require('html-minifier').minify;
+const minify = require('html-minifier').minify;
 exports.Mensaplan_Parser = {
 	server_data: {},
 	parse: (html) => {

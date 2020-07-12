@@ -19,27 +19,31 @@ const start_it_up = (req, res) => {
 				btnLogin: ''
 			}
 		},
-		function (error, response, body) {
-			if (error) throw new Error(error);
-
-			console.log("ALL GOOD, LET'S GO");
-			console.log('****************');
-
-			parse_it(body, response, req, res);
+		(error, response, body) => {
+			if (error) {
+				console.log(error);
+				return send_it(
+					500,
+					{ status: 'fail', payload: error },
+					req,
+					res
+				);
+			}
+			return parse_it(body, response, req, res);
 		}
 	);
 };
 
 const parse_it = (body, response, req, res) => {
-	const parsed = mensaplan_parser.Mensaplan_Parser.parse(body);
-	send_it(parsed, req, res);
+	const parsed = JSON.parse(mensaplan_parser.Mensaplan_Parser.parse(body));
+	send_it(200, { status: 'ok', payload: parsed }, req, res);
 };
 
-const send_it = (parsed, req, res) => {
+const send_it = (status, body, req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Headers', '*');
 	res.setHeader('Content-Type', 'application/json');
-	res.status(200).send(parsed);
+	res.status(status).send(body);
 };
 
 module.exports = start_it_up;
