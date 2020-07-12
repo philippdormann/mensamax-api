@@ -5,7 +5,9 @@
 		"project": "FO111",
 		"facility": "dts",
 		"name": "Dr.-Theo-Schöller-Mittelschule in Nürnberg",
-		"tested": false
+		"tested": false,
+		"verified__VIEWSTATE": "KN55QAm2LNFRrzRQmx9SQWeDnekZ9RIWxuEA7a0VMLsLsmNhKCPnOZEeWZAVMZk7tGkpYlOMNfXdFnN/5tA43zZ+xJ//BFg0OUOpAwektLTD6eYOcVpwi+RXVQHbJfuLgNkeACOnEBvs9MFHitDB6g==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=DSK",
@@ -13,7 +15,10 @@
 		"project": "FO111",
 		"facility": "DSK",
 		"name": "Dreiberg Schule Knetzgau",
-		"tested": false
+		"tested": true,
+		"tested_on": "12.07.2020",
+		"verified__VIEWSTATE": "M2yEfFkBBoehAFHKmsxA6s5XYF6EcFSAXpvb2OLiPI2/7ybQARFe0+umP8r9Bzl4cBjtqHBMCgzH78w8vzMGc4hw6brMNAvOOZBUubI40xDVwpGoxomIR+B+aqP+Nb1Mz3yxAyRYqNJ9FwLLUTxhGA==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ghr",
@@ -21,7 +26,10 @@
 		"project": "FO111",
 		"facility": "ghr",
 		"name": "Georg-Hartmann-Realschule Forchheim",
-		"tested": false
+		"tested": true,
+		"tested_on": "12.07.2020",
+		"verified__VIEWSTATE": "kksdmp57JT8YPS2o7Z/9K/wdqdyBlIj377CoGdiQY74B9WUApyYSqZZ62Fz6j72rQNkYWx6uIFotBM2KrqdCRETQrIWZIEU+hyh2mzue/4xZP5a3COGwURxSJLts1PaQKPr2qbWdROyUHir3B2ZYIA==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hoch",
@@ -176,7 +184,7 @@
 		"project": "FO111",
 		"facility": "GSHerzogenaurach",
 		"name": "Grundschule Herzogenaurach",
-		"tested": true,
+		"tested": false,
 		"tested_on": "12.07.2020"
 	},
 	{
@@ -186,7 +194,9 @@
 		"facility": "ggm",
 		"name": "Gabelsberger-Gymnasium Mainburg",
 		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested_on": "12.07.2020",
+		"verified__VIEWSTATE": "hHazgNM7rXanogfQw4bo9YbFepZYD42MejPq0U4VJcVsoy5f6OtmqefopPgVztxJsgsUoNDZQSoHSVBmQrbg7MXMi8UKRskFynf/k7QPMubRkDY4IQaH0Bv4v+PUiKIo5ezxXCJNfsbCMzB7VEMPNA==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=LL124&E=FWS",
@@ -194,7 +204,7 @@
 		"project": "LL124",
 		"facility": "FWS",
 		"name": "Freie Waldorfschule Landsberg",
-		"tested": true,
+		"tested": false,
 		"tested_on": "12.07.2020"
 	}
 ]
