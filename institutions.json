@@ -232,5 +232,14 @@
 		"facility": "bvowrs",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"sample_url": "http://login.mensaonline.de/loginplan.aspx?p=S243&e=MBS",
+		"provider": "mensaonline.de",
+		"project": "S243",
+		"facility": "MBS",
+		"name": "???",
+		"tested": false
+	},
 	}
 ]
