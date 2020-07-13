@@ -55,6 +55,6 @@ docker-compose build && docker-compose down --remove-orphans && docker-compose u
 3. Build JSON - via RegEx 
 4. Serve via Express/ Vercel Serverless Function
 
-## Known/ tested institutions
+## 🏫 Known/ tested institutions
 - For a nice GUI version, see <https://mensa.vercel.app/institutions-ui>
 - For the raw data, see [institutions.json](./institutions.json)
