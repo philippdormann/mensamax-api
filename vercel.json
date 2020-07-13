@@ -1,0 +1,25 @@
+{
+	"version": 2,
+	"routes": [
+		{
+			"src": "/",
+			"dest": "/api/startpage.js"
+		},
+		{
+			"src": "/institutions-json",
+			"dest": "/institutions.json"
+		},
+		{
+			"src": "/institutions-ui",
+			"dest": "/api/institutions-ui.js"
+		},
+		{
+			"src": "./home.html",
+			"dest": "/api/home.html"
+		},
+		{
+			"src": "./web-template.html",
+			"dest": "/api/web-template.html"
+		}
+	]
+}
