@@ -207,7 +207,15 @@
 		"project": "LL124",
 		"facility": "FWS",
 		"name": "Freie Waldorfschule Landsberg",
-		"tested": false,
-		"tested_on": "12.07.2020"
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=lerchenfeld",
+		"provider": "mensaservice.de",
+		"project": "HH222",
+		"facility": "lerchenfeld",
+		"name": "???",
+		"tested": false
+	},
 	}
 ]
