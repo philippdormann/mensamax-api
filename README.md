@@ -23,11 +23,9 @@
     -   remove whitespace, format html to simplify scraping
 
 ## 🚀 Deployment
-
 -   this script is deployed as a serverless function on the url <https://mensa.vercel.app> with [Vercel](https://vercel.com/) ☁️
 -   the code to this function is found in the `/api` folder 📁
 
-## ❔ HOWTO: local dev with Vercel
 ## 🐳 Docker Deployment
 This project can be deployed as a docker container.
 To do so, just run this code:
@@ -35,13 +33,13 @@ To do so, just run this code:
 docker-compose build && docker-compose down --remove-orphans && docker-compose up -d
 ```
 
+## ❔ HOWTO: local dev with Vercel
 -   `npm i -g vercel` / `yarn global add vercel`
 -   `vercel dev`
 
-## ❔ HOWTO: run this function without Vercel
-
--   `npm i` / `yarn install`
--   `npm run start` / `yarn start`
+## ❔ HOWTO: run without Vercel (Express Server)
+- `npm i && npm run start`
+- `yarn && yarn start`
 
 ## 🛠️ how this works
 1. Fetch data from url (like <https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz> for example)
