@@ -9,6 +9,7 @@ let content = JSON.parse(
 );
 module.exports = (req, res) => {
 	let table = '';
+	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippd1/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`
 	content.forEach((src) => {
 		let tested_insert = '❓ not tested';
 		if (src.tested === true) {
