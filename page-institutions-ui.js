@@ -1,31 +1,15 @@
 const fs = require('fs');
-module.exports = (rel = '/', req, res) => {
-	if (typeof rel !== 'string') rel = '/';
-	fs.readFile(rel + 'web-template.html', 'utf8', function read(
-		err,
-		templateData
-	) {
-		if (err) {
-			console.log(err);
-			res.status(500).end();
-		} else {
-			fs.readFile(rel + 'institutions.json', 'utf8', function read(
-				err,
-				content
-			) {
-				if (err) {
-					console.log(err);
-					res.status(500).end();
-				} else {
-					content = JSON.parse(content);
-					let table = '';
-					content.forEach((src) => {
-						let tested_insert = '❓ not tested';
-						if (src.tested === true) {
-							tested_insert = `👍 tested on: ${src.tested_on}`;
-						}
+const templateData = fs.readFileSync('./web-template.html', 'utf-8');
+let content = JSON.parse(fs.readFileSync('./institutions.json', 'utf-8'));
+module.exports = (req, res) => {
+	let table = '';
+	content.forEach((src) => {
+		let tested_insert = '❓ not tested';
+		if (src.tested === true) {
+			tested_insert = `👍 tested on: ${src.tested_on}`;
+		}
 
-						table += `
+		table += `
 						<h4>${src.name}</h4>
 						${tested_insert}
 						<br>
@@ -40,14 +24,7 @@ module.exports = (rel = '/', req, res) => {
 						sample api link: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}">/api/?p=${src.project}&e=${src.facility}</a>
 						<hr>
 						`;
-					});
-					const rendered = templateData.replace(
-						/{{{content}}}/gi,
-						table
-					);
-					res.send(rendered);
-				}
-			});
-		}
 	});
+	const rendered = templateData.replace(/{{{content}}}/gi, table);
+	res.send(rendered);
 };
