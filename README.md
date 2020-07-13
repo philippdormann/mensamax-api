@@ -63,3 +63,9 @@ docker-compose build && docker-compose down --remove-orphans && docker-compose u
 - For some reason, MensaMax IT department decided to have **many URLs**
   - you can find a list of all known MensaMax URLS @[mensamax-urls.txt](./mensa-urls.txt)
 - These **URLs are not interchangable** and seem to be different versions (as of 13.07.2020)
+
+## 👍💰 Support this project
+You like this project and would like to give something back?
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V4I6I8)
+<span class="badge-paypal"><a href="https://paypal.me/philippdormann" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
+<a href="https://www.buymeacoffee.com/philippdormann" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" style="height: 40px !important;width: auto !important;" ></a>
