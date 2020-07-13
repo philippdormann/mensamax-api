@@ -8,20 +8,19 @@
 🍲🥘🥡🍛🍜🦐🥔
 </pre>
 
-## 📚 dependencies
+## 📚 Dependencies
 
 ![Dependency Info](https://img.shields.io/david/philippd1/gymhmensa)
 [![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app)
 
--   NodeJS
-    -   [express](https://www.npmjs.com/package/express) (minimalist web framework for node)
-        -   serve the API via web server
-    -   [request](https://www.npmjs.com/package/request) (Simplified HTTP client)
-        -   make HTTP-requests
-    -   [cheerio](https://www.npmjs.com/package/cheerio) (core jQuery designed specifically for the server)
-        -   simplify scraping the page to a readable format
-    -   [html-minifier](https://www.npmjs.com/package/html-minifier) (highly configurable, well-tested, JavaScript-based HTML minifier)
-        -   remove whitespace, format html to simplify scraping
+-   [express](https://www.npmjs.com/package/express) (minimalist web framework for node)
+    -   serve the API via web server
+-   [request](https://www.npmjs.com/package/request) (Simplified HTTP client)
+    -   make HTTP-requests
+-   [cheerio](https://www.npmjs.com/package/cheerio) (core jQuery designed specifically for the server)
+    -   simplify scraping the page to a readable format
+-   [html-minifier](https://www.npmjs.com/package/html-minifier) (highly configurable, well-tested, JavaScript-based HTML minifier)
+    -   remove whitespace, format html to simplify scraping
 
 ## 🚀 Deployment
 
