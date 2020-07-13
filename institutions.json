@@ -70,7 +70,10 @@
 		"project": "FO111",
 		"facility": "frid",
 		"name": "Gymnasium Fridericianum",
-		"tested": false
+		"tested": true,
+		"tested_on": "13.07.2020",
+		"verified__VIEWSTATE": "eM/B/vCD9bdvmeju6w5/2wTXtvyhzy8YFDGqCbbPEuMLLmuapwNa6mdVSoqTXXIuBr5alM40bSzWW7BEcKfWjCKiq22S86Gn3bYrp56sExICSybRKwzoXRlm1jYv2jCZHwtawod1xZcrDN8dv6LUQA==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
