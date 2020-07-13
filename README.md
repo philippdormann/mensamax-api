@@ -58,3 +58,8 @@ docker-compose build && docker-compose down --remove-orphans && docker-compose u
 ## 🏫 Known/ tested institutions
 - For a nice GUI version, see <https://mensa.vercel.app/institutions-ui>
 - For the raw data, see [institutions.json](./institutions.json)
+
+## 🧠 General Knowledge
+- For some reason, MensaMax IT department decided to have **many URLs**
+  - you can find a list of all known MensaMax URLS @[mensamax-urls.txt](./mensa-urls.txt)
+- These **URLs are not interchangable** and seem to be different versions (as of 13.07.2020)
