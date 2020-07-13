@@ -8,11 +8,13 @@
 🍲🥘🥡🍛🍜🦐🥔
 </pre>
 
-## 📚 Dependencies
-
-![Dependency Info](https://img.shields.io/david/philippd1/gymhmensa)
 [![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app)
+[![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann)
+[![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann)
+[![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
 
+## 📚 Dependencies
+![Dependency Info](https://img.shields.io/david/philippd1/gymhmensa)
 -   [express](https://www.npmjs.com/package/express) (minimalist web framework for node)
     -   serve the API via web server
 -   [request](https://www.npmjs.com/package/request) (Simplified HTTP client)
@@ -66,6 +68,4 @@ docker-compose build && docker-compose down --remove-orphans && docker-compose u
 
 ## 👍💰 Support this project
 You like this project and would like to give something back?
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V4I6I8)
-<span class="badge-paypal"><a href="https://paypal.me/philippdormann" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
-<a href="https://www.buymeacoffee.com/philippdormann" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" style="height: 40px !important;width: auto !important;" ></a>
+Thanks! See the badges at the top of this README.
