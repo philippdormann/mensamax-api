@@ -249,5 +249,12 @@
 		"name": "???",
 		"tested": false
 	},
+	{
+		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=MGTT",
+		"provider": "mensaonline.de",
+		"project": "FN222",
+		"facility": "MGTT",
+		"name": "Montfort-Gymnasium Tettnang",
+		"tested": false
 	}
 ]
