@@ -8,3 +8,8 @@ server.js
 test.html
 raw-samples
 parsed-samples
+*.lock
+docker-compose.yml
+Dockerfile
+.prettierignore
+.prettierrc
