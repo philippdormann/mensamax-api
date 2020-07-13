@@ -225,5 +225,12 @@
 		"name": "???",
 		"tested": false
 	},
+	{
+		"sample_url": "https://mensaonline.de/LOGINPLAN.ASPX?P=Schwanau&E=bvowrs",
+		"provider": "mensaonline.de",
+		"project": "Schwanau",
+		"facility": "bvowrs",
+		"name": "???",
+		"tested": false
 	}
 ]
