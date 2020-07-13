@@ -28,6 +28,12 @@
 -   the code to this function is found in the `/api` folder 📁
 
 ## ❔ HOWTO: local dev with Vercel
+## 🐳 Docker Deployment
+This project can be deployed as a docker container.
+To do so, just run this code:
+```
+docker-compose build && docker-compose down --remove-orphans && docker-compose up -d
+```
 
 -   `npm i -g vercel` / `yarn global add vercel`
 -   `vercel dev`
