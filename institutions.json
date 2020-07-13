@@ -80,7 +80,7 @@
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "msf",
-		"name": "Grund und Mittelschule Feucht",
+		"name": "Grund und Mittelschule Feucht/ Kinderhort St. Jakob in Feucht",
 		"tested": false
 	},
 	{
@@ -105,14 +105,6 @@
 		"project": "FO111",
 		"facility": "gpa",
 		"name": "Georg-Paul-Amberger Grundschule",
-		"tested": false
-	},
-	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "msf",
-		"name": "Kinderhort St. Jakob in Feucht ",
 		"tested": false
 	},
 	{
