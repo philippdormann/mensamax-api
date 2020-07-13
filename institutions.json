@@ -241,5 +241,13 @@
 		"name": "???",
 		"tested": false
 	},
+	{
+		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=RS",
+		"provider": "mensaonline.de",
+		"project": "FN222",
+		"facility": "RS",
+		"name": "???",
+		"tested": false
+	},
 	}
 ]
