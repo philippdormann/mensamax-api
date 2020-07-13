@@ -217,5 +217,13 @@
 		"name": "???",
 		"tested": false
 	},
+	{
+		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FO111&E=PHR",
+		"provider": "mensaonline.de",
+		"project": "FO111",
+		"facility": "PHR",
+		"name": "???",
+		"tested": false
+	},
 	}
 ]
