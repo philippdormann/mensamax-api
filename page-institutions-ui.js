@@ -1,6 +1,12 @@
 const fs = require('fs');
-const templateData = fs.readFileSync('./web-template.html', 'utf-8');
-let content = JSON.parse(fs.readFileSync('./institutions.json', 'utf-8'));
+const { join } = require('path');
+const templateData = fs.readFileSync(
+	join(__dirname, `web-template.html`),
+	'utf-8'
+);
+let content = JSON.parse(
+	fs.readFileSync(join(__dirname, `institutions.json`), 'utf-8')
+);
 module.exports = (req, res) => {
 	let table = '';
 	content.forEach((src) => {
