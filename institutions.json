@@ -256,5 +256,13 @@
 		"facility": "MGTT",
 		"name": "Montfort-Gymnasium Tettnang",
 		"tested": false
+	},
+	{
+		"sample_url": "http://mensaweb.de/loginplan.aspx?P=StMartin&E=Gs+Dockweiler",
+		"provider": "mensaweb.de",
+		"project": "StMartin",
+		"facility": "Gs+Dockweiler",
+		"name": "Grundschule Dockweiler",
+		"tested": false
 	}
 ]
