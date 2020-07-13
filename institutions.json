@@ -37,7 +37,10 @@
 		"project": "FO111",
 		"facility": "hoch",
 		"name": "Gymnasium Höchstadt a.d.Aisch",
-		"tested": false
+		"tested": true,
+		"tested_on": "13.07.2020",
+		"verified__VIEWSTATE": "h/v36zNJViS6qvn9cmLs0uHSLE0+Kg/dgQUpQx6uYkJmEQG2XLf/q8Z1N8CzamyhLbFssqDZZSkwvAUyaWaCFILBp3MC022mwLD+PNb/PoQ1Q/UM7wGHTQDKP1EmYdvAC8gizGh4l7vKdArFB1ZX3A==",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz",
@@ -184,10 +187,10 @@
 		"project": "FO111",
 		"facility": "GSHerzogenaurach",
 		"name": "Grundschule Herzogenaurach",
-        "tested": true,
-        "tested_on": "12.07.2020",
-        "verified__VIEWSTATE": "PjjXhwtnpc2/ZSIhKlDBdgACMeb1AN1TW+UUs8bKz3vcbmN+iZoT6gvh+CD1XGbi4SBnVN2N6TBC+rqVbDksdpd6So1cLO0RX+degvBCz2uYk6+MO3clXQg+IOsTR0OHC5fOC2bNqaQRkHHgwmmq4aVZJ/IdxGFH43gGgtlhzss=",
-        "verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested": true,
+		"tested_on": "12.07.2020",
+		"verified__VIEWSTATE": "PjjXhwtnpc2/ZSIhKlDBdgACMeb1AN1TW+UUs8bKz3vcbmN+iZoT6gvh+CD1XGbi4SBnVN2N6TBC+rqVbDksdpd6So1cLO0RX+degvBCz2uYk6+MO3clXQg+IOsTR0OHC5fOC2bNqaQRkHHgwmmq4aVZJ/IdxGFH43gGgtlhzss=",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=KEH111&E=ggm",
