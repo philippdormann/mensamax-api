@@ -218,7 +218,7 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FO111&E=PHR",
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FO111&E=PHR",
 		"provider": "mensaonline.de",
 		"project": "FO111",
 		"facility": "PHR",
@@ -234,7 +234,7 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://login.mensaonline.de/loginplan.aspx?p=S243&e=MBS",
+		"sample_url": "http://mensaonline.de/loginplan.aspx?p=S243&e=MBS",
 		"provider": "mensaonline.de",
 		"project": "S243",
 		"facility": "MBS",
@@ -242,7 +242,7 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=RS",
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=RS",
 		"provider": "mensaonline.de",
 		"project": "FN222",
 		"facility": "RS",
@@ -250,7 +250,7 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://login.mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=MGTT",
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=MGTT",
 		"provider": "mensaonline.de",
 		"project": "FN222",
 		"facility": "MGTT",
