@@ -59,7 +59,10 @@
 		"project": "FO111",
 		"facility": "mscadolzburg",
 		"name": "Mittelschule Cadolzburg",
-		"tested": false
+		"tested": true,
+		"tested_on": "13.07.2020",
+		"verified__VIEWSTATE": "8hwGx1zs8l3d+Zs173PuTpwVwBBg+FuphKdFDHyIQ7C0L7oW0ZF3uQ+dmP/Zq4HY4RLJ39ECgPiRK7xP2B+cgQwKnKVt1i1Xeaz5QpLOcG4YTpeBR4DQGZYv2/Qv5W7SSrIRUON2dwsQnJqWFHVB7zePcZKuQctFsmLd5lx+7tk=",
+		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=frid",
