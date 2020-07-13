@@ -41,22 +41,20 @@ docker-compose build && docker-compose down --remove-orphans && docker-compose u
 - `npm i && npm run start`
 - `yarn && yarn start`
 
-## 🛠️ how this works
+## 🛠️ How this works
 1. Fetch data from url (like <https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz> for example)
-    -   setup request
-        -   enable cookies (`very important`)
-        -   request method: POST (`very important`)
-        -   enable followAllRedirects (`very important`)
-        -   set login headers (`very important`)
+    -   setup request (these settings are important)
+        -   enable cookies
+        -   request method: POST
+        -   enable followAllRedirects
+        -   set login headers
 2. Parsing the data
     -   get relevant element with cheerio
-    -   minify html
-    -   RegEx. a lot of RegEx.
-        -   if you really want to, have a look at it yourself - I can't really explain it 🧠🤯🧠
-3. Build JSON
-    -   done with RegEx.
-4. Serve via Express/ Vercel Serverless
+    -   minify html 🗜️
+    -   RegEx. a lot of RegEx. 🤯🧠🤯
+3. Build JSON - via RegEx 
+4. Serve via Express/ Vercel Serverless Function
 
-## Known institutions
+## Known/ tested institutions
 - For a nice GUI version, see <https://mensa.vercel.app/institutions-ui>
 - For the raw data, see [institutions.json](./institutions.json)
