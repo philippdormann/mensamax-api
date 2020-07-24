@@ -264,5 +264,29 @@
 		"facility": "Gs+Dockweiler",
 		"name": "Grundschule Dockweiler",
 		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=BOR000&E=Euregio",
+		"provider": "mensaonline.de",
+		"project": "BOR000",
+		"facility": "Euregio",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=PF1111&E=kepler",
+		"provider": "mensaonline.de",
+		"project": "PF1111",
+		"facility": "kepler",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=HDH111&E=WG",
+		"provider": "mensaweb.de",
+		"project": "HDH111",
+		"facility": "WG",
+		"name": "???",
+		"tested": false
 	}
 ]
