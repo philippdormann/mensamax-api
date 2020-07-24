@@ -288,5 +288,13 @@
 		"facility": "WG",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"sample_url": "http://mensaservice.de/LOGINPLAN.ASPX?P=TUE124&E=ALS",
+		"provider": "mensaservice.de",
+		"project": "TUE124",
+		"facility": "ALS",
+		"name": "???",
+		"tested": false
 	}
 ]
