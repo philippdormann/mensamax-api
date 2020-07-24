@@ -282,7 +282,7 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=HDH111&E=WG",
+		"sample_url": "http://mensaweb.de/LOGINPLAN.ASPX?P=HDH111&E=WG",
 		"provider": "mensaweb.de",
 		"project": "HDH111",
 		"facility": "WG",
