@@ -296,5 +296,13 @@
 		"facility": "ALS",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"sample_url": "http://mensaservice.de/LOGINPLAN.ASPX?P=ES222&E=Sprache",
+		"provider": "mensaservice.de",
+		"project": "ES222",
+		"facility": "Sprache",
+		"name": "???",
+		"tested": false
 	}
 ]
