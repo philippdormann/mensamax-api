@@ -5,9 +5,7 @@
 		"project": "FO111",
 		"facility": "dts",
 		"name": "Dr.-Theo-Schöller-Mittelschule in Nürnberg",
-		"tested": false,
-		"verified__VIEWSTATE": "KN55QAm2LNFRrzRQmx9SQWeDnekZ9RIWxuEA7a0VMLsLsmNhKCPnOZEeWZAVMZk7tGkpYlOMNfXdFnN/5tA43zZ+xJ//BFg0OUOpAwektLTD6eYOcVpwi+RXVQHbJfuLgNkeACOnEBvs9MFHitDB6g==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested": false
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=DSK",
@@ -16,9 +14,7 @@
 		"facility": "DSK",
 		"name": "Dreiberg Schule Knetzgau",
 		"tested": true,
-		"tested_on": "12.07.2020",
-		"verified__VIEWSTATE": "M2yEfFkBBoehAFHKmsxA6s5XYF6EcFSAXpvb2OLiPI2/7ybQARFe0+umP8r9Bzl4cBjtqHBMCgzH78w8vzMGc4hw6brMNAvOOZBUubI40xDVwpGoxomIR+B+aqP+Nb1Mz3yxAyRYqNJ9FwLLUTxhGA==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "12.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ghr",
@@ -27,9 +23,7 @@
 		"facility": "ghr",
 		"name": "Georg-Hartmann-Realschule Forchheim",
 		"tested": true,
-		"tested_on": "12.07.2020",
-		"verified__VIEWSTATE": "kksdmp57JT8YPS2o7Z/9K/wdqdyBlIj377CoGdiQY74B9WUApyYSqZZ62Fz6j72rQNkYWx6uIFotBM2KrqdCRETQrIWZIEU+hyh2mzue/4xZP5a3COGwURxSJLts1PaQKPr2qbWdROyUHir3B2ZYIA==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "12.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hoch",
@@ -38,9 +32,7 @@
 		"facility": "hoch",
 		"name": "Gymnasium Höchstadt a.d.Aisch",
 		"tested": true,
-		"tested_on": "13.07.2020",
-		"verified__VIEWSTATE": "h/v36zNJViS6qvn9cmLs0uHSLE0+Kg/dgQUpQx6uYkJmEQG2XLf/q8Z1N8CzamyhLbFssqDZZSkwvAUyaWaCFILBp3MC022mwLD+PNb/PoQ1Q/UM7wGHTQDKP1EmYdvAC8gizGh4l7vKdArFB1ZX3A==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "13.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz",
@@ -49,9 +41,7 @@
 		"facility": "herz",
 		"name": "Gymnasium Herzogenaurach",
 		"tested": true,
-		"tested_on": "12.07.2020",
-		"verified__VIEWSTATE": "G0W5d68B7sQw5+/Q3SXg4OK2k1Tj0FOKG65lU7PQ2OFbtyRUiMicA/M7mVzMyg3315D2xsJw9iECgEYY/fiSRvFwKIde0dUT05/a/saXN4yRgmFS5c3TTgCEhMUd8pejthsVoQYxDhwYyEz4ArewBw==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "12.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=mscadolzburg",
@@ -60,9 +50,7 @@
 		"facility": "mscadolzburg",
 		"name": "Mittelschule Cadolzburg",
 		"tested": true,
-		"tested_on": "13.07.2020",
-		"verified__VIEWSTATE": "8hwGx1zs8l3d+Zs173PuTpwVwBBg+FuphKdFDHyIQ7C0L7oW0ZF3uQ+dmP/Zq4HY4RLJ39ECgPiRK7xP2B+cgQwKnKVt1i1Xeaz5QpLOcG4YTpeBR4DQGZYv2/Qv5W7SSrIRUON2dwsQnJqWFHVB7zePcZKuQctFsmLd5lx+7tk=",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "13.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=frid",
@@ -71,9 +59,7 @@
 		"facility": "frid",
 		"name": "Gymnasium Fridericianum",
 		"tested": true,
-		"tested_on": "13.07.2020",
-		"verified__VIEWSTATE": "eM/B/vCD9bdvmeju6w5/2wTXtvyhzy8YFDGqCbbPEuMLLmuapwNa6mdVSoqTXXIuBr5alM40bSzWW7BEcKfWjCKiq22S86Gn3bYrp56sExICSybRKwzoXRlm1jYv2jCZHwtawod1xZcrDN8dv6LUQA==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "13.07.2020"
 	},
 	{
 		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
@@ -186,9 +172,7 @@
 		"facility": "GSHerzogenaurach",
 		"name": "Grundschule Herzogenaurach",
 		"tested": true,
-		"tested_on": "12.07.2020",
-		"verified__VIEWSTATE": "PjjXhwtnpc2/ZSIhKlDBdgACMeb1AN1TW+UUs8bKz3vcbmN+iZoT6gvh+CD1XGbi4SBnVN2N6TBC+rqVbDksdpd6So1cLO0RX+degvBCz2uYk6+MO3clXQg+IOsTR0OHC5fOC2bNqaQRkHHgwmmq4aVZJ/IdxGFH43gGgtlhzss=",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "12.07.2020"
 	},
 	{
 		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=KEH111&E=ggm",
@@ -197,9 +181,7 @@
 		"facility": "ggm",
 		"name": "Gabelsberger-Gymnasium Mainburg",
 		"tested": true,
-		"tested_on": "12.07.2020",
-		"verified__VIEWSTATE": "hHazgNM7rXanogfQw4bo9YbFepZYD42MejPq0U4VJcVsoy5f6OtmqefopPgVztxJsgsUoNDZQSoHSVBmQrbg7MXMi8UKRskFynf/k7QPMubRkDY4IQaH0Bv4v+PUiKIo5ezxXCJNfsbCMzB7VEMPNA==",
-		"verified__VIEWSTATEGENERATOR": "D5B5CA0F"
+		"tested_on": "12.07.2020"
 	},
 	{
 		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=LL124&E=FWS",
