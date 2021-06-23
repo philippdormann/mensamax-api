@@ -26,6 +26,7 @@ tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table>
 tmp = tmp.replaceAll("</div></td></tr><tr><td><div>", "</food><food>")
 tmp = tmp.replaceAll("</th></tr><tr><td>", "</th></tr><wrap><category>")
 tmp = tmp.replaceAll("<category></td><td></td><td></td><td></td><td></td></tr>", "</wrap>")
+tmp = tmp.replaceAll(/<food>\d+ /gi, "<food>")
 
 fs.writeFileSync("./parsed1.html", tmp)
 
