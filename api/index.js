@@ -1,5 +1,4 @@
-const request = require('request').defaults({ jar: true });
-const mensaplan_parser = require('./mensaplan-parser');
+const mensaplan_parser = require('./parser');
 const fs = require('fs');
 const { join } = require('path');
 let institutions = JSON.parse(
