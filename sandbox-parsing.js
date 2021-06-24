@@ -3,6 +3,16 @@ const fs = require('fs');
 const minify = require('html-minifier').minify;
 const input = fs.readFileSync("./out.html", { encoding: "utf-8" })
 
+function chunk(arr, len) {
+    let chunks = []
+    let i = 0
+    let n = arr.length;
+    while (i < n) {
+        chunks.push(arr.slice(i, i += len));
+    }
+    return chunks;
+}
+
 let tmp = cheerio.load(input)
 tmp("*").removeAttr("style").removeAttr("class").removeAttr("valign").removeAttr("colspan").removeAttr("align").removeAttr("border").removeAttr("cellpadding").removeAttr("alt").removeAttr("title").removeAttr("onclick")
 tmp("img").parent().remove()
@@ -33,19 +43,19 @@ tmp = tmp.replaceAll("</wrap></tbody></table></td></tr><tr><td>", "</wrap>")
 tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td></tr><tr><td>", "</food></day><day></day>")
 tmp = tmp.replaceAll(/<food>\d+ /gi, "<food>")
 
-fs.writeFileSync("./parsed1.html", tmp)
+// fs.writeFileSync("./parsed1.html", tmp)
 
-let $1 = cheerio.load(tmp)
+const $1 = cheerio.load(tmp)
 let categories = []
 let elements = []
 $1("category").each(function (index, element) {
     categories.push($1(element).text())
 });
 $1("day").each(function (index, element) {
-    let $2 = cheerio.load($1(element).html())
+    const $2 = cheerio.load($1(element).html())
     let items = []
     $2("food").each(function (index, element) {
-        let $3 = cheerio.load($2(element).html())
+        const $3 = cheerio.load($2(element).html())
         let zusatzstoffe = []
         $3("span").each(function (index, element) {
             zusatzstoffe.push($3(element).text())
@@ -55,17 +65,33 @@ $1("day").each(function (index, element) {
     });
     elements.push(items)
 });
-// console.log({ categories });
-// console.log({ elements });
-
-fs.writeFileSync("./dmeo.json", JSON.stringify(elements))
-
-let $ = cheerio.load(input)
-let hinweis = $("#lblSpeiesplanHinweis").text();
+const $ = cheerio.load(input)
+const hinweis = $("#lblSpeiesplanHinweis").text();
 let he = []
-let head = $(".tdHeader th").each((i, e) => {
+$(".tdHeader th").each((i, e) => {
     he.push($(e).html())
 })
-let h = he.filter(h => h !== "")
-// console.log(h);
-// console.log(hinweis);
+let days = he.filter(h => h !== "")
+
+elements = chunk(elements, days.length)
+fs.writeFileSync("./dmeo.json", JSON.stringify(elements))
+// 
+let out = {};
+// 
+// console.log(categories);
+let index = 0;
+categories.forEach(c => {
+    let i = 0;
+    days.forEach(d => {
+        // console.log(elements[index][i]);
+        // out[`${h[index]}`] = {}
+        if (!out[`${days[i]}`]) {
+            out[`${days[i]}`] = {}
+        }
+        out[`${days[i]}`][`${categories[index]}`] = elements[index][i]
+        i++;
+    });
+    index++;
+});
+// console.log(out);
+fs.writeFileSync("./result.json", JSON.stringify(out))
