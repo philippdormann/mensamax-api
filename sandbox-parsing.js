@@ -26,6 +26,11 @@ tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table>
 tmp = tmp.replaceAll("</div></td></tr><tr><td><div>", "</food><food>")
 tmp = tmp.replaceAll("</th></tr><tr><td>", "</th></tr><wrap><category>")
 tmp = tmp.replaceAll("<category></td><td></td><td></td><td></td><td></td></tr>", "</wrap>")
+tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>", "</day><day></day>")
+tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>", "</food></day><day><food>")
+tmp = tmp.replaceAll("</td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>", "</category><day><food>")
+tmp = tmp.replaceAll("</wrap></tbody></table></td></tr><tr><td>", "</wrap>")
+tmp = tmp.replaceAll("</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td></tr><tr><td>", "</food></day><day></day>")
 tmp = tmp.replaceAll(/<food>\d+ /gi, "<food>")
 
 fs.writeFileSync("./parsed1.html", tmp)
