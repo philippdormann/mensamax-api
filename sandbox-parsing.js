@@ -30,6 +30,31 @@ tmp = tmp.replaceAll(/<food>\d+ /gi, "<food>")
 
 fs.writeFileSync("./parsed1.html", tmp)
 
+let $1 = cheerio.load(tmp)
+let categories = []
+let elements = []
+$1("category").each(function (index, element) {
+    categories.push($1(element).text())
+});
+$1("day").each(function (index, element) {
+    let $2 = cheerio.load($1(element).html())
+    let items = []
+    $2("food").each(function (index, element) {
+        let $3 = cheerio.load($2(element).html())
+        let zusatzstoffe = []
+        $3("span").each(function (index, element) {
+            zusatzstoffe.push($3(element).text())
+        });
+        $3("sub").remove()
+        items.push({ title: $3.text(), zusatzstoffe })
+    });
+    elements.push(items)
+});
+// console.log({ categories });
+// console.log({ elements });
+
+fs.writeFileSync("./dmeo.json", JSON.stringify(elements))
+
 let $ = cheerio.load(input)
 let hinweis = $("#lblSpeiesplanHinweis").text();
 let he = []
