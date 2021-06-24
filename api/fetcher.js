@@ -8,11 +8,11 @@ exports.fetcher = ({ p, e }) => {
     return new Promise(function (resolve, reject) {
         if (p && e) {
             // console.log({ p, e });
-            console.log(institutions);
+            // console.log(institutions);
             const found = institutions.find(function (ins) {
                 return ins.project === p && ins.facility === e
             });
-            console.log(found);
+            // console.log(found);
             axios.get(`https://${found.provider}/LOGINPLAN.ASPX`, {
                 params: { p, e },
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
