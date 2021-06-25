@@ -40,64 +40,50 @@ exports.parser = (input) => {
 				minifyCSS: true,
 				collapseWhitespace: true
 			});
-
 			tmp = tmp.replaceAll(
-				'</td><td><table><tbody><tr></tr><tr><td><table><tbody><tr><td></td></tr><tr><td><div>',
-				'</category><day><food>'
+				'<tr><td></td></tr>',
+				''
 			);
 			tmp = tmp.replaceAll(
-				'</div></td></tr></tbody></table></td></tr></tbody></table></category><day><food>',
-				'</food></day><day><food>'
+				'<td><table><tbody><tr><td><table><tbody>',
+				'<day>'
 			);
 			tmp = tmp.replaceAll(
-				'</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td>',
-				'</food></day><category>'
-			);
-			tmp = tmp.replaceAll('</div></td></tr><tr><td><div>', '</food><food>');
-			tmp = tmp.replaceAll('</th></tr><tr><td>', '</th></tr><wrap><category>');
-			tmp = tmp.replaceAll('</th></tr><tr><td>', '</th></tr><wrap><category>');
-			tmp = tmp.replaceAll(
-				'</td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>',
-				'</category><day><food>'
+				'</tbody></table></td></tr></tbody></table></td>',
+				'</day>'
 			);
 			tmp = tmp.replaceAll(
-				'</div></td></tr></tbody></table></td></tr></tbody></table></td><td></category><day><food>',
-				'</food></day><day></day><day><food>'
+				'<tr><td><div>',
+				'<food>'
 			);
 			tmp = tmp.replaceAll(
-				'</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td></tr><tr><td>',
-				'</food></day><day></day><category>'
+				'</div></td></tr></day>',
+				'</food></day>'
 			);
 			tmp = tmp.replaceAll(
-				'</div></td></tr></tbody></table></td></tr></tbody></table></category><day><food>',
-				'</food></day><day><food>'
+				'</div></td></tr>',
+				'</food>'
 			);
 			tmp = tmp.replaceAll(
-				'<category></td><td></td><td></td><td></td><td></td></tr></tbody></table></td></tr><tr><td>',
-				'</wrap>'
+				'</th></tr><tr><td>',
+				'</th></tr><wrapper><td>'
 			);
-			// tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td></tr><tr><td>', '</food></day><day></day>');
-			// tmp = tmp.replaceAll(
-			// 	'</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>',
-			// 	'</food></day><day><food>'
-			// );
-			// tmp = tmp.replaceAll(
-			// 	'</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>',
-			// 	'</food></day><day></day><day><food>'
-			// );
-			// tmp = tmp.replaceAll(
-			// 	'<category></td><td></td><td></td><td></td><td></td></tr>',
-			// 	'</wrap>'
-			// );
-			// tmp = tmp.replaceAll(
-			// 	'</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td><td><table><tbody><tr><td><table><tbody><tr><td></td></tr><tr><td><div>',
-			// 	'</day><day></day>'
-			// );
-			// tmp = tmp.replaceAll('</wrap></tbody></table></td></tr><tr><td>', '</wrap>');
-			// tmp = tmp.replaceAll(
-			// 	'</div></td></tr></tbody></table></td></tr></tbody></table></td><td></td></tr><tr><td>',
-			// 	'</food></day><day></day>'
-			// );
+			tmp = tmp.replaceAll(
+				'</day></tr><tr>',
+				'</day>'
+			);
+			tmp = tmp.replaceAll(
+				'<td></td><td></td><td></td><td></td><td></td></tr>',
+				'</wrapper>'
+			);
+			tmp = tmp.replaceAll(
+				'</day><td></td></tr><tr>',
+				'</day><day></day>'
+			);
+			tmp = tmp.replaceAll(
+				'</day><td></td><day>',
+				'</day><day></day><day>'
+			);
 			tmp = tmp.replaceAll(/<food>\d+ /gi, '<food>');
 
 			fs.writeFileSync('./tmp.html', tmp);
@@ -105,7 +91,7 @@ exports.parser = (input) => {
 			const $1 = cheerio.load(tmp);
 			let categories = [];
 			let elements = [];
-			$1('category').each(function (index, element) {
+			$1('td').each(function (index, element) {
 				categories.push($1(element).text());
 			});
 			$1('day').each(function (index, element) {
@@ -124,12 +110,13 @@ exports.parser = (input) => {
 			});
 			const $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
-			let he = [];
+			let days = [];
 			$('.tdHeader th').each((i, e) => {
-				he.push($(e).html());
+				days.push($(e).html());
 			});
-			const days = he.filter((h) => h !== '');
+			days = days.filter((h) => h !== '');
 			elements = chunk(elements, days.length);
+			console.log(elements);
 			let out = {};
 			let index = 0;
 			categories.forEach((c) => {
@@ -138,15 +125,16 @@ exports.parser = (input) => {
 					if (!out[`${days[i]}`]) {
 						out[`${days[i]}`] = {};
 					}
-					out[`${days[i]}`][`${categories[index]}`] = elements[index][i];
+					console.log({ index });
+					// out[`${days[i]}`][`${categories[index]}`] = elements[index][i];
 					i++;
 				});
 				index++;
 			});
+			fs.writeFileSync('./elements.json', JSON.stringify(elements));
 			resolve(out);
 		} catch (e) {
 			reject(e);
 		}
-		// fs.writeFileSync('./result.json', JSON.stringify(out));
 	})
 }
