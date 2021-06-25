@@ -38,7 +38,7 @@
 			"publish": false
 		},
 		"hooks": {
-			"after:bump": "auto-changelog --commit-limit false -p -u --hide-credit && format && git add ."
+			"after:bump": "auto-changelog --commit-limit false -p -u --hide-credit && prettier --write . && git add ."
 		}
 	}
 }
