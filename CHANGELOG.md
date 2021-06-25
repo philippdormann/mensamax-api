@@ -2,10 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.0.0-rc.3](https://github.com/philippdormann/gymhmensa/compare/v2.0.0-rc.2...v2.0.0-rc.3)
+
+- Dockerfile fix + .env ignore [`efdf869`](https://github.com/philippdormann/gymhmensa/commit/efdf869bd46019577033c8ad6d9442e9defc51ff)
+- 🧪 basic parser testing [`33e87ff`](https://github.com/philippdormann/gymhmensa/commit/33e87ffbb0fd3e0c129509ffa4898eb75a242dad)
+- add vscode settings + devcontainer config [`ef99553`](https://github.com/philippdormann/gymhmensa/commit/ef995532a8cdcea8d22c5c89bbc4e9cd96342b4b)
+- String.prototype.replaceAll polyfill for Vercel Node.js v14 [`0f2f72c`](https://github.com/philippdormann/gymhmensa/commit/0f2f72c783692555ca0094bbd5b1b804b036b0af)
+- gitignore .env PORT [`ae63cd3`](https://github.com/philippdormann/gymhmensa/commit/ae63cd388899f89324111943fa7b44ca007a83f4)
+- add typedef to api/fetcher [`a6c1cf4`](https://github.com/philippdormann/gymhmensa/commit/a6c1cf479cacfcd5c47618ee7199886dfae6e1ba)
+- fix MensaplanResponse typedef [`85ca324`](https://github.com/philippdormann/gymhmensa/commit/85ca324971584e29643460f90fb74ff8098fca51)
+- 🔌 add dotenv for port defaulting [`d4f1d51`](https://github.com/philippdormann/gymhmensa/commit/d4f1d5138f5c76aadca7d647cb5e055834c736c5)
+
 #### [v2.0.0-rc.2](https://github.com/philippdormann/gymhmensa/compare/v2.0.0-rc.1...v2.0.0-rc.2)
+
+> 25 June 2021
 
 - enforce formatting [`00e45c1`](https://github.com/philippdormann/gymhmensa/commit/00e45c12b08f040b12960721e46ae32ad0ada748)
 - 📝 Updated README [`ca31ea9`](https://github.com/philippdormann/gymhmensa/commit/ca31ea93613e9337003b9c90ee7dc69497cafe8f)
+- 🚀RELEASE v2.0.0-rc.2 [`3f63cf0`](https://github.com/philippdormann/gymhmensa/commit/3f63cf0bb0daa9d7430047416f9cb8e15de7fee7)
 - add typedef to parser [`f32503d`](https://github.com/philippdormann/gymhmensa/commit/f32503dfde6e3d003cafae05165c0b211c1c04bf)
 - 🐞 fix prettier format on release [`4314e4f`](https://github.com/philippdormann/gymhmensa/commit/4314e4f00b6197e49f15b4b053e1d90bccffdfa0)
 
