@@ -32,7 +32,7 @@ exports.parser = (input) => {
 			tmp('#strDetails').parent().parent().remove();
 			tmp('td').removeAttr('id');
 			tmp('tr').removeAttr('id');
-			tmp = tmp.html();
+			tmp = tmp("#tblMain").parent().html()
 			tmp = tmp.replaceAll('<td>•&nbsp;</td>', '');
 
 			tmp = minify(tmp, {
@@ -40,74 +40,7 @@ exports.parser = (input) => {
 				minifyCSS: true,
 				collapseWhitespace: true
 			});
-			tmp = tmp.replaceAll(
-				'<tr><td></td></tr>',
-				''
-			);
-			tmp = tmp.replaceAll(
-				'<td><table><tbody><tr><td><table><tbody>',
-				'<day>'
-			);
-			tmp = tmp.replaceAll(
-				'</tbody></table></td></tr></tbody></table></td>',
-				'</day>'
-			);
-			tmp = tmp.replaceAll(
-				'<tr><td><div>',
-				'<food>'
-			);
-			tmp = tmp.replaceAll(
-				'</div></td></tr></day>',
-				'</food></day>'
-			);
-			tmp = tmp.replaceAll(
-				'</div></td></tr>',
-				'</food>'
-			);
-			tmp = tmp.replaceAll(
-				'</th></tr><tr><td>',
-				'</th></tr><wrapper><td>'
-			);
-			tmp = tmp.replaceAll(
-				'</day></tr><tr>',
-				'</day>'
-			);
-			tmp = tmp.replaceAll(
-				'<td></td><td></td><td></td><td></td><td></td></tr>',
-				'</wrapper>'
-			);
-			tmp = tmp.replaceAll(
-				'</day><td></td></tr><tr>',
-				'</day><day></day>'
-			);
-			tmp = tmp.replaceAll(
-				'</day><td></td><day>',
-				'</day><day></day><day>'
-			);
-			tmp = tmp.replaceAll(/<food>\d+ /gi, '<food>');
 
-			fs.writeFileSync('./tmp.html', tmp);
-
-			const $1 = cheerio.load(tmp);
-			let categories = [];
-			let elements = [];
-			$1('td').each(function (index, element) {
-				categories.push($1(element).text());
-			});
-			$1('day').each(function (index, element) {
-				const $2 = cheerio.load($1(element).html());
-				let items = [];
-				$2('food').each(function (index, element) {
-					const $3 = cheerio.load($2(element).html());
-					let zusatzstoffe = [];
-					$3('span').each(function (index, element) {
-						zusatzstoffe.push($3(element).text());
-					});
-					$3('sub').remove();
-					items.push({ title: $3.text(), zusatzstoffe });
-				});
-				elements.push(items);
-			});
 			const $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
 			let days = [];
@@ -115,24 +48,47 @@ exports.parser = (input) => {
 				days.push($(e).html());
 			});
 			days = days.filter((h) => h !== '');
-			elements = chunk(elements, days.length);
-			console.log(elements);
-			let out = {};
-			let index = 0;
-			categories.forEach((c) => {
-				let i = 0;
-				days.forEach((d) => {
-					if (!out[`${days[i]}`]) {
-						out[`${days[i]}`] = {};
+			tmp = tmp.replaceAll(
+				'<tr><td></td><td></td><td></td><td></td><td></td></tr>',
+				''
+			);
+			tmp = tmp.replaceAll(
+				'<tr><td></td></tr>',
+				''
+			);
+			tmp = tmp.replaceAll(/<div>\d+ /gi, '<div>');
+
+			const $1 = cheerio.load(tmp)
+			let categories = []
+			let items = []
+			$1("td").each(function (index, element) {
+				if ($1(element).html().includes("<div>")) {
+					const $2 = cheerio.load($1(element).html());
+					$2("td table tbody").each(function (index, element) {
+						const $5 = cheerio.load($(element).html());
+						let foods = []
+						$5("div").each(function (index, element) {
+							const $3 = cheerio.load($5(element).html());
+							let z = [];
+							$3('span').each(function (index, element) {
+								z.push($3(element).text());
+							});
+							$3('sub').remove();
+							foods.push({ type: "food", title: $3.text(), z });
+						});
+						items.push(foods);
+					});
+				} else {
+					if ($1(element).text() !== "") {
+						categories.push($1(element).text())
+						items.push([{ title: $1(element).text(), type: "category" }])
+					} else {
+						items.push({ title: $1(element).text(), type: "food", z: [] })
 					}
-					console.log({ index });
-					// out[`${days[i]}`][`${categories[index]}`] = elements[index][i];
-					i++;
-				});
-				index++;
+				}
 			});
-			fs.writeFileSync('./elements.json', JSON.stringify(elements));
-			resolve(out);
+			fs.writeFileSync('./elements.json', JSON.stringify(items));
+			resolve(items);
 		} catch (e) {
 			reject(e);
 		}
