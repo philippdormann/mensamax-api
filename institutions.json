@@ -192,6 +192,46 @@
 		"tested": false
 	},
 	{
+		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=S367&E=FLG",
+		"provider": "mensaservice.de",
+		"project": "S367",
+		"facility": "FLG",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensa365.de/LOGINPLAN.ASPX?P=rt243&E=whr",
+		"provider": "mensa365.de",
+		"project": "rt243",
+		"facility": "whr",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensahome.de/LOGINPLAN.ASPX?P=lb124&E=FWS",
+		"provider": "mensahome.de",
+		"project": "lb124",
+		"facility": "FWS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=WI243&E=EHS",
+		"provider": "mensaservice.de",
+		"project": "WI243",
+		"facility": "EHS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=Heidberg",
+		"provider": "mensaservice.de",
+		"project": "HH222",
+		"facility": "Heidberg",
+		"name": "???",
+		"tested": false
+	},
+	{
 		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=lerchenfeld",
 		"provider": "mensaservice.de",
 		"project": "HH222",
@@ -200,10 +240,58 @@
 		"tested": false
 	},
 	{
+		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=Ohmoor",
+		"provider": "mensaservice.de",
+		"project": "HH222",
+		"facility": "Ohmoor",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "https://mammasmensa.de/LOGINPLAN.ASPX?P=HH222&E=Ohmoor",
+		"provider": "mammasmensa.de",
+		"project": "HH222",
+		"facility": "STS-Lohbruegge",
+		"name": "???",
+		"tested": false
+	},
+	{
 		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FO111&E=PHR",
 		"provider": "mensaonline.de",
 		"project": "FO111",
 		"facility": "PHR",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=BC111&E=RS",
+		"provider": "mensaonline.de",
+		"project": "BC111",
+		"facility": "RS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=GOE271&E=GYM",
+		"provider": "mensaonline.de",
+		"project": "GOE271",
+		"facility": "GYM",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=AZ000&E=OHS",
+		"provider": "mensaonline.de",
+		"project": "AZ000",
+		"facility": "OHS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=EMD160&E=MAX",
+		"provider": "mensaonline.de",
+		"project": "EMD160",
+		"facility": "MAX",
 		"name": "???",
 		"tested": false
 	},
@@ -248,6 +336,30 @@
 		"tested": false
 	},
 	{
+		"sample_url": "http://mensaweb.de/loginplan.aspx?P=Brilon&E=H-L-S",
+		"provider": "mensaweb.de",
+		"project": "Brilon",
+		"facility": "H-L-S",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/loginplan.aspx?P=RZ222&E=CGW",
+		"provider": "mensaland.de",
+		"project": "RZ222",
+		"facility": "CGW",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/loginplan.aspx?P=FR333&E=GS",
+		"provider": "mensaland.de",
+		"project": "FR333",
+		"facility": "GS",
+		"name": "???",
+		"tested": false
+	},
+	{
 		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=BOR000&E=Euregio",
 		"provider": "mensaonline.de",
 		"project": "BOR000",
@@ -284,6 +396,46 @@
 		"provider": "mensaservice.de",
 		"project": "ES222",
 		"facility": "Sprache",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=DA124&E=FES",
+		"provider": "mensaland.de",
+		"project": "DA124",
+		"facility": "FES",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=MR222&E=RGS",
+		"provider": "mensaland.de",
+		"project": "MR222",
+		"facility": "RGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=CUX124&E=IGS-Stade",
+		"provider": "mensaland.de",
+		"project": "CUX124",
+		"facility": "IGS-Stade",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=ES243&E=LUG",
+		"provider": "mensaland.de",
+		"project": "ES243",
+		"facility": "LUG",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=HH666&E=RLW",
+		"provider": "mensaland.de",
+		"project": "HH666",
+		"facility": "RLW",
 		"name": "???",
 		"tested": false
 	}
