@@ -12,8 +12,8 @@ module.exports = (req, res) => {
 	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`
 	content.forEach((src) => {
 		let tested_insert = '❓ not tested';
-		if (src.tested === true) {
-			tested_insert = `👍 tested on: ${src.tested_on}`;
+		if (src.tested) {
+			tested_insert = `👍 tested on: ${src.tested}`;
 		}
 		src.sample_url = `https://${src.provider}/LOGINPLAN.ASPX?P=${src.project}&E=${src.facility}`
 

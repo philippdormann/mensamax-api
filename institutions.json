@@ -32,7 +32,7 @@
 		"project": "FO111",
 		"facility": "herz",
 		"name": "Gymnasium Herzogenaurach",
-		"tested": false
+		"tested": "2021-06-25"
 	},
 	{
 		"provider": "mensadigital.de",
