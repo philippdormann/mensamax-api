@@ -54,6 +54,7 @@ exports.parser = (input) => {
 			tmp = tmp.replaceAll('</tr><tr>', '');
 			tmp = tmp.replaceAll('</th><td>', '</tr></th><td>');
 			tmp = tmp.replaceAll('</tr></tbody></table>', '</tbody></table>');
+			tmp = tmp.replaceAll(/<food>\d+ /g, '<food>');
 			// begin parsing: load html into cheerio object
 			let $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
