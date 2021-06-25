@@ -1,14 +1,8 @@
-load-from-server.json
 parsed.json
-parsing.js
-parsing-multi.test.js
 README.md
 response.json
 server.js
 test.html
-raw-samples
-parsed-samples
-*.lock
 docker-compose.yml
 Dockerfile
 .prettierignore
