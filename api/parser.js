@@ -65,9 +65,43 @@ exports.parser = (input) => {
 			// ==========
 			// load preprocessed html into cheerio object
 			$ = cheerio.load(tmp)
-			let out = {}
-			let categories = []
-			let items = []
+			// = = = = = = = = = = = = = = = = = = 
+			const $1 = cheerio.load(tmp);
+			let categories = [];
+			let elements = [];
+			$1('td').each(function (index, element) {
+				categories.push($1(element).text());
+			});
+			$1('day').each(function (index, element) {
+				const $2 = cheerio.load($1(element).html());
+				let items = [];
+				$2('food').each(function (index, element) {
+					const $3 = cheerio.load($2(element).html());
+					let zusatzstoffe = [];
+					$3('span').each(function (index, element) {
+						zusatzstoffe.push($3(element).text());
+					});
+					$3('sub').remove();
+					items.push({ title: $3.text(), zusatzstoffe });
+				});
+				elements.push(items);
+			});
+			$ = cheerio.load(input);
+			elements = chunk(elements, days.length);
+			let out = {};
+			let index = 0;
+			categories.forEach((c) => {
+				let i = 0;
+				days.forEach((d) => {
+					if (!out[`${days[i]}`]) {
+						out[`${days[i]}`] = {};
+					}
+					out[`${days[i]}`][`${categories[index]}`] = elements[index][i];
+					i++;
+				});
+				index++;
+			});
+			// = = = = = = = = = = = = = = = = = = 
 			fs.writeFileSync("./outdemo.html", tmp)
 			resolve(out);
 		} catch (e) {
