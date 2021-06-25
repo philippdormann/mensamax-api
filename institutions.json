@@ -1,6 +1,5 @@
 [
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=dts",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "dts",
@@ -8,61 +7,48 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=DSK",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "DSK",
 		"name": "Dreiberg Schule Knetzgau",
-		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ghr",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "ghr",
 		"name": "Georg-Hartmann-Realschule Forchheim",
-		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hoch",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "hoch",
 		"name": "Gymnasium Höchstadt a.d.Aisch",
-		"tested": true,
-		"tested_on": "13.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "herz",
 		"name": "Gymnasium Herzogenaurach",
-		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=mscadolzburg",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "mscadolzburg",
 		"name": "Mittelschule Cadolzburg",
-		"tested": true,
-		"tested_on": "13.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=frid",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "frid",
 		"name": "Gymnasium Fridericianum",
-		"tested": true,
-		"tested_on": "13.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=msf",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "msf",
@@ -70,7 +56,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=feu",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "feu",
@@ -78,7 +63,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=SLM",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "SLM",
@@ -86,7 +70,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=gpa",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "gpa",
@@ -94,7 +77,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=Schulhaus",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "Schulhaus",
@@ -102,7 +84,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=ggo",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "ggo",
@@ -110,7 +91,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=sjw",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "sjw",
@@ -118,7 +98,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=drb",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "drb",
@@ -126,7 +105,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=gsr",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "gsr",
@@ -134,7 +112,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=lurf",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "lurf",
@@ -142,7 +119,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=hlg",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "hlg",
@@ -150,7 +126,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=kat",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "kat",
@@ -158,7 +133,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=sfh",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "sfh",
@@ -166,25 +140,20 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=GSHerzogenaurach",
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "GSHerzogenaurach",
 		"name": "Grundschule Herzogenaurach",
-		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=KEH111&E=ggm",
 		"provider": "mensapoint.de",
 		"project": "KEH111",
 		"facility": "ggm",
 		"name": "Gabelsberger-Gymnasium Mainburg",
-		"tested": true,
-		"tested_on": "12.07.2020"
+		"tested": false
 	},
 	{
-		"sample_url": "https://mensapoint.de/LOGINPLAN.ASPX?P=LL124&E=FWS",
 		"provider": "mensapoint.de",
 		"project": "LL124",
 		"facility": "FWS",
@@ -192,7 +161,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=S367&E=FLG",
 		"provider": "mensaservice.de",
 		"project": "S367",
 		"facility": "FLG",
@@ -200,7 +168,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensa365.de/LOGINPLAN.ASPX?P=rt243&E=whr",
 		"provider": "mensa365.de",
 		"project": "rt243",
 		"facility": "whr",
@@ -208,7 +175,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensahome.de/LOGINPLAN.ASPX?P=lb124&E=FWS",
 		"provider": "mensahome.de",
 		"project": "lb124",
 		"facility": "FWS",
@@ -216,7 +182,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=WI243&E=EHS",
 		"provider": "mensaservice.de",
 		"project": "WI243",
 		"facility": "EHS",
@@ -224,7 +189,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=Heidberg",
 		"provider": "mensaservice.de",
 		"project": "HH222",
 		"facility": "Heidberg",
@@ -232,7 +196,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=lerchenfeld",
 		"provider": "mensaservice.de",
 		"project": "HH222",
 		"facility": "lerchenfeld",
@@ -240,7 +203,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaservice.de/LOGINPLAN.ASPX?P=HH222&E=Ohmoor",
 		"provider": "mensaservice.de",
 		"project": "HH222",
 		"facility": "Ohmoor",
@@ -248,7 +210,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mammasmensa.de/LOGINPLAN.ASPX?P=HH222&E=Ohmoor",
 		"provider": "mammasmensa.de",
 		"project": "HH222",
 		"facility": "STS-Lohbruegge",
@@ -256,7 +217,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FO111&E=PHR",
 		"provider": "mensaonline.de",
 		"project": "FO111",
 		"facility": "PHR",
@@ -264,7 +224,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=BC111&E=RS",
 		"provider": "mensaonline.de",
 		"project": "BC111",
 		"facility": "RS",
@@ -272,7 +231,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=GOE271&E=GYM",
 		"provider": "mensaonline.de",
 		"project": "GOE271",
 		"facility": "GYM",
@@ -280,7 +238,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=AZ000&E=OHS",
 		"provider": "mensaonline.de",
 		"project": "AZ000",
 		"facility": "OHS",
@@ -288,7 +245,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=EMD160&E=MAX",
 		"provider": "mensaonline.de",
 		"project": "EMD160",
 		"facility": "MAX",
@@ -296,7 +252,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "https://mensaonline.de/LOGINPLAN.ASPX?P=Schwanau&E=bvowrs",
 		"provider": "mensaonline.de",
 		"project": "Schwanau",
 		"facility": "bvowrs",
@@ -304,7 +259,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/loginplan.aspx?p=S243&e=MBS",
 		"provider": "mensaonline.de",
 		"project": "S243",
 		"facility": "MBS",
@@ -312,7 +266,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=RS",
 		"provider": "mensaonline.de",
 		"project": "FN222",
 		"facility": "RS",
@@ -320,7 +273,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=FN222&E=MGTT",
 		"provider": "mensaonline.de",
 		"project": "FN222",
 		"facility": "MGTT",
@@ -328,7 +280,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaweb.de/loginplan.aspx?P=StMartin&E=Gs+Dockweiler",
 		"provider": "mensaweb.de",
 		"project": "StMartin",
 		"facility": "Gs+Dockweiler",
@@ -336,7 +287,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaweb.de/loginplan.aspx?P=Brilon&E=H-L-S",
 		"provider": "mensaweb.de",
 		"project": "Brilon",
 		"facility": "H-L-S",
@@ -344,7 +294,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/loginplan.aspx?P=RZ222&E=CGW",
 		"provider": "mensaland.de",
 		"project": "RZ222",
 		"facility": "CGW",
@@ -352,7 +301,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/loginplan.aspx?P=FR333&E=GS",
 		"provider": "mensaland.de",
 		"project": "FR333",
 		"facility": "GS",
@@ -360,7 +308,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=BOR000&E=Euregio",
 		"provider": "mensaonline.de",
 		"project": "BOR000",
 		"facility": "Euregio",
@@ -368,7 +315,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaonline.de/LOGINPLAN.ASPX?P=PF1111&E=kepler",
 		"provider": "mensaonline.de",
 		"project": "PF1111",
 		"facility": "kepler",
@@ -376,7 +322,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaweb.de/LOGINPLAN.ASPX?P=HDH111&E=WG",
 		"provider": "mensaweb.de",
 		"project": "HDH111",
 		"facility": "WG",
@@ -384,7 +329,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaservice.de/LOGINPLAN.ASPX?P=TUE124&E=ALS",
 		"provider": "mensaservice.de",
 		"project": "TUE124",
 		"facility": "ALS",
@@ -392,7 +336,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaservice.de/LOGINPLAN.ASPX?P=ES222&E=Sprache",
 		"provider": "mensaservice.de",
 		"project": "ES222",
 		"facility": "Sprache",
@@ -400,7 +343,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=DA124&E=FES",
 		"provider": "mensaland.de",
 		"project": "DA124",
 		"facility": "FES",
@@ -408,7 +350,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=MR222&E=RGS",
 		"provider": "mensaland.de",
 		"project": "MR222",
 		"facility": "RGS",
@@ -416,7 +357,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=CUX124&E=IGS-Stade",
 		"provider": "mensaland.de",
 		"project": "CUX124",
 		"facility": "IGS-Stade",
@@ -424,7 +364,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=ES243&E=LUG",
 		"provider": "mensaland.de",
 		"project": "ES243",
 		"facility": "LUG",
@@ -432,7 +371,6 @@
 		"tested": false
 	},
 	{
-		"sample_url": "http://mensaland.de/LOGINPLAN.ASPX?P=HH666&E=RLW",
 		"provider": "mensaland.de",
 		"project": "HH666",
 		"facility": "RLW",
