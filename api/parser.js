@@ -15,6 +15,7 @@ exports.parser = (input) => {
 	return new Promise(function (resolve, reject) {
 		try {
 			let tmp = cheerio.load(input);
+			const timeRange = tmp('#lblWoche').text()
 			// drop all attributes + unneeded elements for better parsing
 			tmp('*')
 				.removeAttr('style')
@@ -43,6 +44,16 @@ exports.parser = (input) => {
 			});
 			// remove empty food items
 			tmp = tmp.replaceAll('<tr><td></td></tr>', '');
+			tmp = tmp.replaceAll('<td></td><td></td><td></td><td></td><td></td>', '');
+			tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td><div>', '</food></day><day><food>');
+			tmp = tmp.replaceAll('<td><table><tbody><tr><td><table><tbody><tr><td><div>', '<day><food>');
+			tmp = tmp.replaceAll('</div></td></tr><tr><td><div>', '</food><food>');
+			tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td>', '</food></day>');
+			tmp = tmp.replaceAll('</day><td></td><food>', '</day><day></day><day><food>');
+			tmp = tmp.replaceAll('<td></td>', '<day></day>');
+			tmp = tmp.replaceAll('</tr><tr>', '');
+			tmp = tmp.replaceAll('</th><td>', '</tr></th><td>');
+			tmp = tmp.replaceAll('</tr></tbody></table>', '</tbody></table>');
 			// begin parsing: load html into cheerio object
 			let $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
@@ -57,54 +68,7 @@ exports.parser = (input) => {
 			let out = {}
 			let categories = []
 			let items = []
-			fs.writeFileSync("./outdemo.html", $.html())
-
-			// DEBUG: console.log($("#tblMain > tbody > tr").length);
-
-			// loop through table rows
-			$("#tblMain > tbody > tr").each(function (index, element) {
-				// exclude days row
-				if (index !== 0) {
-					const ehtml = $(element).html()
-					fs.appendFileSync("outdemo1.html", ehtml + "\n\n")
-					$ = cheerio.load(ehtml);
-					let row = []
-					console.log(ehtml);
-					$("td").each(function (index, element) {
-						// const ehtml = $(element).parent().html()
-						// if (ehtml.includes("<div>")) {
-						// 	console.log("it's food");
-						// } else {
-						// 	console.log("it's a category");
-						// }
-					});
-
-					// 	$("td table tbody").each(function (index, element) {
-					// 		$ = cheerio.load($(element).html());
-					// 		let foods = []
-					// 		$("div").each(function (index, element) {
-					// 			const $3 = cheerio.load($(element).html());
-					// 			let z = [];
-					// 			$3('span').each((i, e) =>
-					// 				z.push($3(e).text())
-					// 			);
-					// 			$3('sub').remove();
-					// 			foods.push({ type: "food", title: $3.text(), z });
-					// 		});
-					// 		items.push(foods);
-					// 	});
-					// } else {
-					// 	if ($(element).text() !== "") {
-					// 		categories.push($(element).text())
-					// 		items.push([{ title: $(element).text(), type: "category" }])
-					// 	} else {
-					// 		items.push({ title: $(element).text(), type: "food", z: [] })
-					// 	}
-					// }
-				}
-			});
-			// fs.writeFileSync("outdemo.json", JSON.stringify(items))
-			// console.log(items);
+			fs.writeFileSync("./outdemo.html", tmp)
 			resolve(out);
 		} catch (e) {
 			reject(e);
