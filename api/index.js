@@ -2,11 +2,11 @@ const { fetcher } = require('./fetcher');
 const { parser } = require('./parser');
 module.exports = async function start_it_up(req, res) {
 	try {
-		const out = await fetcher({ p: req.query.p, e: req.query.e })
-		const parsed = await parser(out)
+		const html = await fetcher({ p: req.query.p, e: req.query.e })
+		const parsed = await parser(html);
 		return send_it(
 			200,
-			{ status: 'ok', payload: parsed },
+			{ status: 'ok', payload: parsed.json },
 			req,
 			res
 		);
