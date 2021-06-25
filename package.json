@@ -1,5 +1,5 @@
 {
-	"name": "mensamax-api",
+	"name": "@philippdormann/mensamax-api",
 	"version": "1.0.0",
 	"license": "MIT",
 	"description": "MensaMax-API. Simple APIs for using MensaMax data in modern applications",
