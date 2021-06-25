@@ -1,6 +1,4 @@
 const cheerio = require('cheerio');
-var parser = require('fast-xml-parser');
-const fs = require('fs');
 const minify = require('html-minifier').minify;
 function chunk(arr, len) {
 	let chunks = [];
@@ -61,7 +59,6 @@ exports.parser = (input) => {
 			// remove leading IDs from foods
 			tmp = tmp.replaceAll(/<food>\d+ /g, '<food>');
 			// at this point, the html/ xml in 'tmp' is pretty readable
-
 			// begin parsing: load html into cheerio object
 			let $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
@@ -70,10 +67,9 @@ exports.parser = (input) => {
 				days.push($(e).html());
 			});
 			days = days.filter((h) => h !== '');
-			// ==========
 			// load preprocessed html into cheerio object
 			$ = cheerio.load(tmp)
-			// = = = = = = = = = = = = = = = = = = 
+			// parse markup to arrays
 			const $1 = cheerio.load(tmp);
 			let categories = [];
 			let elements = [];
@@ -111,9 +107,6 @@ exports.parser = (input) => {
 				});
 				index++;
 			});
-			// = = = = = = = = = = = = = = = = = = 
-			fs.writeFileSync("./outdemo.html", tmp)
-			fs.writeFileSync("./outdemo.json", JSON.stringify(out))
 			resolve({ json: out, html: tmp, hinweis, categories, timeRange, days, elements_unchunked });
 		} catch (e) {
 			reject(e);

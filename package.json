@@ -10,13 +10,12 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"axios": "^0.21.1",
+		"axios": "0.21.1",
 		"cheerio": "1.0.0-rc.10",
 		"express": "4.17.1",
 		"html-minifier": "4.0.0",
 		"path": "0.12.7",
-		"request": "2.88.2",
-		"undici": "^4.0.0"
+		"request": "2.88.2"
 	},
 	"devDependencies": {
 		"nodemon": "2.0.7",
