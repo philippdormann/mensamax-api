@@ -1,4 +1,4 @@
-FROM node:14.5.0-alpine3.12
+FROM node:16.3.0-alpine3.13
 COPY ./ ./
-RUN yarn install --production=true
+RUN yarn --production=true --frozen-lockfile
 CMD [ "node", "server.js" ]

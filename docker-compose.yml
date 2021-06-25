@@ -4,6 +4,6 @@ services:
         restart: always
         build: .
         ports:
-            - 80:80
-        volumes:
-            - './cache/:./cache'
+            - 50005:80
+        # volumes:
+        #     - './cache/:./cache'

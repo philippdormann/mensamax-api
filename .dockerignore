@@ -7,3 +7,4 @@ Dockerfile
 .DS_Store
 test
 sandbox-parsing.js
+.env
