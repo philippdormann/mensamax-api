@@ -43,6 +43,118 @@
 	},
 	{
 		"provider": "mensadigital.de",
+		"project": "HH2306",
+		"facility": "Irena-Sendler",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HH2306",
+		"facility": "STS-Hegholt",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HH2306",
+		"facility": "GS-Hegholt",
+		"name": "Grundschule Bramfeld",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "FN2232",
+		"facility": "DHG",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HH2306",
+		"facility": "STS-Brado",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HP2329",
+		"facility": "Goethe",
+		"name": "Goethe-Gymnasium Bensheim",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HP2329",
+		"facility": "Gutenberg",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HH2309",
+		"facility": "ADW",
+		"name": "Adolph-Diesterweg-Schule Hamburg",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "HB2349",
+		"facility": "AG",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "F197",
+		"facility": "MPS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "DON2354",
+		"facility": "Mensation",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "EN2322",
+		"facility": "SEW",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "STA2336",
+		"facility": "BSZ-Wasserburg",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "WI243",
+		"facility": "Leibniz",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "WI243",
+		"facility": "Oranien",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "WI243",
+		"facility": "Martin-Buher",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "frid",
 		"name": "Gymnasium Fridericianum",
