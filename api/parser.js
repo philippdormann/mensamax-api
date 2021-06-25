@@ -27,7 +27,7 @@ exports.parser = (input) => {
 	return new Promise(function (resolve, reject) {
 		try {
 			let tmp = cheerio.load(input);
-			const timeRange = tmp('#lblWoche').text()
+			const timeRange = tmp('#lblWoche').text();
 			// drop all attributes + unneeded elements for better parsing
 			tmp('*')
 				.removeAttr('style')
@@ -46,7 +46,7 @@ exports.parser = (input) => {
 			tmp('#strDetails').parent().parent().remove();
 			tmp('td').removeAttr('id');
 			tmp('tr').removeAttr('id');
-			tmp = tmp("#tblMain").parent().html()
+			tmp = tmp('#tblMain').parent().html();
 			tmp = tmp.replaceAll('<td>•&nbsp;</td>', '');
 			// minify html for easier parsing
 			tmp = minify(tmp, {
@@ -57,14 +57,35 @@ exports.parser = (input) => {
 			// remove empty food items
 			tmp = tmp.replaceAll('<tr><td></td></tr>', '');
 			// remove empty row at end of table
-			tmp = tmp.replaceAll('<td></td><td></td><td></td><td></td><td></td>', '');
+			tmp = tmp.replaceAll(
+				'<td></td><td></td><td></td><td></td><td></td>',
+				''
+			);
 			// replace tr,div,td with food+day elements for readability
-			tmp = tmp.replaceAll('<td></td><td></td><td></td><td></td><td></td>', '');
-			tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td><div>', '</food></day><day><food>');
-			tmp = tmp.replaceAll('<td><table><tbody><tr><td><table><tbody><tr><td><div>', '<day><food>');
-			tmp = tmp.replaceAll('</div></td></tr><tr><td><div>', '</food><food>');
-			tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td>', '</food></day>');
-			tmp = tmp.replaceAll('</day><td></td><food>', '</day><day></day><day><food>');
+			tmp = tmp.replaceAll(
+				'<td></td><td></td><td></td><td></td><td></td>',
+				''
+			);
+			tmp = tmp.replaceAll(
+				'</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td><div>',
+				'</food></day><day><food>'
+			);
+			tmp = tmp.replaceAll(
+				'<td><table><tbody><tr><td><table><tbody><tr><td><div>',
+				'<day><food>'
+			);
+			tmp = tmp.replaceAll(
+				'</div></td></tr><tr><td><div>',
+				'</food><food>'
+			);
+			tmp = tmp.replaceAll(
+				'</div></td></tr></tbody></table></td></tr></tbody></table></td>',
+				'</food></day>'
+			);
+			tmp = tmp.replaceAll(
+				'</day><td></td><food>',
+				'</day><day></day><day><food>'
+			);
 			tmp = tmp.replaceAll('<td></td>', '<day></day>');
 			tmp = tmp.replaceAll('</tr><tr>', '');
 			tmp = tmp.replaceAll('</th><td>', '</tr></th><td>');
@@ -84,7 +105,7 @@ exports.parser = (input) => {
 			});
 			days = days.filter((h) => h !== '');
 			// load preprocessed html into cheerio object
-			$ = cheerio.load(tmp)
+			$ = cheerio.load(tmp);
 			// parse markup to arrays
 			const $1 = cheerio.load(tmp);
 			let categories = [];
@@ -118,14 +139,23 @@ exports.parser = (input) => {
 					if (!out[`${days[i]}`]) {
 						out[`${days[i]}`] = {};
 					}
-					out[`${days[i]}`][`${categories[index]}`] = elements[index][i];
+					out[`${days[i]}`][`${categories[index]}`] =
+						elements[index][i];
 					i++;
 				});
 				index++;
 			});
-			resolve({ json: out, html: tmp, hinweis, categories, timeRange, days, elements_unchunked });
+			resolve({
+				json: out,
+				html: tmp,
+				hinweis,
+				categories,
+				timeRange,
+				days,
+				elements_unchunked
+			});
 		} catch (e) {
 			reject(e);
 		}
-	})
-}
+	});
+};

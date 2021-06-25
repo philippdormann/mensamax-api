@@ -38,7 +38,7 @@
 			"publish": false
 		},
 		"hooks": {
-			"after:bump": "auto-changelog --commit-limit false -p -u --hide-credit && git add CHANGELOG.md"
+			"after:bump": "auto-changelog --commit-limit false -p -u --hide-credit && format && git add ."
 		}
 	}
 }

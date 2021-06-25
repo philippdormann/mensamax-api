@@ -1,9 +1,9 @@
-version: "3"
+version: '3'
 services:
-  api:
-    restart: always
-    build: .
-    ports:
-      - 80:80
-    volumes:
-      - "./cache/:./cache"
+    api:
+        restart: always
+        build: .
+        ports:
+            - 80:80
+        volumes:
+            - './cache/:./cache'

@@ -9,13 +9,13 @@ let content = JSON.parse(
 );
 module.exports = (req, res) => {
 	let table = '';
-	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`
+	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`;
 	content.forEach((src) => {
 		let tested_insert = '❓ not tested';
 		if (src.tested) {
 			tested_insert = `👍 tested on: ${src.tested}`;
 		}
-		src.sample_url = `https://${src.provider}/LOGINPLAN.ASPX?P=${src.project}&E=${src.facility}`
+		src.sample_url = `https://${src.provider}/LOGINPLAN.ASPX?P=${src.project}&E=${src.facility}`;
 
 		table += `
 						<h4>${src.name}</h4>
