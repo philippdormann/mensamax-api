@@ -376,5 +376,138 @@
 		"facility": "RLW",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "KarlGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "WBGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "EKHS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "LeibnizRS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "WRS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "DenkteGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "KissenGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "SchuleRemlingen",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "GsSchoepp",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "WinnigstedtGS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "HortSchoeppenstedt",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "KitaAhlum",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "WR",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "Phantasia",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "Sonnenschein",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "KitaHummelburg",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "KitaRasselbande",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaservice.de",
+		"project": "WF111",
+		"facility": "Assewind",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensawelten.de",
+		"project": "BS111",
+		"facility": "KB",
+		"name": "???",
+		"tested": false
 	}
 ]
