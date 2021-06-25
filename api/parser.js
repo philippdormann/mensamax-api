@@ -95,7 +95,9 @@ exports.parser = (input) => {
 				elements.push(items);
 			});
 			$ = cheerio.load(input);
+			const elements_unchunked = elements;
 			elements = chunk(elements, days.length);
+			// parse elements into final json structure
 			let out = {};
 			let index = 0;
 			categories.forEach((c) => {
@@ -112,7 +114,7 @@ exports.parser = (input) => {
 			// = = = = = = = = = = = = = = = = = = 
 			fs.writeFileSync("./outdemo.html", tmp)
 			fs.writeFileSync("./outdemo.json", JSON.stringify(out))
-			resolve({ json: out, html: tmp, hinweis, categories, timeRange, days });
+			resolve({ json: out, html: tmp, hinweis, categories, timeRange, days, elements_unchunked });
 		} catch (e) {
 			reject(e);
 		}
