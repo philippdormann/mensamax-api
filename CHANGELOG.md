@@ -2,12 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [2.0.0-rc.1](https://github.com/philippdormann/gymhmensa/compare/1.0.0...2.0.0-rc.1)
+#### [v2.0.0-rc.2](https://github.com/philippdormann/gymhmensa/compare/v2.0.0-rc.1...v2.0.0-rc.2)
+
+- enforce formatting [`00e45c1`](https://github.com/philippdormann/gymhmensa/commit/00e45c12b08f040b12960721e46ae32ad0ada748)
+- 📝 Updated README [`ca31ea9`](https://github.com/philippdormann/gymhmensa/commit/ca31ea93613e9337003b9c90ee7dc69497cafe8f)
+- add typedef to parser [`f32503d`](https://github.com/philippdormann/gymhmensa/commit/f32503dfde6e3d003cafae05165c0b211c1c04bf)
+- 🐞 fix prettier format on release [`4314e4f`](https://github.com/philippdormann/gymhmensa/commit/4314e4f00b6197e49f15b4b053e1d90bccffdfa0)
+
+#### [v2.0.0-rc.1](https://github.com/philippdormann/gymhmensa/compare/1.0.0...v2.0.0-rc.1)
+
+> 25 June 2021
 
 - 🧹 cleanup [`d09d895`](https://github.com/philippdormann/gymhmensa/commit/d09d8956fb895988f2b532b675e6410facf4f0a0)
 - 🚧 WIP: basic sample for fetcher + parser usage [`b7f3336`](https://github.com/philippdormann/gymhmensa/commit/b7f3336d701b049a817723c050665b29284d7159)
 - package fetcher to module [`bf34c57`](https://github.com/philippdormann/gymhmensa/commit/bf34c57d14df89263e9e6c663f0ad9d4853ae57e)
 - 🚧WIP: food/ day/ menu parser [`f53eb68`](https://github.com/philippdormann/gymhmensa/commit/f53eb68ca968ba1d95f44a0f6fce0d9523494f77)
+- 🚀RELEASE v2.0.0-rc.1 [`1e1f1f4`](https://github.com/philippdormann/gymhmensa/commit/1e1f1f4a80d99455ded0dd898d6264206e7797cc)
 - added 19 new institutions [`4cdcb0e`](https://github.com/philippdormann/gymhmensa/commit/4cdcb0e93c72ba790ef2edf36010fa486c45f58a)
 - +19 institutions [`c0843bd`](https://github.com/philippdormann/gymhmensa/commit/c0843bddb5db553a8feb9203a6bcbaf715d85b0d)
 - 🧹 cleanup parser with cheerio usage [`2def5e6`](https://github.com/philippdormann/gymhmensa/commit/2def5e66bffc28fcaed001690542011efba4a346)
