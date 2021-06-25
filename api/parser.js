@@ -1,4 +1,5 @@
 const cheerio = require('cheerio');
+var parser = require('fast-xml-parser');
 const fs = require('fs');
 const minify = require('html-minifier').minify;
 function chunk(arr, len) {
@@ -34,61 +35,77 @@ exports.parser = (input) => {
 			tmp('tr').removeAttr('id');
 			tmp = tmp("#tblMain").parent().html()
 			tmp = tmp.replaceAll('<td>•&nbsp;</td>', '');
-
+			// minify html for easier parsing
 			tmp = minify(tmp, {
 				useShortDoctype: true,
 				minifyCSS: true,
 				collapseWhitespace: true
 			});
-
-			const $ = cheerio.load(input);
+			// remove empty food items
+			tmp = tmp.replaceAll('<tr><td></td></tr>', '');
+			// begin parsing: load html into cheerio object
+			let $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
 			let days = [];
 			$('.tdHeader th').each((i, e) => {
 				days.push($(e).html());
 			});
 			days = days.filter((h) => h !== '');
-			tmp = tmp.replaceAll(
-				'<tr><td></td><td></td><td></td><td></td><td></td></tr>',
-				''
-			);
-			tmp = tmp.replaceAll(
-				'<tr><td></td></tr>',
-				''
-			);
-			tmp = tmp.replaceAll(/<div>\d+ /gi, '<div>');
-
-			const $1 = cheerio.load(tmp)
+			// ==========
+			// load preprocessed html into cheerio object
+			$ = cheerio.load(tmp)
+			let out = {}
 			let categories = []
 			let items = []
-			$1("td").each(function (index, element) {
-				if ($1(element).html().includes("<div>")) {
-					const $2 = cheerio.load($1(element).html());
-					$2("td table tbody").each(function (index, element) {
-						const $5 = cheerio.load($(element).html());
-						let foods = []
-						$5("div").each(function (index, element) {
-							const $3 = cheerio.load($5(element).html());
-							let z = [];
-							$3('span').each(function (index, element) {
-								z.push($3(element).text());
-							});
-							$3('sub').remove();
-							foods.push({ type: "food", title: $3.text(), z });
-						});
-						items.push(foods);
+			fs.writeFileSync("./outdemo.html", $.html())
+
+			// DEBUG: console.log($("#tblMain > tbody > tr").length);
+
+			// loop through table rows
+			$("#tblMain > tbody > tr").each(function (index, element) {
+				// exclude days row
+				if (index !== 0) {
+					const ehtml = $(element).html()
+					fs.appendFileSync("outdemo1.html", ehtml + "\n\n")
+					$ = cheerio.load(ehtml);
+					let row = []
+					console.log(ehtml);
+					$("td").each(function (index, element) {
+						// const ehtml = $(element).parent().html()
+						// if (ehtml.includes("<div>")) {
+						// 	console.log("it's food");
+						// } else {
+						// 	console.log("it's a category");
+						// }
 					});
-				} else {
-					if ($1(element).text() !== "") {
-						categories.push($1(element).text())
-						items.push([{ title: $1(element).text(), type: "category" }])
-					} else {
-						items.push({ title: $1(element).text(), type: "food", z: [] })
-					}
+
+					// 	$("td table tbody").each(function (index, element) {
+					// 		$ = cheerio.load($(element).html());
+					// 		let foods = []
+					// 		$("div").each(function (index, element) {
+					// 			const $3 = cheerio.load($(element).html());
+					// 			let z = [];
+					// 			$3('span').each((i, e) =>
+					// 				z.push($3(e).text())
+					// 			);
+					// 			$3('sub').remove();
+					// 			foods.push({ type: "food", title: $3.text(), z });
+					// 		});
+					// 		items.push(foods);
+					// 	});
+					// } else {
+					// 	if ($(element).text() !== "") {
+					// 		categories.push($(element).text())
+					// 		items.push([{ title: $(element).text(), type: "category" }])
+					// 	} else {
+					// 		items.push({ title: $(element).text(), type: "food", z: [] })
+					// 	}
+					// }
 				}
 			});
-			fs.writeFileSync('./elements.json', JSON.stringify(items));
-			resolve(items);
+			// fs.writeFileSync("outdemo.json", JSON.stringify(items))
+			// console.log(items);
+			resolve(out);
 		} catch (e) {
 			reject(e);
 		}
