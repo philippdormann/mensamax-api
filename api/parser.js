@@ -9,6 +9,20 @@ function chunk(arr, len) {
 	}
 	return chunks;
 }
+/**
+ * @typedef {Object} MensaplanResponse
+ * @property {Object} json parsed json object containing all days as keys and days/ food items as object values
+ * @property {string} html human readable html version of mensaplan
+ * @property {string} hinweis note of the institution/ kitchen
+ * @property {Array} categories array of available categories in the mensaplan
+ * @property {string} timerange start and end date of mensaplan along with calendar week if available
+ * @property {Array} days array of days in this mensaplan
+ * @property {string} days array of days in this mensaplan
+ * @property {Array} elements_unchunked unchunked array of food/ day items in this mensaplan
+ */
+/**
+ * @returns {MensaplanResponse} MensaplanResponse
+ */
 exports.parser = (input) => {
 	return new Promise(function (resolve, reject) {
 		try {
