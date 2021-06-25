@@ -83,12 +83,12 @@ exports.parser = (input) => {
 				let items = [];
 				$2('food').each(function (index, element) {
 					const $3 = cheerio.load($2(element).html());
-					let zusatzstoffe = [];
+					let additives_allergies = [];
 					$3('span').each(function (index, element) {
-						zusatzstoffe.push($3(element).text());
+						additives_allergies.push($3(element).text());
 					});
 					$3('sub').remove();
-					items.push({ title: $3.text(), zusatzstoffe });
+					items.push({ title: $3.text(), additives_allergies });
 				});
 				elements.push(items);
 			});
