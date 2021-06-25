@@ -103,7 +103,8 @@ exports.parser = (input) => {
 			});
 			// = = = = = = = = = = = = = = = = = = 
 			fs.writeFileSync("./outdemo.html", tmp)
-			resolve(out);
+			fs.writeFileSync("./outdemo.json", JSON.stringify(out))
+			resolve({ json: out, html: tmp, hinweis, categories, timeRange, days });
 		} catch (e) {
 			reject(e);
 		}
