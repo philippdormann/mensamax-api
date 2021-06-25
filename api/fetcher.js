@@ -3,6 +3,9 @@ const cheerio = require('cheerio');
 const axios = require('axios').default;
 const institutions = require('../institutions.json');
 // =========
+/**
+ * @returns {string} html content of mensaplan
+ */
 exports.fetcher = ({ p, e }) => {
 	return new Promise(function (resolve, reject) {
 		if (p && e) {
