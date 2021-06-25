@@ -44,6 +44,9 @@ exports.parser = (input) => {
 			});
 			// remove empty food items
 			tmp = tmp.replaceAll('<tr><td></td></tr>', '');
+			// remove empty row at end of table
+			tmp = tmp.replaceAll('<td></td><td></td><td></td><td></td><td></td>', '');
+			// replace tr,div,td with food+day elements for readability
 			tmp = tmp.replaceAll('<td></td><td></td><td></td><td></td><td></td>', '');
 			tmp = tmp.replaceAll('</div></td></tr></tbody></table></td></tr></tbody></table></td><td><table><tbody><tr><td><table><tbody><tr><td><div>', '</food></day><day><food>');
 			tmp = tmp.replaceAll('<td><table><tbody><tr><td><table><tbody><tr><td><div>', '<day><food>');
@@ -53,8 +56,12 @@ exports.parser = (input) => {
 			tmp = tmp.replaceAll('<td></td>', '<day></day>');
 			tmp = tmp.replaceAll('</tr><tr>', '');
 			tmp = tmp.replaceAll('</th><td>', '</tr></th><td>');
+			// fix end of file invalid markup
 			tmp = tmp.replaceAll('</tr></tbody></table>', '</tbody></table>');
+			// remove leading IDs from foods
 			tmp = tmp.replaceAll(/<food>\d+ /g, '<food>');
+			// at this point, the html/ xml in 'tmp' is pretty readable
+
 			// begin parsing: load html into cheerio object
 			let $ = cheerio.load(input);
 			const hinweis = $('#lblSpeiesplanHinweis').text();
