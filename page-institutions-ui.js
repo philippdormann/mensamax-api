@@ -27,9 +27,11 @@ module.exports = (req, res) => {
 						<br>
 						data provider: <code data-clipboard-text="${src.provider}">${src.provider}</code>
 						<br>
-						sample raw link: <a target="_blank" href="${src.sample_url}">${src.sample_url}</a>
+						raw link: <a target="_blank" href="${src.sample_url}">${src.sample_url}</a>
 						<br>
-						sample api link: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}">/api/?p=${src.project}&e=${src.facility}</a>
+						api link simple: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}">/api/?p=${src.project}&e=${src.facility}</a>
+						<br>
+						api link details: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}&details=yes">/api/?p=${src.project}&e=${src.facility}&details=yes</a>
 						<hr>
 						`;
 	});

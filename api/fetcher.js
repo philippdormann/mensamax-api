@@ -1,7 +1,6 @@
 const request = require('request').defaults({ jar: true });
 const cheerio = require('cheerio');
 const axios = require('axios').default;
-const { join } = require('path');
 const institutions = require("../institutions.json")
 // =========
 exports.fetcher = ({ p, e }) => {
