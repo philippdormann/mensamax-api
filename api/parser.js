@@ -1,3 +1,17 @@
+// ==== polyfill for Vercel Node.js v14
+if (!String.prototype.replaceAll) {
+	String.prototype.replaceAll = function (str, newStr) {
+		if (
+			Object.prototype.toString.call(str).toLowerCase() ===
+			'[object regexp]'
+		) {
+			return this.replace(str, newStr);
+		}
+		return this.replace(new RegExp(str, 'g'), newStr);
+	};
+}
+// ==== polyfill for Vercel Node.js v14
+// =====================================
 const cheerio = require('cheerio');
 const minify = require('html-minifier').minify;
 function chunk(arr, len) {
