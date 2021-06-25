@@ -58,6 +58,8 @@ exports.parser = (input) => {
 			tmp = tmp.replaceAll('</tr></tbody></table>', '</tbody></table>');
 			// remove leading IDs from foods
 			tmp = tmp.replaceAll(/<food>\d+ /g, '<food>');
+			// remove trailing whitespace from foods
+			tmp = tmp.replaceAll(' <sub>', '<sub>');
 			// at this point, the html/ xml in 'tmp' is pretty readable
 			// begin parsing: load html into cheerio object
 			let $ = cheerio.load(input);
