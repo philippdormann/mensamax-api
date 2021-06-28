@@ -3,12 +3,12 @@
 	"version": "2.0.0-rc.3",
 	"license": "MIT",
 	"description": "MensaMax-API. Simple APIs for using MensaMax data in modern applications",
-	"main": "server.js",
+	"main": "main.js",
 	"scripts": {
 		"release": "release-it",
 		"test": "ava",
 		"start": "node server.js",
-		"dev": "nodemon .",
+		"dev": "nodemon server.js",
 		"format": "prettier --write ."
 	},
 	"dependencies": {
