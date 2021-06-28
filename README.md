@@ -8,64 +8,89 @@
 🍲🥘🥡🍛🍜🦐🥔
 </pre>
 
-[![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app)
-[![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann)
-[![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann)
-[![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
+[![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app) [![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann) [![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann) [![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
 
-## 📚 Dependencies
-![Dependency Info](https://img.shields.io/david/philippd1/gymhmensa)
--   [express](https://www.npmjs.com/package/express) (minimalist web framework for node)
-    -   serve the API via web server
--   [request](https://www.npmjs.com/package/request) (Simplified HTTP client)
-    -   make HTTP-requests
--   [cheerio](https://www.npmjs.com/package/cheerio) (core jQuery designed specifically for the server)
-    -   simplify scraping the page to a readable format
--   [html-minifier](https://www.npmjs.com/package/html-minifier) (highly configurable, well-tested, JavaScript-based HTML minifier)
-    -   remove whitespace, format html to simplify scraping
+## 🧐 Usage
+> General Note: Please use your own caching strategy, MensaMax servers might be quite slow
+### API usage
+see <https://mensa.vercel.app/institutions-ui> for API URLs
+
+### npm package usage
+#### Install package
+```bash
+yarn add @philippdormann/mensamax-api
+```
+#### ts/ module imports
+```ts
+import { fetcher, parser } from '@philippdormann/mensamax-api';
+const html = await fetcher({ p: 'FO111', e: 'herz' });
+const parsed = await parser(html);
+console.log(parsed);
+```
+#### CommonJS imports
+```js
+const { fetcher, parser } = require('@philippdormann/mensamax-api');
+(async function() {
+	try {
+		const html = await fetcher({ p: 'FO111', e: 'herz' });
+		const parsed = await parser(html);
+		console.log(parsed);
+	} catch (e) {
+		console.log(e);
+	}
+})();
+```
 
 ## 🚀 Deployment
--   this script is deployed as a serverless function on the url <https://mensa.vercel.app> with [Vercel](https://vercel.com/) ☁️
--   the code to this function is found in the `/api` folder 📁
+This project is deployed as a serverless function on the url <https://mensa.vercel.app> with [Vercel](https://vercel.com/) ☁️
 
 ## 🐳 Docker Deployment
 This project can be deployed as a docker container.
 To do so, just run this code:
 ```
-docker-compose build && docker-compose down --remove-orphans && docker-compose up -d
+docker-compose up -d --build
 ```
 
-## ❔ HOWTO: local dev with Vercel
--   `npm i -g vercel` / `yarn global add vercel`
--   `vercel dev`
+## 💻 Local Development
+Either develop on your machine directly or use the provided devcontainer for VSCode
+```
+yarn && yarn dev
+```
 
-## ❔ HOWTO: run without Vercel (Express Server)
-- `npm i && npm run start`
-- `yarn && yarn start`
-
-## 🛠️ How this works
-1. Fetch data from url (like <https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz> for example)
-    -   setup request (these settings are important)
-        -   enable cookies
-        -   request method: POST
-        -   enable followAllRedirects
-        -   set login headers
-2. Parsing the data
-    -   get relevant element with cheerio
-    -   minify html 🗜️
-    -   RegEx. a lot of RegEx. 🤯🧠🤯
-3. Build JSON - via RegEx 
-4. Serve via Express/ Vercel Serverless Function
+## 💡 How this works
+1. Fetch data from url ([fetcher.js](./api/fetcher.js))
+   - fetch `VIEWSTATE` + `VIEWSTATEGENERATOR` from .NET with axios
+     - hit login endpoint with a GET request
+     - request method: POST
+     - enable followAllRedirects
+     - set login headers
+   - setup request (these settings are important)
+     - enable cookies
+     - request method: POST
+     - enable followAllRedirects
+     - set login headers
+2. Parsing the data ([parser.js](./api/parser.js))
+    - get relevant elements with cheerio
+      - timePeriod
+      - categories
+      - day cards with food items
+    - minify html
+    - Regex
+    - Replace unreadable markup such as internal MensaMax IDs
+    - Build JSON from custom markup
+3. Serve via Express/ Vercel Serverless Function
 
 ## 🏫 Known/ tested institutions
 - For a nice GUI version, see <https://mensa.vercel.app/institutions-ui>
 - For the raw data, see [institutions.json](./institutions.json)
+- Please feel free to suggest new institutions by opening a PR/ Issue
 
 ## 🧠 General Knowledge
 - For some reason, MensaMax IT department decided to have **many URLs**
   - you can find a list of all known MensaMax URLS @[mensamax-urls.txt](./mensa-urls.txt)
-- These **URLs are not interchangable** and seem to be different versions (as of 13.07.2020)
+- These **URLs are not interchangeable** and seem to be different MensaMax versions (as of 25.06.2021)
+- There is a private/ internal GraphQL API for MensaMax which needs authentication
 
 ## 👍💰 Support this project
 You like this project and would like to give something back?
-Thanks! See the badges at the top of this README.
+Thanks! [Have a look at my profile](https://github.com/philippdormann) for more information & options.

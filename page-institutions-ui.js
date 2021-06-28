@@ -9,12 +9,13 @@ let content = JSON.parse(
 );
 module.exports = (req, res) => {
 	let table = '';
-	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippd1/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`
+	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`;
 	content.forEach((src) => {
 		let tested_insert = '❓ not tested';
-		if (src.tested === true) {
-			tested_insert = `👍 tested on: ${src.tested_on}`;
+		if (src.tested) {
+			tested_insert = `👍 tested on: ${src.tested}`;
 		}
+		src.sample_url = `https://${src.provider}/LOGINPLAN.ASPX?P=${src.project}&E=${src.facility}`;
 
 		table += `
 						<h4>${src.name}</h4>
@@ -26,9 +27,11 @@ module.exports = (req, res) => {
 						<br>
 						data provider: <code data-clipboard-text="${src.provider}">${src.provider}</code>
 						<br>
-						sample raw link: <a target="_blank" href="${src.sample_url}">${src.sample_url}</a>
+						raw link: <a target="_blank" href="${src.sample_url}">${src.sample_url}</a>
 						<br>
-						sample api link: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}">/api/?p=${src.project}&e=${src.facility}</a>
+						api link simple: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}">/api/?p=${src.project}&e=${src.facility}</a>
+						<br>
+						api link details: <a target="_blank" href="../api/?p=${src.project}&e=${src.facility}&details=yes">/api/?p=${src.project}&e=${src.facility}&details=yes</a>
 						<hr>
 						`;
 	});

@@ -1,8 +1,10 @@
 .git
 .gitignore
+.prettierignore
 node_modules
 npm-debug
 Dockerfile
 .DS_Store
-parsed-samples
-raw-samples
+test
+sandbox-parsing.js
+.env
