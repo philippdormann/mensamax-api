@@ -8,7 +8,38 @@
 🍲🥘🥡🍛🍜🦐🥔
 </pre>
 
-[![Deployment](https://badgen.net/badge/Deployment⚡/Vercel/black)](https://mensa.vercel.app) [![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann) [![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann) [![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
+[![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app) [![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann) [![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann) [![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
+
+## 🧐 Usage
+> General Note: Please use your own caching strategy, MensaMax servers might be quite slow
+### API usage
+see <https://mensa.vercel.app/institutions-ui> for API URLs
+
+### npm package usage
+#### Install package
+```bash
+yarn add @philippdormann/mensamax-api
+```
+#### ts/ module imports
+```ts
+import { fetcher, parser } from '@philippdormann/mensamax-api';
+const html = await fetcher({ p: 'FO111', e: 'herz' });
+const parsed = await parser(html);
+console.log(parsed);
+```
+#### CommonJS imports
+```js
+const { fetcher, parser } = require('@philippdormann/mensamax-api');
+(async function() {
+	try {
+		const html = await fetcher({ p: 'FO111', e: 'herz' });
+		const parsed = await parser(html);
+		console.log(parsed);
+	} catch (e) {
+		console.log(e);
+	}
+})();
+```
 
 ## 🚀 Deployment
 This project is deployed as a serverless function on the url <https://mensa.vercel.app> with [Vercel](https://vercel.com/) ☁️
@@ -20,7 +51,8 @@ To do so, just run this code:
 docker-compose up -d --build
 ```
 
-## 💻 Local Development with Express Server
+## 💻 Local Development
+Either develop on your machine directly or use the provided devcontainer for VSCode
 ```
 yarn && yarn dev
 ```
