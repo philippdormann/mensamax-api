@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.4...v2.0.0)
+
+- README Update: package usage [`52bb3e4`](https://github.com/philippdormann/mensamax-api/commit/52bb3e44be6b5f7583d963571a173895e23e728e)
+
 #### [v2.0.0-rc.4](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.3...v2.0.0-rc.4)
 
+> 28 June 2021
+
+- 🚀RELEASE v2.0.0-rc.4 [`6809385`](https://github.com/philippdormann/mensamax-api/commit/6809385fe82aa6ae8d51c0e6e4a69be2df3d75b4)
 - add exports for npm package [`5adaac6`](https://github.com/philippdormann/mensamax-api/commit/5adaac67ef93fe5bee91104032823130ebfbbf2b)
 
 #### [v2.0.0-rc.3](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.2...v2.0.0-rc.3)
