@@ -2,3 +2,4 @@
 parsed.json
 .vercel
 .env
+yarn.lock
