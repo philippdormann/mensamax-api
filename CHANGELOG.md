@@ -2,9 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.0.1](https://github.com/philippdormann/mensamax-api/compare/v2.0.0...v2.0.1)
+
+- Merge branch 'dev' [`#13`](https://github.com/philippdormann/mensamax-api/issues/13)
+- ⏫ dependency bump [`9bb6847`](https://github.com/philippdormann/mensamax-api/commit/9bb6847e74c112e8d1863af79d73e631dc747869)
+- apply prettier formatting [`bbd5b77`](https://github.com/philippdormann/mensamax-api/commit/bbd5b7716337762eb19e82152f01ff3d63c5ca1b)
+- add tmp list for new institutions [`e7aa7f7`](https://github.com/philippdormann/mensamax-api/commit/e7aa7f751e7439ce1ff481a19236754255b609d5)
+
 #### [v2.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.4...v2.0.0)
 
+> 28 June 2021
+
 - README Update: package usage [`52bb3e4`](https://github.com/philippdormann/mensamax-api/commit/52bb3e44be6b5f7583d963571a173895e23e728e)
+- 🚀RELEASE v2.0.0 [`f42c19e`](https://github.com/philippdormann/mensamax-api/commit/f42c19e72025667b05b762919c6365f6bb90af06)
 
 #### [v2.0.0-rc.4](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.3...v2.0.0-rc.4)
 
