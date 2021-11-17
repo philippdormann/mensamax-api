@@ -621,5 +621,12 @@
 		"facility": "KB",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "S419",
+		"facility": "Hegel",
+		"name": "Hegel-Gymnasium Stuttgart",
+		"tested": false
 	}
 ]
