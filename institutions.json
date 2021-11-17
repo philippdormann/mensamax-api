@@ -628,5 +628,211 @@
 		"facility": "Hegel",
 		"name": "Hegel-Gymnasium Stuttgart",
 		"tested": "2021-11-17"
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "Ratoldusschule",
+		"code": "7854",
+		"name": "Ratoldusschule",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "Teggingerschule",
+		"code": "7854",
+		"name": "Teggingerschule",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "Sonnenrainschule",
+		"code": "7854",
+		"name": "Sonnenrainschule",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "Hausherrenschule",
+		"code": "7854",
+		"name": "Hausherrenschule",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "GS-Boehringen",
+		"code": "7854",
+		"name": "Grundschule Böhringen (Storchen-schule)",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "GS-Guettingen",
+		"code": "7854",
+		"name": "Grundschule Güttingen",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "GS-Liggeringen",
+		"code": "7854",
+		"name": "Grundschule Liggeringen",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "GS-Markelfingen",
+		"code": "7854",
+		"name": "Grundschule Markelfingen",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "KN2387",
+		"facility": "GS-Stahringen",
+		"code": "7854",
+		"name": "Grundschule Stahringen",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "ERB2378",
+		"facility": "EGS",
+		"code": "64739",
+		"name": "Ernst-Göbel-Schule - Höchst im Odenwald",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "KN2387",
+		"facility": "?",
+		"code": "7854",
+		"name": "?",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "GT2435",
+		"facility": "Droste-Haus",
+		"code": "zaK325",
+		"name": "Droste-Haus - Jugendaustauschwerk im Kreis Gütersloh e.V.",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "BB2369",
+		"facility": "SZ",
+		"code": "3442",
+		"name": "Stadt Rutesheim",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "LDK2427",
+		"facility": "ABS",
+		"code": "2852",
+		"name": "August-Bebel-Gesamtschule Wetzlar",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "LDK2427",
+		"facility": "GS-Dalheim",
+		"code": "2852",
+		"name": "Dalheim-Schule Wetzlar",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "LDK2427",
+		"facility": "GS-Lahnaue",
+		"code": "2852",
+		"name": "Grundschule an der Lahnaue / Lahnau",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "WAF2455",
+		"facility": "GSVW",
+		"code": "2743",
+		"name": "Gemeinde Wadersloh",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "WAF2455",
+		"facility": "SKW",
+		"code": "2743",
+		"name": "Sekundarschule Wadersloh",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "KN2387",
+		"facility": "Teggingerschule",
+		"code": "7854",
+		"name": "Teggingerschule Radolfzell",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "MeineMensa",
+		"facility": "KN-GSS",
+		"name": "Geschwister-Scholl-Schule Konstanz",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "HB2385",
+		"facility": "GyVege",
+		"code": "2143",
+		"name": "Gymnasium Vegesack",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "HR2454",
+		"facility": "EVS",
+		"code": "8763",
+		"name": "EVS - Treysa",
+		"tested": false
+	},
+	{
+		"provider": "mensalokal.de",
+		"project": "WF2247",
+		"facility": "Teichgarten",
+		"code": "2462",
+		"name": "Schule am Teichgarten - Wolfenbüttel",
+		"tested": false
+	},
+	{
+		"provider": "mensalokal.de",
+		"project": "H2289",
+		"facility": "IGSBüss",
+		"code": "2f76EE",
+		"name": "IGS Büssingweg",
+		"tested": false
+	},
+	{
+		"provider": "mensalokal.de",
+		"project": "H2289",
+		"facility": "Roderbruch",
+		"code": "h5Q8i8",
+		"name": "IGS Roderbruch",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "BC243",
+		"facility": "JCGS",
+		"name": "Joseph-Christian-Gemeinschaftsschule Riedlingen",
+		"tested": false
 	}
 ]
