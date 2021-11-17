@@ -30,9 +30,10 @@
 	"release-it": {
 		"git": {
 			"commit": true,
+			"requireBranch": "main",
 			"requireCleanWorkingDir": false,
 			"commitMessage": "🚀RELEASE v${version}",
-			"push": false,
+			"push": true,
 			"tag": true,
 			"tagName": "v${version}",
 			"tagAnnotation": "v${version}"
