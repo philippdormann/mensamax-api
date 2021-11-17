@@ -12,3 +12,5 @@ mensahost.de
 mensacity.de
 mensaoffice.de
 mammasmensa.de
+mensalokal.de
+mensastadt.de
