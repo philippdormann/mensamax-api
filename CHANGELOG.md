@@ -2,12 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.1.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.1...v2.1.0)
+
+- Hegel-Gymnasium Stuttgart - S419/Hegel [`#16`](https://github.com/philippdormann/mensamax-api/issues/16)
+- + 26 institutions [`fde0432`](https://github.com/philippdormann/mensamax-api/commit/fde0432785f67280318923e88e93c26420b386fb)
+- ⏫ dependency bump [`f5d4af4`](https://github.com/philippdormann/mensamax-api/commit/f5d4af4c25ded5984ed5de8d81bc74e2d8e9f58d)
+- updated release config [`553e9ec`](https://github.com/philippdormann/mensamax-api/commit/553e9eccfa64c91b7307883824eed5516c87d7a9)
+- new urls: mensastadt.dt + mensalokal.de [`814fa57`](https://github.com/philippdormann/mensamax-api/commit/814fa578c72c310f691b0b8c703aacc0dd834b7f)
+- add test date to S419 [`fd7f6e5`](https://github.com/philippdormann/mensamax-api/commit/fd7f6e5a66382fe2a29dd89c188faee59f993a0c)
+
 #### [v2.0.1](https://github.com/philippdormann/mensamax-api/compare/v2.0.0...v2.0.1)
+
+> 7 September 2021
 
 - Merge branch 'dev' [`#13`](https://github.com/philippdormann/mensamax-api/issues/13)
 - ⏫ dependency bump [`9bb6847`](https://github.com/philippdormann/mensamax-api/commit/9bb6847e74c112e8d1863af79d73e631dc747869)
 - apply prettier formatting [`bbd5b77`](https://github.com/philippdormann/mensamax-api/commit/bbd5b7716337762eb19e82152f01ff3d63c5ca1b)
 - add tmp list for new institutions [`e7aa7f7`](https://github.com/philippdormann/mensamax-api/commit/e7aa7f751e7439ce1ff481a19236754255b609d5)
+- 🚀RELEASE v2.0.1 [`3cd1bea`](https://github.com/philippdormann/mensamax-api/commit/3cd1beabf071f8fc5cfad6723559bbbc5234c412)
 
 #### [v2.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.0-rc.4...v2.0.0)
 
