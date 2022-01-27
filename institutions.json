@@ -1,846 +1,845 @@
 [
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "dts",
-		"name": "Dr.-Theo-Schöller-Mittelschule in Nürnberg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "DSK",
-		"name": "Dreiberg Schule Knetzgau",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "ghr",
-		"name": "Georg-Hartmann-Realschule Forchheim",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "hoch",
-		"name": "Gymnasium Höchstadt a.d.Aisch",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "herz",
-		"name": "Gymnasium Herzogenaurach",
-		"tested": "2021-06-25"
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "mscadolzburg",
-		"name": "Mittelschule Cadolzburg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HH2306",
-		"facility": "Irena-Sendler",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HH2306",
-		"facility": "STS-Hegholt",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HH2306",
-		"facility": "GS-Hegholt",
-		"name": "Grundschule Bramfeld",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FN2232",
-		"facility": "DHG",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HH2306",
-		"facility": "STS-Brado",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HP2329",
-		"facility": "Goethe",
-		"name": "Goethe-Gymnasium Bensheim",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HP2329",
-		"facility": "Gutenberg",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HH2309",
-		"facility": "ADW",
-		"name": "Adolph-Diesterweg-Schule Hamburg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "HB2349",
-		"facility": "AG",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "F197",
-		"facility": "MPS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "DON2354",
-		"facility": "Mensation",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "EN2322",
-		"facility": "SEW",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "STA2336",
-		"facility": "BSZ-Wasserburg",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "WI243",
-		"facility": "Leibniz",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "WI243",
-		"facility": "Oranien",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "WI243",
-		"facility": "Martin-Buher",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "frid",
-		"name": "Gymnasium Fridericianum",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "msf",
-		"name": "Grund und Mittelschule Feucht/ Kinderhort St. Jakob in Feucht",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "feu",
-		"name": "Realschule Feucht",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "SLM",
-		"name": "Mittelschule St. Leonhard Nürnberg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "gpa",
-		"name": "Georg-Paul-Amberger Grundschule",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "Schulhaus",
-		"name": "Evangelisches Montessori Kinderhaus Röttenbach",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "ggo",
-		"name": "Grundschule Großgründlach",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "sjw",
-		"name": "St. Josef Kinderhaus",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "drb",
-		"name": "Dientzenhofer Realschule in Brannenburg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "gsr",
-		"name": "Graf-Stauffenberg-Realschule in Bamberg",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "lurf",
-		"name": "Leopold-Ullstein-Realschule Fürth",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "hlg",
-		"name": "Helene-Lange-Gymnasium in Fürth",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "kat",
-		"name": "Grund- und Mittelschule Nürnberg-Katzwang",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "sfh",
-		"name": "St. Franziskus Kinderhaus",
-		"tested": false
-	},
-	{
-		"provider": "mensadigital.de",
-		"project": "FO111",
-		"facility": "GSHerzogenaurach",
-		"name": "Grundschule Herzogenaurach",
-		"tested": false
-	},
-	{
-		"provider": "mensapoint.de",
-		"project": "KEH111",
-		"facility": "ggm",
-		"name": "Gabelsberger-Gymnasium Mainburg",
-		"tested": false
-	},
-	{
-		"provider": "mensapoint.de",
-		"project": "LL124",
-		"facility": "FWS",
-		"name": "Freie Waldorfschule Landsberg",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "S367",
-		"facility": "FLG",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensa365.de",
-		"project": "rt243",
-		"facility": "whr",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensahome.de",
-		"project": "lb124",
-		"facility": "FWS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WI243",
-		"facility": "EHS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "HH222",
-		"facility": "Heidberg",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "HH222",
-		"facility": "lerchenfeld",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "HH222",
-		"facility": "Ohmoor",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mammasmensa.de",
-		"project": "HH222",
-		"facility": "STS-Lohbruegge",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "FO111",
-		"facility": "PHR",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "BC111",
-		"facility": "RS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "GOE271",
-		"facility": "GYM",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "AZ000",
-		"facility": "OHS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "EMD160",
-		"facility": "MAX",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "Schwanau",
-		"facility": "bvowrs",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "S243",
-		"facility": "MBS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "FN222",
-		"facility": "RS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "FN222",
-		"facility": "MGTT",
-		"name": "Montfort-Gymnasium Tettnang",
-		"tested": false
-	},
-	{
-		"provider": "mensaweb.de",
-		"project": "StMartin",
-		"facility": "Gs+Dockweiler",
-		"name": "Grundschule Dockweiler",
-		"tested": false
-	},
-	{
-		"provider": "mensaweb.de",
-		"project": "Brilon",
-		"facility": "H-L-S",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "RZ222",
-		"facility": "CGW",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "FR333",
-		"facility": "GS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "BOR000",
-		"facility": "Euregio",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "PF1111",
-		"facility": "kepler",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaweb.de",
-		"project": "HDH111",
-		"facility": "WG",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "TUE124",
-		"facility": "ALS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "ES222",
-		"facility": "Sprache",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "DA124",
-		"facility": "FES",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "MR222",
-		"facility": "RGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "CUX124",
-		"facility": "IGS-Stade",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "ES243",
-		"facility": "LUG",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "HH666",
-		"facility": "RLW",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "KarlGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "WBGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "EKHS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "LeibnizRS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "WRS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "DenkteGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "KissenGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "SchuleRemlingen",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "GsSchoepp",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "WinnigstedtGS",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "HortSchoeppenstedt",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "KitaAhlum",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "WR",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "Phantasia",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "Sonnenschein",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "KitaHummelburg",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "KitaRasselbande",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaservice.de",
-		"project": "WF111",
-		"facility": "Assewind",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensawelten.de",
-		"project": "BS111",
-		"facility": "KB",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "S419",
-		"facility": "Hegel",
-		"name": "Hegel-Gymnasium Stuttgart",
-		"tested": "2021-11-17"
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "Ratoldusschule",
-		"code": "7854",
-		"name": "Ratoldusschule",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "Teggingerschule",
-		"code": "7854",
-		"name": "Teggingerschule",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "Sonnenrainschule",
-		"code": "7854",
-		"name": "Sonnenrainschule",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "Hausherrenschule",
-		"code": "7854",
-		"name": "Hausherrenschule",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "GS-Boehringen",
-		"code": "7854",
-		"name": "Grundschule Böhringen (Storchen-schule)",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "GS-Guettingen",
-		"code": "7854",
-		"name": "Grundschule Güttingen",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "GS-Liggeringen",
-		"code": "7854",
-		"name": "Grundschule Liggeringen",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "GS-Markelfingen",
-		"code": "7854",
-		"name": "Grundschule Markelfingen",
-		"tested": false
-	},
-	{
-		"provider": "mensaland.de",
-		"project": "KN2387",
-		"facility": "GS-Stahringen",
-		"code": "7854",
-		"name": "Grundschule Stahringen",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "ERB2378",
-		"facility": "EGS",
-		"code": "64739",
-		"name": "Ernst-Göbel-Schule - Höchst im Odenwald",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "KN2387",
-		"facility": "?",
-		"code": "7854",
-		"name": "?",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "GT2435",
-		"facility": "Droste-Haus",
-		"code": "zaK325",
-		"name": "Droste-Haus - Jugendaustauschwerk im Kreis Gütersloh e.V.",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "BB2369",
-		"facility": "SZ",
-		"code": "3442",
-		"name": "Stadt Rutesheim",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "LDK2427",
-		"facility": "ABS",
-		"code": "2852",
-		"name": "August-Bebel-Gesamtschule Wetzlar",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "LDK2427",
-		"facility": "GS-Dalheim",
-		"code": "2852",
-		"name": "Dalheim-Schule Wetzlar",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "LDK2427",
-		"facility": "GS-Lahnaue",
-		"code": "2852",
-		"name": "Grundschule an der Lahnaue / Lahnau",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "WAF2455",
-		"facility": "GSVW",
-		"code": "2743",
-		"name": "Gemeinde Wadersloh",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "WAF2455",
-		"facility": "SKW",
-		"code": "2743",
-		"name": "Sekundarschule Wadersloh",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "KN2387",
-		"facility": "Teggingerschule",
-		"code": "7854",
-		"name": "Teggingerschule Radolfzell",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "MeineMensa",
-		"facility": "KN-GSS",
-		"name": "Geschwister-Scholl-Schule Konstanz",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "HB2385",
-		"facility": "GyVege",
-		"code": "2143",
-		"name": "Gymnasium Vegesack",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "HR2454",
-		"facility": "EVS",
-		"code": "8763",
-		"name": "EVS - Treysa",
-		"tested": false
-	},
-	{
-		"provider": "mensalokal.de",
-		"project": "WF2247",
-		"facility": "Teichgarten",
-		"code": "2462",
-		"name": "Schule am Teichgarten - Wolfenbüttel",
-		"tested": false
-	},
-	{
-		"provider": "mensalokal.de",
-		"project": "H2289",
-		"facility": "IGSBüss",
-		"code": "2f76EE",
-		"name": "IGS Büssingweg",
-		"tested": false
-	},
-	{
-		"provider": "mensalokal.de",
-		"project": "H2289",
-		"facility": "Roderbruch",
-		"code": "h5Q8i8",
-		"name": "IGS Roderbruch",
-		"tested": false
-	},
-	{
-		"provider": "mensastadt.de",
-		"project": "BC243",
-		"facility": "JCGS",
-		"name": "Joseph-Christian-Gemeinschaftsschule Riedlingen",
-		"tested": false
-	},
-	{
-                "provider": "mensahaus.de",
-                "project": "PB2499",
-                "facility": "maxcluster",
-                "name": "maxcluster GmbH",
-                "tested": "2022-01-27"
-        }
-
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "dts",
+    "name": "Dr.-Theo-Schöller-Mittelschule in Nürnberg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "DSK",
+    "name": "Dreiberg Schule Knetzgau",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "ghr",
+    "name": "Georg-Hartmann-Realschule Forchheim",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "hoch",
+    "name": "Gymnasium Höchstadt a.d.Aisch",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "herz",
+    "name": "Gymnasium Herzogenaurach",
+    "tested": "2021-06-25"
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "mscadolzburg",
+    "name": "Mittelschule Cadolzburg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HH2306",
+    "facility": "Irena-Sendler",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HH2306",
+    "facility": "STS-Hegholt",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HH2306",
+    "facility": "GS-Hegholt",
+    "name": "Grundschule Bramfeld",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FN2232",
+    "facility": "DHG",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HH2306",
+    "facility": "STS-Brado",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HP2329",
+    "facility": "Goethe",
+    "name": "Goethe-Gymnasium Bensheim",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HP2329",
+    "facility": "Gutenberg",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HH2309",
+    "facility": "ADW",
+    "name": "Adolph-Diesterweg-Schule Hamburg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "HB2349",
+    "facility": "AG",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "F197",
+    "facility": "MPS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "DON2354",
+    "facility": "Mensation",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "EN2322",
+    "facility": "SEW",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "STA2336",
+    "facility": "BSZ-Wasserburg",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "WI243",
+    "facility": "Leibniz",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "WI243",
+    "facility": "Oranien",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "WI243",
+    "facility": "Martin-Buher",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "frid",
+    "name": "Gymnasium Fridericianum",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "msf",
+    "name": "Grund und Mittelschule Feucht/ Kinderhort St. Jakob in Feucht",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "feu",
+    "name": "Realschule Feucht",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "SLM",
+    "name": "Mittelschule St. Leonhard Nürnberg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "gpa",
+    "name": "Georg-Paul-Amberger Grundschule",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "Schulhaus",
+    "name": "Evangelisches Montessori Kinderhaus Röttenbach",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "ggo",
+    "name": "Grundschule Großgründlach",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "sjw",
+    "name": "St. Josef Kinderhaus",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "drb",
+    "name": "Dientzenhofer Realschule in Brannenburg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "gsr",
+    "name": "Graf-Stauffenberg-Realschule in Bamberg",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "lurf",
+    "name": "Leopold-Ullstein-Realschule Fürth",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "hlg",
+    "name": "Helene-Lange-Gymnasium in Fürth",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "kat",
+    "name": "Grund- und Mittelschule Nürnberg-Katzwang",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "sfh",
+    "name": "St. Franziskus Kinderhaus",
+    "tested": false
+  },
+  {
+    "provider": "mensadigital.de",
+    "project": "FO111",
+    "facility": "GSHerzogenaurach",
+    "name": "Grundschule Herzogenaurach",
+    "tested": false
+  },
+  {
+    "provider": "mensapoint.de",
+    "project": "KEH111",
+    "facility": "ggm",
+    "name": "Gabelsberger-Gymnasium Mainburg",
+    "tested": false
+  },
+  {
+    "provider": "mensapoint.de",
+    "project": "LL124",
+    "facility": "FWS",
+    "name": "Freie Waldorfschule Landsberg",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "S367",
+    "facility": "FLG",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensa365.de",
+    "project": "rt243",
+    "facility": "whr",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensahome.de",
+    "project": "lb124",
+    "facility": "FWS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WI243",
+    "facility": "EHS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "HH222",
+    "facility": "Heidberg",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "HH222",
+    "facility": "lerchenfeld",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "HH222",
+    "facility": "Ohmoor",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mammasmensa.de",
+    "project": "HH222",
+    "facility": "STS-Lohbruegge",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "FO111",
+    "facility": "PHR",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "BC111",
+    "facility": "RS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "GOE271",
+    "facility": "GYM",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "AZ000",
+    "facility": "OHS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "EMD160",
+    "facility": "MAX",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "Schwanau",
+    "facility": "bvowrs",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "S243",
+    "facility": "MBS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "FN222",
+    "facility": "RS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "FN222",
+    "facility": "MGTT",
+    "name": "Montfort-Gymnasium Tettnang",
+    "tested": false
+  },
+  {
+    "provider": "mensaweb.de",
+    "project": "StMartin",
+    "facility": "Gs+Dockweiler",
+    "name": "Grundschule Dockweiler",
+    "tested": false
+  },
+  {
+    "provider": "mensaweb.de",
+    "project": "Brilon",
+    "facility": "H-L-S",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "RZ222",
+    "facility": "CGW",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "FR333",
+    "facility": "GS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "BOR000",
+    "facility": "Euregio",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaonline.de",
+    "project": "PF1111",
+    "facility": "kepler",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaweb.de",
+    "project": "HDH111",
+    "facility": "WG",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "TUE124",
+    "facility": "ALS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "ES222",
+    "facility": "Sprache",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "DA124",
+    "facility": "FES",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "MR222",
+    "facility": "RGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "CUX124",
+    "facility": "IGS-Stade",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "ES243",
+    "facility": "LUG",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "HH666",
+    "facility": "RLW",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "KarlGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "WBGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "EKHS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "LeibnizRS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "WRS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "DenkteGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "KissenGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "SchuleRemlingen",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "GsSchoepp",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "WinnigstedtGS",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "HortSchoeppenstedt",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "KitaAhlum",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "WR",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "Phantasia",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "Sonnenschein",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "KitaHummelburg",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "KitaRasselbande",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaservice.de",
+    "project": "WF111",
+    "facility": "Assewind",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensawelten.de",
+    "project": "BS111",
+    "facility": "KB",
+    "name": "???",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "S419",
+    "facility": "Hegel",
+    "name": "Hegel-Gymnasium Stuttgart",
+    "tested": "2021-11-17"
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "Ratoldusschule",
+    "code": "7854",
+    "name": "Ratoldusschule",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "Teggingerschule",
+    "code": "7854",
+    "name": "Teggingerschule",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "Sonnenrainschule",
+    "code": "7854",
+    "name": "Sonnenrainschule",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "Hausherrenschule",
+    "code": "7854",
+    "name": "Hausherrenschule",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "GS-Boehringen",
+    "code": "7854",
+    "name": "Grundschule Böhringen (Storchen-schule)",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "GS-Guettingen",
+    "code": "7854",
+    "name": "Grundschule Güttingen",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "GS-Liggeringen",
+    "code": "7854",
+    "name": "Grundschule Liggeringen",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "GS-Markelfingen",
+    "code": "7854",
+    "name": "Grundschule Markelfingen",
+    "tested": false
+  },
+  {
+    "provider": "mensaland.de",
+    "project": "KN2387",
+    "facility": "GS-Stahringen",
+    "code": "7854",
+    "name": "Grundschule Stahringen",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "ERB2378",
+    "facility": "EGS",
+    "code": "64739",
+    "name": "Ernst-Göbel-Schule - Höchst im Odenwald",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "KN2387",
+    "facility": "?",
+    "code": "7854",
+    "name": "?",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "GT2435",
+    "facility": "Droste-Haus",
+    "code": "zaK325",
+    "name": "Droste-Haus - Jugendaustauschwerk im Kreis Gütersloh e.V.",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "BB2369",
+    "facility": "SZ",
+    "code": "3442",
+    "name": "Stadt Rutesheim",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "LDK2427",
+    "facility": "ABS",
+    "code": "2852",
+    "name": "August-Bebel-Gesamtschule Wetzlar",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "LDK2427",
+    "facility": "GS-Dalheim",
+    "code": "2852",
+    "name": "Dalheim-Schule Wetzlar",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "LDK2427",
+    "facility": "GS-Lahnaue",
+    "code": "2852",
+    "name": "Grundschule an der Lahnaue / Lahnau",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "WAF2455",
+    "facility": "GSVW",
+    "code": "2743",
+    "name": "Gemeinde Wadersloh",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "WAF2455",
+    "facility": "SKW",
+    "code": "2743",
+    "name": "Sekundarschule Wadersloh",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "KN2387",
+    "facility": "Teggingerschule",
+    "code": "7854",
+    "name": "Teggingerschule Radolfzell",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "MeineMensa",
+    "facility": "KN-GSS",
+    "name": "Geschwister-Scholl-Schule Konstanz",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "HB2385",
+    "facility": "GyVege",
+    "code": "2143",
+    "name": "Gymnasium Vegesack",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "HR2454",
+    "facility": "EVS",
+    "code": "8763",
+    "name": "EVS - Treysa",
+    "tested": false
+  },
+  {
+    "provider": "mensalokal.de",
+    "project": "WF2247",
+    "facility": "Teichgarten",
+    "code": "2462",
+    "name": "Schule am Teichgarten - Wolfenbüttel",
+    "tested": false
+  },
+  {
+    "provider": "mensalokal.de",
+    "project": "H2289",
+    "facility": "IGSBüss",
+    "code": "2f76EE",
+    "name": "IGS Büssingweg",
+    "tested": false
+  },
+  {
+    "provider": "mensalokal.de",
+    "project": "H2289",
+    "facility": "Roderbruch",
+    "code": "h5Q8i8",
+    "name": "IGS Roderbruch",
+    "tested": false
+  },
+  {
+    "provider": "mensastadt.de",
+    "project": "BC243",
+    "facility": "JCGS",
+    "name": "Joseph-Christian-Gemeinschaftsschule Riedlingen",
+    "tested": false
+  },
+  {
+    "provider": "mensahaus.de",
+    "project": "PB2499",
+    "facility": "maxcluster",
+    "name": "maxcluster GmbH",
+    "tested": "2022-01-27"
+  }
 ]
