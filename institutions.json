@@ -45,6 +45,7 @@
 		"provider": "mensadigital.de",
 		"project": "HH2306",
 		"facility": "Irena-Sendler",
+		"code": "2143",
 		"name": "???",
 		"tested": false
 	},
@@ -80,6 +81,7 @@
 		"provider": "mensadigital.de",
 		"project": "HP2329",
 		"facility": "Goethe",
+		"code": "6468",
 		"name": "Goethe-Gymnasium Bensheim",
 		"tested": false
 	},
@@ -108,6 +110,7 @@
 		"provider": "mensadigital.de",
 		"project": "F197",
 		"facility": "MPS",
+		"code": "945Std",
 		"name": "???",
 		"tested": false
 	},
@@ -115,6 +118,7 @@
 		"provider": "mensadigital.de",
 		"project": "DON2354",
 		"facility": "Mensation",
+		"code": "2143",
 		"name": "???",
 		"tested": false
 	},
@@ -128,6 +132,7 @@
 	{
 		"provider": "mensadigital.de",
 		"project": "STA2336",
+		"code": "54632",
 		"facility": "BSZ-Wasserburg",
 		"name": "???",
 		"tested": false
@@ -136,6 +141,7 @@
 		"provider": "mensadigital.de",
 		"project": "WI243",
 		"facility": "Leibniz",
+		"code": "2150",
 		"name": "???",
 		"tested": false
 	},
@@ -143,6 +149,14 @@
 		"provider": "mensadigital.de",
 		"project": "WI243",
 		"facility": "Oranien",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensadigital.de",
+		"project": "EN2322",
+		"facility": "GySue",
+		"code": "8349",
 		"name": "???",
 		"tested": false
 	},
@@ -269,6 +283,53 @@
 		"provider": "mensapoint.de",
 		"project": "GOE444",
 		"facility": "BBS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "GOE444",
+		"facility": "TRG",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "HH222",
+		"facility": "AVG",
+		"code": "1716",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "FL111",
+		"facility": "Ramsharde",
+		"code": "1938",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "HH222",
+		"facility": "sts-lohbruegge",
+		"code": "1716",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "PB197",
+		"facility": "Marienschule",
+		"code": "1245",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
+		"project": "HAM111",
+		"facility": "THRS",
+		"code": "1426",
 		"name": "???",
 		"tested": false
 	},
@@ -969,6 +1030,14 @@
 	},
 	{
 		"provider": "mensaonline.de",
+		"project": "HH111",
+		"code": "2018",
+		"facility": "STS‐Blankenese",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
 		"project": "LI243",
 		"code": "0956",
 		"facility": "GS-Nonnenhorn",
@@ -993,9 +1062,25 @@
 	},
 	{
 		"provider": "mensaonline.de",
+		"project": "PF111",
+		"code": "PFN25",
+		"facility": "Nordstadt",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
 		"project": "CUX000",
 		"code": "2257",
 		"facility": "OBSB",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "CUX000",
+		"code": "7346",
+		"facility": "SaW",
 		"name": "???",
 		"tested": false
 	},
@@ -1109,6 +1194,52 @@
 		"provider": "mensaonline.de",
 		"project": "Renningen",
 		"facility": "Mensaverein",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "H012",
+		"facility": "List",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "OHZ111",
+		"facility": "Medienhaus",
+		"code": "Mensa2013",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "HH111",
+		"facility": "SNG-Glinde",
+		"code": "2018",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "CUX000",
+		"facility": "AAG",
+		"code": "Cux736",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "RZ000",
+		"facility": "GSLuetau",
+		"code": "21483",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "walram",
+		"facility": "mensa",
 		"name": "???",
 		"tested": false
 	}
