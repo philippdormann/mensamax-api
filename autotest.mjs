@@ -1,4 +1,5 @@
-import axios from 'axios';
+import { fetcher } from './api/fetcher.js';
+import { parser } from './api/parser.js';
 import fs from 'fs';
 let institutions = JSON.parse(fs.readFileSync('./institutions.json'));
 let currentDate = new Date();
@@ -9,19 +10,15 @@ let resultPassedString = `${cYear}-${cMonth}-${cDay}`;
 let results = [];
 for await (let i of institutions) {
 	console.log(`starting validation for p=${i.project}&e=${i.facility}`);
-	const res = await axios.get(
-		`http://localhost:3005/api/?p=${i.project}&e=${i.facility}`,
-		{ validateStatus: () => true }
-	);
-	i.tested = false;
-	if (res.data.status === 'ok') {
+	try {
+		const html = await fetcher({ p: i.project, e: i.facility });
+		await parser(html);
 		i.tested = resultPassedString;
+	} catch (e) {
+		i.tested = false;
 	}
 	results.push(i);
 	console.log(`finished validation for p=${i.project}&e=${i.facility}`);
 	fs.writeFileSync('./validated.json', JSON.stringify(results));
 	console.log(`updated validated.json`);
 }
-
-fs.writeFileSync('./validated.json', JSON.stringify(results));
-// console.log(results);
