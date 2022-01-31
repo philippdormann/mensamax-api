@@ -11,35 +11,35 @@
 		"project": "FO111",
 		"facility": "DSK",
 		"name": "Dreiberg Schule Knetzgau",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "ghr",
 		"name": "Georg-Hartmann-Realschule Forchheim",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "hoch",
 		"name": "Gymnasium Höchstadt a.d.Aisch",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "herz",
 		"name": "Gymnasium Herzogenaurach",
-		"tested": "2021-06-25"
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "mscadolzburg",
 		"name": "Mittelschule Cadolzburg",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -68,7 +68,7 @@
 		"project": "FN2232",
 		"facility": "DHG",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -83,14 +83,14 @@
 		"facility": "Goethe",
 		"code": "6468",
 		"name": "Goethe-Gymnasium Bensheim",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "HP2329",
 		"facility": "Gutenberg",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -104,7 +104,7 @@
 		"project": "HB2349",
 		"facility": "AG",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -112,7 +112,7 @@
 		"facility": "MPS",
 		"code": "945Std",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -135,7 +135,7 @@
 		"code": "54632",
 		"facility": "BSZ-Wasserburg",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -150,7 +150,7 @@
 		"project": "WI243",
 		"facility": "Oranien",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -158,7 +158,7 @@
 		"facility": "GySue",
 		"code": "8349",
 		"name": "???",
-		"tested": false
+		"tested": "2022-01-31"
 	},
 	{
 		"provider": "mensadigital.de",
