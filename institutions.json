@@ -329,25 +329,10 @@
 		"tested": false
 	},
 	{
-		"provider": "mammasmensa.de",
-		"project": "HH222",
-		"facility": "FARMSEN",
-		"code": "1716",
-		"name": "Gymnasium Farmsen Hamburg",
-		"tested": false
-	},
-	{
 		"provider": "mensaonline.de",
 		"project": "FO111",
 		"facility": "PHR",
 		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "CUX000",
-		"facility": "SZO",
-		"name": "Gymnasium Otterndorf",
 		"tested": false
 	},
 	{
@@ -438,13 +423,6 @@
 		"provider": "mensaonline.de",
 		"project": "BOR000",
 		"facility": "Euregio",
-		"name": "???",
-		"tested": false
-	},
-	{
-		"provider": "mensaonline.de",
-		"project": "R000",
-		"facility": "GL",
 		"name": "???",
 		"tested": false
 	},
@@ -858,19 +836,11 @@
 		"tested": false
 	},
 	{
-		"provider": "mensahaus.de",
-		"project": "HF2498",
-		"facility": "Ges",
-		"code": "8458",
-		"name": "Gemeinde Rödinghausen",
-		"tested": false
-	},
-	{
-		"provider": "mensahaus.de",
-		"project": "HD2477",
-		"facility": "RS",
-		"code": "5258",
-		"name": "Kurpfalz-Realschule Schriesheim",
-		"tested": false
-	}
+                "provider": "mensahaus.de",
+                "project": "PB2499",
+                "facility": "maxcluster",
+                "name": "maxcluster GmbH",
+                "tested": "2022-01-27"
+        }
+
 ]
