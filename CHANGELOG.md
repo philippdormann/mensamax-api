@@ -2,10 +2,26 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.1.0-beta.1](https://github.com/philippdormann/mensamax-api/compare/v2.1.0...v2.1.0-beta.1)
+
+- release npm package on main push [`#19`](https://github.com/philippdormann/mensamax-api/pull/19)
+- add maxcluster GmbH [`#17`](https://github.com/philippdormann/mensamax-api/pull/17)
+- +5 institutions [`cd8c994`](https://github.com/philippdormann/mensamax-api/commit/cd8c994fa9a100d728324b6c5929eeed7bd34dc2)
+- Create npm-publish.yml [`8712b93`](https://github.com/philippdormann/mensamax-api/commit/8712b93503aded0092f70f07eed967fbcd829d7f)
+- fix: formatting [`c5e2cdb`](https://github.com/philippdormann/mensamax-api/commit/c5e2cdb0f18646000a39876251c770273842147e)
+- fix: drop ci "build" step 🙂 [`4d54b09`](https://github.com/philippdormann/mensamax-api/commit/4d54b096a14be4224b84f919fda3beb075c51755)
+- mensahaus.de [`9c1c827`](https://github.com/philippdormann/mensamax-api/commit/9c1c827df1a646567322f5073e31b5e136517000)
+- fix: npm i (GitHub Action) [`3f005d7`](https://github.com/philippdormann/mensamax-api/commit/3f005d70f819402acff2a3ee0ad406ffa498d96d)
+- Update institutions.json [`79f5fdf`](https://github.com/philippdormann/mensamax-api/commit/79f5fdfa399ffeb2c6db09618f671a6887c3ce07)
+- fix: ci [`ae1964a`](https://github.com/philippdormann/mensamax-api/commit/ae1964ab01962bfc6154da44a24d2160a787dcd6)
+
 #### [v2.1.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.1...v2.1.0)
+
+> 17 November 2021
 
 - Hegel-Gymnasium Stuttgart - S419/Hegel [`#16`](https://github.com/philippdormann/mensamax-api/issues/16)
 - + 26 institutions [`fde0432`](https://github.com/philippdormann/mensamax-api/commit/fde0432785f67280318923e88e93c26420b386fb)
+- 🚀RELEASE v2.1.0 [`9a33177`](https://github.com/philippdormann/mensamax-api/commit/9a33177f542bdcc9ed7a028bbec2bca5b4599da0)
 - ⏫ dependency bump [`f5d4af4`](https://github.com/philippdormann/mensamax-api/commit/f5d4af4c25ded5984ed5de8d81bc74e2d8e9f58d)
 - updated release config [`553e9ec`](https://github.com/philippdormann/mensamax-api/commit/553e9eccfa64c91b7307883824eed5516c87d7a9)
 - new urls: mensastadt.dt + mensalokal.de [`814fa57`](https://github.com/philippdormann/mensamax-api/commit/814fa578c72c310f691b0b8c703aacc0dd834b7f)
