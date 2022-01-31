@@ -267,6 +267,13 @@
 	},
 	{
 		"provider": "mensapoint.de",
+		"project": "GOE444",
+		"facility": "BBS",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensapoint.de",
 		"project": "LL124",
 		"facility": "FWS",
 		"name": "Freie Waldorfschule Landsberg",
@@ -409,6 +416,13 @@
 		"provider": "mensaland.de",
 		"project": "RZ222",
 		"facility": "CGW",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaland.de",
+		"project": "LOE111",
+		"facility": "FWS",
 		"name": "???",
 		"tested": false
 	},
@@ -624,6 +638,13 @@
 		"tested": false
 	},
 	{
+		"provider": "mensawelten.de",
+		"project": "GOE197",
+		"facility": "SaBG",
+		"name": "???",
+		"tested": false
+	},
+	{
 		"provider": "mensaland.de",
 		"project": "S419",
 		"facility": "Hegel",
@@ -700,6 +721,13 @@
 		"facility": "GS-Stahringen",
 		"code": "7854",
 		"name": "Grundschule Stahringen",
+		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "UN2396",
+		"facility": "Mensa",
+		"name": "???",
 		"tested": false
 	},
 	{
@@ -811,6 +839,13 @@
 		"facility": "Teichgarten",
 		"code": "2462",
 		"name": "Schule am Teichgarten - Wolfenbüttel",
+		"tested": false
+	},
+	{
+		"provider": "mensalokal.de",
+		"project": "UL271",
+		"facility": "VBS",
+		"name": "???",
 		"tested": false
 	},
 	{
@@ -969,6 +1004,13 @@
 		"project": "CUX000",
 		"code": "MENSASAM",
 		"facility": "SAM",
+		"name": "???",
+		"tested": false
+	},
+	{
+		"provider": "mensaonline.de",
+		"project": "CUX000",
+		"facility": "SZO",
 		"name": "???",
 		"tested": false
 	},
