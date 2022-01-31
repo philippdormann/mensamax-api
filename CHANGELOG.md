@@ -2,30 +2,56 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v2.1.0-beta.1](https://github.com/philippdormann/mensamax-api/compare/v2.1.0...v2.1.0-beta.1)
+#### [v2.2.0](https://github.com/philippdormann/mensamax-api/compare/v2.1.0...v2.2.0)
 
 - release npm package on main push [`#19`](https://github.com/philippdormann/mensamax-api/pull/19)
 - add maxcluster GmbH [`#17`](https://github.com/philippdormann/mensamax-api/pull/17)
+- +30 institutions [`01f8bc7`](https://github.com/philippdormann/mensamax-api/commit/01f8bc70973d396d9a4eb9f02f0b9c902e3bacef)
+- run validation script [`72a3bf1`](https://github.com/philippdormann/mensamax-api/commit/72a3bf1c9773315693339e8706adfbfceb9c5b89)
+- + 16 institutions [`19de1f5`](https://github.com/philippdormann/mensamax-api/commit/19de1f52e4ddcec950318f83fd799ef6ae581b76)
+- + 7 institutions [`0e6769c`](https://github.com/philippdormann/mensamax-api/commit/0e6769c6013981bbeb2ab651c67ec7f1363db20c)
+- 🚀RELEASE v2.1.0-beta.1 [`c892fc9`](https://github.com/philippdormann/mensamax-api/commit/c892fc9fc1a287124219c23126d10e3ae0abd21f)
+- + 6 institutions [`a3efb2f`](https://github.com/philippdormann/mensamax-api/commit/a3efb2ffd46f327002eed19f9b8c5627efb91783)
 - +5 institutions [`cd8c994`](https://github.com/philippdormann/mensamax-api/commit/cd8c994fa9a100d728324b6c5929eeed7bd34dc2)
 - Create npm-publish.yml [`8712b93`](https://github.com/philippdormann/mensamax-api/commit/8712b93503aded0092f70f07eed967fbcd829d7f)
+- a few manual confirmations [`a8ba61d`](https://github.com/philippdormann/mensamax-api/commit/a8ba61d4b91d4aab63b2c5efb2014da8e93573e5)
+- add script for automatically testing all institutions [`ea6c211`](https://github.com/philippdormann/mensamax-api/commit/ea6c211e22cb7988d0028cb6064de20e15ae9ce4)
+- skip http overhead/ standalone autotest script [`1b8f4e2`](https://github.com/philippdormann/mensamax-api/commit/1b8f4e256264509ca20c46fb9f1b7efc84b87be2)
 - fix: formatting [`c5e2cdb`](https://github.com/philippdormann/mensamax-api/commit/c5e2cdb0f18646000a39876251c770273842147e)
+- dependency bumps [`cb1b858`](https://github.com/philippdormann/mensamax-api/commit/cb1b858399829d65c52edcab20a7cc1fe6e1834d)
 - fix: drop ci "build" step 🙂 [`4d54b09`](https://github.com/philippdormann/mensamax-api/commit/4d54b096a14be4224b84f919fda3beb075c51755)
+- Create FUNDING.yml [`3d94eaa`](https://github.com/philippdormann/mensamax-api/commit/3d94eaae45ae71993ac915285f80e49136f297c8)
 - mensahaus.de [`9c1c827`](https://github.com/philippdormann/mensamax-api/commit/9c1c827df1a646567322f5073e31b5e136517000)
 - fix: npm i (GitHub Action) [`3f005d7`](https://github.com/philippdormann/mensamax-api/commit/3f005d70f819402acff2a3ee0ad406ffa498d96d)
 - Update institutions.json [`79f5fdf`](https://github.com/philippdormann/mensamax-api/commit/79f5fdfa399ffeb2c6db09618f671a6887c3ce07)
 - fix: ci [`ae1964a`](https://github.com/philippdormann/mensamax-api/commit/ae1964ab01962bfc6154da44a24d2160a787dcd6)
 
-#### [v2.1.0](https://github.com/philippdormann/mensamax-api/compare/v2.0.1...v2.1.0)
+#### [v2.1.0](https://github.com/philippdormann/mensamax-api/compare/v2.1.0-beta.1...v2.1.0)
 
 > 17 November 2021
 
+#### [v2.1.0-beta.1](https://github.com/philippdormann/mensamax-api/compare/v2.0.1...v2.1.0-beta.1)
+
+> 31 January 2022
+
+- release npm package on main push [`#19`](https://github.com/philippdormann/mensamax-api/pull/19)
+- add maxcluster GmbH [`#17`](https://github.com/philippdormann/mensamax-api/pull/17)
 - Hegel-Gymnasium Stuttgart - S419/Hegel [`#16`](https://github.com/philippdormann/mensamax-api/issues/16)
 - + 26 institutions [`fde0432`](https://github.com/philippdormann/mensamax-api/commit/fde0432785f67280318923e88e93c26420b386fb)
+- 🚀RELEASE v2.1.0-beta.1 [`c892fc9`](https://github.com/philippdormann/mensamax-api/commit/c892fc9fc1a287124219c23126d10e3ae0abd21f)
+- +5 institutions [`cd8c994`](https://github.com/philippdormann/mensamax-api/commit/cd8c994fa9a100d728324b6c5929eeed7bd34dc2)
+- Create npm-publish.yml [`8712b93`](https://github.com/philippdormann/mensamax-api/commit/8712b93503aded0092f70f07eed967fbcd829d7f)
 - 🚀RELEASE v2.1.0 [`9a33177`](https://github.com/philippdormann/mensamax-api/commit/9a33177f542bdcc9ed7a028bbec2bca5b4599da0)
+- fix: formatting [`c5e2cdb`](https://github.com/philippdormann/mensamax-api/commit/c5e2cdb0f18646000a39876251c770273842147e)
+- fix: drop ci "build" step 🙂 [`4d54b09`](https://github.com/philippdormann/mensamax-api/commit/4d54b096a14be4224b84f919fda3beb075c51755)
 - ⏫ dependency bump [`f5d4af4`](https://github.com/philippdormann/mensamax-api/commit/f5d4af4c25ded5984ed5de8d81bc74e2d8e9f58d)
 - updated release config [`553e9ec`](https://github.com/philippdormann/mensamax-api/commit/553e9eccfa64c91b7307883824eed5516c87d7a9)
 - new urls: mensastadt.dt + mensalokal.de [`814fa57`](https://github.com/philippdormann/mensamax-api/commit/814fa578c72c310f691b0b8c703aacc0dd834b7f)
+- mensahaus.de [`9c1c827`](https://github.com/philippdormann/mensamax-api/commit/9c1c827df1a646567322f5073e31b5e136517000)
+- fix: npm i (GitHub Action) [`3f005d7`](https://github.com/philippdormann/mensamax-api/commit/3f005d70f819402acff2a3ee0ad406ffa498d96d)
+- Update institutions.json [`79f5fdf`](https://github.com/philippdormann/mensamax-api/commit/79f5fdfa399ffeb2c6db09618f671a6887c3ce07)
 - add test date to S419 [`fd7f6e5`](https://github.com/philippdormann/mensamax-api/commit/fd7f6e5a66382fe2a29dd89c188faee59f993a0c)
+- fix: ci [`ae1964a`](https://github.com/philippdormann/mensamax-api/commit/ae1964ab01962bfc6154da44a24d2160a787dcd6)
 
 #### [v2.0.1](https://github.com/philippdormann/mensamax-api/compare/v2.0.0...v2.0.1)
 
