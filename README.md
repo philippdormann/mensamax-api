@@ -8,7 +8,7 @@
 🍲🥘🥡🍛🍜🦐🥔
 </pre>
 
-[![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app) [![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann) [![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann) [![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8)
+[![Deployment](https://badgen.net/badge/Deployment/Vercel/black)](https://mensa.vercel.app) [![donate with PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/philippdormann) [![buy me a coffee](https://img.shields.io/badge/buymeacoffee-donate-yellow.svg)](https://buymeacoffee.com/philippdormann) [![ko-fi](https://badgen.net/badge/ko-fi/donate/yellow)](https://ko-fi.com/V7V4I6I8) [![npm](https://img.shields.io/npm/dy/@philippdormann/mensamax-api?label=npm%20downloads)](https://www.npmjs.com/package/@philippdormann/mensamax-api)
 
 ## 🧐 Usage
 > General Note: Please use your own caching strategy, MensaMax servers might be quite slow
