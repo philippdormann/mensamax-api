@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.3.0](https://github.com/philippdormann/mensamax-api/compare/v2.2.0...v2.3.0)
+
+- add mensaweb-DD111-fws to institutions [`#20`](https://github.com/philippdormann/mensamax-api/issues/20)
+- dependency bump [`cfd0b31`](https://github.com/philippdormann/mensamax-api/commit/cfd0b314340cfa713726151eb22c83233bca66cd)
+
 #### [v2.2.0](https://github.com/philippdormann/mensamax-api/compare/v2.1.0...v2.2.0)
+
+> 1 February 2022
 
 - release npm package on main push [`#19`](https://github.com/philippdormann/mensamax-api/pull/19)
 - add maxcluster GmbH [`#17`](https://github.com/philippdormann/mensamax-api/pull/17)
@@ -13,6 +20,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - 🚀RELEASE v2.1.0-beta.1 [`c892fc9`](https://github.com/philippdormann/mensamax-api/commit/c892fc9fc1a287124219c23126d10e3ae0abd21f)
 - + 6 institutions [`a3efb2f`](https://github.com/philippdormann/mensamax-api/commit/a3efb2ffd46f327002eed19f9b8c5627efb91783)
 - +5 institutions [`cd8c994`](https://github.com/philippdormann/mensamax-api/commit/cd8c994fa9a100d728324b6c5929eeed7bd34dc2)
+- 🚀RELEASE v2.2.0 [`c15ea08`](https://github.com/philippdormann/mensamax-api/commit/c15ea08e6207df679b9999f49767cc330351f37d)
 - Create npm-publish.yml [`8712b93`](https://github.com/philippdormann/mensamax-api/commit/8712b93503aded0092f70f07eed967fbcd829d7f)
 - a few manual confirmations [`a8ba61d`](https://github.com/philippdormann/mensamax-api/commit/a8ba61d4b91d4aab63b2c5efb2014da8e93573e5)
 - add script for automatically testing all institutions [`ea6c211`](https://github.com/philippdormann/mensamax-api/commit/ea6c211e22cb7988d0028cb6064de20e15ae9ce4)
