@@ -1301,5 +1301,12 @@
 		"facility": "STD124",
 		"name": "???",
 		"tested": false
+	},
+	{
+		"provider": "mensaweb.de",
+		"project": "DD111",
+		"facility": "fws",
+		"name": "Freie Waldorfschule Dresden",
+		"tested": "2022-09-01"
 	}
 ]
