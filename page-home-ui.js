@@ -7,5 +7,5 @@ const templateData = fs.readFileSync(
 const content = fs.readFileSync(join(__dirname, `home.html`), 'utf-8');
 module.exports = (req, res) => {
 	const rendered = templateData.replace(/{{{content}}}/gi, content);
-	return res.send(rendered);
+	return res.end(rendered);
 };

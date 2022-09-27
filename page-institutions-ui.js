@@ -4,13 +4,11 @@ const templateData = fs.readFileSync(
 	join(__dirname, `web-template.html`),
 	'utf-8'
 );
-let content = JSON.parse(
-	fs.readFileSync(join(__dirname, `institutions.json`), 'utf-8')
-);
+const institutions = require('./institutions.json');
 module.exports = (req, res) => {
 	let table = '';
-	table += `<p>Currently, there are <u>${content.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/gymhmensa/issues/new">Create a new GitHub issue.</a></p>`;
-	content.forEach((src) => {
+	table += `<p>Currently, there are <u>${institutions.length}</u> sources in this list.<br>Can't find your organisation? <a href="https://github.com/philippdormann/mensamax-api/issues/new">Create a new GitHub issue.</a></p>`;
+	institutions.forEach((src) => {
 		let tested_insert = '❓ not tested';
 		if (src.tested) {
 			tested_insert = `👍 tested on: ${src.tested}`;
@@ -39,5 +37,5 @@ module.exports = (req, res) => {
 						`;
 	});
 	const rendered = templateData.replace(/{{{content}}}/gi, table);
-	res.send(rendered);
+	res.end(rendered);
 };
