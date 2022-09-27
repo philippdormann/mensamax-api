@@ -78,7 +78,7 @@ yarn && yarn dev
     - Regex
     - Replace unreadable markup such as internal MensaMax IDs
     - Build JSON from custom markup
-3. Serve via Express/ Vercel Serverless Function
+3. Serve via rayo http/ Vercel Serverless Function
 
 ## 🏫 Known/ tested institutions
 - For a nice GUI version, see <https://mensa.vercel.app/institutions-ui>

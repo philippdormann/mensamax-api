@@ -18,5 +18,9 @@ const send_it = (status, body, req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Headers', '*');
 	res.setHeader('Content-Type', 'application/json');
-	res.status(status).send(body);
+	try {
+		res.status(status).send(body);
+	} catch (error) {
+		res.end(JSON.stringify(body));
+	}
 };
