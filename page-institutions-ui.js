@@ -15,8 +15,9 @@ module.exports = (req, res) => {
 		if (src.tested) {
 			tested_insert = `👍 tested on: ${src.tested}`;
 		}
+		regCode = src.code || '?';
+		//
 		src.sample_url = `https://${src.provider}/LOGINPLAN.ASPX?P=${src.project}&E=${src.facility}`;
-
 		table += `
 						<h4>${src.name}</h4>
 						${tested_insert}
@@ -24,6 +25,8 @@ module.exports = (req, res) => {
 						Project: <code data-clipboard-text="${src.project}">${src.project}</code>
 						<br>
 						Facility: <code data-clipboard-text="${src.facility}">${src.facility}</code>
+						<br>
+						registration code: <code data-clipboard-text="${regCode}">${regCode}</code>
 						<br>
 						data provider: <code data-clipboard-text="${src.provider}">${src.provider}</code>
 						<br>
