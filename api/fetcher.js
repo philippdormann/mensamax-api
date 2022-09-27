@@ -4,6 +4,8 @@ const cheerio = require('cheerio');
 const axios = require('axios').default;
 const institutions = require('../institutions.json');
 // =========
+process.env.CACHE_TIME_MINUTES = parseInt(process.env.CACHE_TIME_MINUTES || 1);
+// =========
 let redisclient = undefined;
 if (process.env.CACHE === 'redis') {
 	if (process.env.CACHE_REDIS_URL) {
@@ -15,14 +17,25 @@ if (process.env.CACHE === 'redis') {
 }
 const mensaplanCache = [];
 // =========
-function getCacheItem(key, expiry) {
+function updateCacheItem(key, data) {
+	if (process.env.CACHE === 'redis') {
+		redisclient.set(key, data, 'EX', process.env.CACHE_TIME_MINUTES * 60);
+	} else {
+		mensaplanCache.push({
+			ts: Date.now(),
+			data,
+			key
+		});
+	}
+}
+function getCacheItem(key) {
 	return new Promise(function (resolve, reject) {
 		if (process.env.CACHE === 'redis') {
 			redisclient
 				.get(key)
 				.then((result) => {
 					if (result) {
-						resolve({ content: result });
+						resolve({ data: result });
 					} else {
 						resolve(undefined);
 					}
@@ -31,13 +44,15 @@ function getCacheItem(key, expiry) {
 					resolve(undefined);
 				});
 		} else {
+			const expiry =
+				Date.now() - process.env.CACHE_TIME_MINUTES * 60 * 1000;
 			const cacheItem = mensaplanCache.find(
 				(i) => i.ts > expiry && i.key === key
 			);
 			if (cacheItem) {
 				resolve(cacheItem);
 			} else {
-				reject(expiry);
+				resolve(undefined);
 			}
 		}
 	});
@@ -59,17 +74,11 @@ function getMensaplanHTML({ p, e }) {
 						}
 					);
 				} else {
-					const cacheTime = parseInt(
-						process.env.CACHE_TIME_MINUTES || 1
-					);
-					getCacheItem(
-						`${p}${e}${found.provider}`,
-						Date.now() - cacheTime * 60 * 1000
-					)
+					getCacheItem(`${p}${e}${found.provider}`)
 						.then((cache) => {
 							if (cache) {
 								// serve from cache
-								resolve(cache.content);
+								resolve(cache.data);
 							} else {
 								// load fresh data
 								fetchHTML({
@@ -77,20 +86,10 @@ function getMensaplanHTML({ p, e }) {
 									e,
 									provider: found.provider
 								}).then((data) => {
-									if (process.env.CACHE === 'redis') {
-										redisclient.set(
-											`${p}${e}${found.provider}`,
-											data,
-											'EX',
-											cacheTime * 60
-										);
-									} else {
-										mensaplanCache.push({
-											ts: Date.now(),
-											content: data,
-											key: `${p}${e}${found.provider}`
-										});
-									}
+									updateCacheItem(
+										`${p}${e}${found.provider}`,
+										data
+									);
 									resolve(data);
 								});
 							}
