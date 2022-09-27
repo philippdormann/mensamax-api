@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const axios = require('axios').default;
 const institutions = require('../institutions.json');
 // =========
-const mensaplanCache = { cacheTimestamp: 0, cacheContent: {} };
+const mensaplanCache = [];
 // =========
 /**
  * @returns {string} html content of mensaplan
@@ -16,6 +16,7 @@ function getMensaplanHTML({ p, e }) {
 				return ins.project === p && ins.facility === e;
 			});
 			if (found) {
+				// console.log(mensaplanCache);
 				if (process.env.CACHE === 'none') {
 					fetchHTML({ p, e, provider: found.provider }).then(
 						(data) => {
@@ -23,25 +24,31 @@ function getMensaplanHTML({ p, e }) {
 						}
 					);
 				} else {
-					const cacheTimeMinutes = parseInt(
+					const cacheTime = parseInt(
 						process.env.CACHE_TIME_MINUTES || 1
 					);
-					if (
-						Date.now() >
-						mensaplanCache.cacheTimestamp +
-							cacheTimeMinutes * 60 * 1000
-					) {
+					const cache = mensaplanCache.find(
+						(i) =>
+							i.ts + cacheTime * 60 * 1000 > Date.now() &&
+							i.key === `${p}${e}${found.provider}`
+					);
+					if (cache) {
+						// still in cache
+						console.log('resolve::cache');
+						resolve(cache.content);
+					} else {
 						// reload data
-						mensaplanCache.cacheTimestamp = Date.now();
 						fetchHTML({ p, e, provider: found.provider }).then(
 							(data) => {
-								mensaplanCache.cacheContent = data;
-								resolve(mensaplanCache.cacheContent);
+								console.log('resolve::fresh');
+								mensaplanCache.push({
+									ts: Date.now(),
+									content: data,
+									key: `${p}${e}${found.provider}`
+								});
+								resolve(data);
 							}
 						);
-					} else {
-						// still in cache
-						resolve(mensaplanCache.cacheContent);
 					}
 				}
 			} else {
