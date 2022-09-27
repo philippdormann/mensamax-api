@@ -11,35 +11,35 @@
 		"project": "FO111",
 		"facility": "DSK",
 		"name": "Dreiberg Schule Knetzgau",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "ghr",
 		"name": "Georg-Hartmann-Realschule Forchheim",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "hoch",
 		"name": "Gymnasium Höchstadt a.d.Aisch",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "herz",
 		"name": "Gymnasium Herzogenaurach",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "mscadolzburg",
 		"name": "Mittelschule Cadolzburg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -68,7 +68,7 @@
 		"project": "FN2232",
 		"facility": "DHG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -83,14 +83,14 @@
 		"facility": "Goethe",
 		"code": "6468",
 		"name": "Goethe-Gymnasium Bensheim",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "HP2329",
 		"facility": "Gutenberg",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -104,7 +104,7 @@
 		"project": "HB2349",
 		"facility": "AG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -112,7 +112,7 @@
 		"facility": "MPS",
 		"code": "945Std",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -135,7 +135,7 @@
 		"code": "54632",
 		"facility": "BSZ-Wasserburg",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -150,7 +150,7 @@
 		"project": "WI243",
 		"facility": "Oranien",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -158,7 +158,7 @@
 		"facility": "GySue",
 		"code": "8349",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -172,7 +172,7 @@
 		"project": "FO111",
 		"facility": "frid",
 		"name": "Gymnasium Fridericianum",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -193,7 +193,7 @@
 		"project": "FO111",
 		"facility": "SLM",
 		"name": "Mittelschule St. Leonhard Nürnberg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -207,28 +207,28 @@
 		"project": "FO111",
 		"facility": "Schulhaus",
 		"name": "Evangelisches Montessori Kinderhaus Röttenbach",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "ggo",
 		"name": "Grundschule Großgründlach",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "sjw",
 		"name": "St. Josef Kinderhaus",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "drb",
 		"name": "Dientzenhofer Realschule in Brannenburg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -242,7 +242,7 @@
 		"project": "FO111",
 		"facility": "lurf",
 		"name": "Leopold-Ullstein-Realschule Fürth",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
@@ -263,28 +263,28 @@
 		"project": "FO111",
 		"facility": "sfh",
 		"name": "St. Franziskus Kinderhaus",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensadigital.de",
 		"project": "FO111",
 		"facility": "GSHerzogenaurach",
 		"name": "Grundschule Herzogenaurach",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
 		"project": "KEH111",
 		"facility": "ggm",
 		"name": "Gabelsberger-Gymnasium Mainburg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
 		"project": "GOE444",
 		"facility": "BBS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
@@ -307,7 +307,7 @@
 		"facility": "Ramsharde",
 		"code": "1938",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
@@ -323,7 +323,7 @@
 		"facility": "Marienschule",
 		"code": "1245",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
@@ -331,14 +331,14 @@
 		"facility": "THRS",
 		"code": "1426",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensapoint.de",
 		"project": "LL124",
 		"facility": "FWS",
 		"name": "Freie Waldorfschule Landsberg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
@@ -431,7 +431,7 @@
 		"project": "EMD160",
 		"facility": "MAX",
 		"name": "Max-Windmüller-Gymnasium Emden",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -473,35 +473,35 @@
 		"project": "Brilon",
 		"facility": "H-L-S",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "RZ222",
 		"facility": "CGW",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "LOE111",
 		"facility": "FWS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "FR333",
 		"facility": "GS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
 		"project": "BOR000",
 		"facility": "Euregio",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -509,14 +509,14 @@
 		"code": "PFK25",
 		"facility": "kepler",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaweb.de",
 		"project": "HDH111",
 		"facility": "WG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
@@ -537,21 +537,21 @@
 		"project": "DA124",
 		"facility": "FES",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "MR222",
 		"facility": "RGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "CUX124",
 		"facility": "IGS-Stade",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
@@ -559,7 +559,7 @@
 		"code": "5255",
 		"facility": "LUG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
@@ -573,63 +573,63 @@
 		"project": "WF111",
 		"facility": "KarlGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "WBGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "EKHS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "LeibnizRS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "WRS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "DenkteGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "KissenGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "SchuleRemlingen",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "GsSchoepp",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
@@ -637,21 +637,21 @@
 		"facility": "WinnigstedtGS",
 		"code": "2002",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "HortSchoeppenstedt",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "KitaAhlum",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
@@ -665,35 +665,35 @@
 		"project": "WF111",
 		"facility": "Phantasia",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "Sonnenschein",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "KitaHummelburg",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "KitaRasselbande",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaservice.de",
 		"project": "WF111",
 		"facility": "Assewind",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensawelten.de",
@@ -707,14 +707,14 @@
 		"project": "GOE197",
 		"facility": "SaBG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
 		"project": "S419",
 		"facility": "Hegel",
 		"name": "Hegel-Gymnasium Stuttgart",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaland.de",
@@ -793,7 +793,7 @@
 		"project": "UN2396",
 		"facility": "Mensa",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -801,7 +801,7 @@
 		"facility": "EGS",
 		"code": "64739",
 		"name": "Ernst-Göbel-Schule - Höchst im Odenwald",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -817,7 +817,7 @@
 		"facility": "Droste-Haus",
 		"code": "zaK325",
 		"name": "Droste-Haus - Jugendaustauschwerk im Kreis Gütersloh e.V.",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -833,7 +833,7 @@
 		"facility": "ABS",
 		"code": "2852",
 		"name": "August-Bebel-Gesamtschule Wetzlar",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -841,7 +841,7 @@
 		"facility": "GS-Dalheim",
 		"code": "2852",
 		"name": "Dalheim-Schule Wetzlar",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -849,7 +849,7 @@
 		"facility": "GS-Lahnaue",
 		"code": "2852",
 		"name": "Grundschule an der Lahnaue / Lahnau",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -857,7 +857,7 @@
 		"facility": "GSVW",
 		"code": "2743",
 		"name": "Gemeinde Wadersloh",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -865,7 +865,7 @@
 		"facility": "SKW",
 		"code": "2743",
 		"name": "Sekundarschule Wadersloh",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensastadt.de",
@@ -896,7 +896,7 @@
 		"facility": "EVS",
 		"code": "8763",
 		"name": "EVS - Treysa",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
@@ -904,7 +904,7 @@
 		"facility": "Teichgarten",
 		"code": "2462",
 		"name": "Schule am Teichgarten - Wolfenbüttel",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
@@ -912,7 +912,7 @@
 		"facility": "GBG",
 		"code": "9e8Yg2",
 		"name": "???",
-		"tested": false
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
@@ -928,7 +928,7 @@
 		"facility": "MensaGym",
 		"code": "2143",
 		"name": "???",
-		"tested": false
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
@@ -936,14 +936,14 @@
 		"facility": "Ritzefeld",
 		"code": "5876",
 		"name": "???",
-		"tested": false
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
 		"project": "UL271",
 		"facility": "VBS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensalokal.de",
@@ -982,7 +982,7 @@
 		"project": "PB2499",
 		"facility": "maxcluster",
 		"name": "maxcluster GmbH",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaweb.de",
@@ -990,7 +990,7 @@
 		"code": "Bremen13",
 		"facility": "Horn",
 		"name": "Schulverein Gymnasium Horn e.V.",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -998,7 +998,7 @@
 		"project": "HH394",
 		"facility": "Scholl",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1006,7 +1006,7 @@
 		"project": "HH394",
 		"facility": "Heilwig",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1014,21 +1014,21 @@
 		"project": "HH394",
 		"facility": "FSS",
 		"name": "Fritz-Schumacher-Schule Hamburg",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
 		"project": "H-U",
 		"facility": "Gym",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
 		"project": "hdh000",
 		"facility": "mensa",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1056,7 +1056,7 @@
 		"project": "R000",
 		"facility": "GL",
 		"name": "Gymnasium Lappersdorf",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1111,7 +1111,7 @@
 		"code": "PFN25",
 		"facility": "Nordstadt",
 		"name": "???",
-		"tested": false
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1119,7 +1119,7 @@
 		"code": "2257",
 		"facility": "OBSB",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": false
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1127,7 +1127,7 @@
 		"code": "7346",
 		"facility": "SaW",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1150,7 +1150,7 @@
 		"code": "V5x5s5",
 		"facility": "Kluftern",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1158,7 +1158,7 @@
 		"code": "Yvw667",
 		"facility": "AilingenGS",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1166,7 +1166,7 @@
 		"code": "D6gc46",
 		"facility": "Berg",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1174,21 +1174,21 @@
 		"code": "8VBe83",
 		"facility": "GZG",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
 		"project": "FHBOSH",
 		"facility": "424",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
 		"project": "BL111",
 		"facility": "SZ",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1204,7 +1204,7 @@
 		"facility": "WFO",
 		"code": "ASB123",
 		"name": "Wilhelm-Focke-Oberschule Bremen",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1212,7 +1212,7 @@
 		"facility": "KSA",
 		"code": "ASB123",
 		"name": "Oberschule an der Kurt-Schumacher-Allee Bremen",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1240,7 +1240,7 @@
 		"project": "Renningen",
 		"facility": "Mensaverein",
 		"name": "???",
-		"tested": "2022-01-31"
+		"tested": "2022-09-27"
 	},
 	{
 		"provider": "mensaonline.de",
@@ -1307,6 +1307,6 @@
 		"project": "DD111",
 		"facility": "fws",
 		"name": "Freie Waldorfschule Dresden",
-		"tested": "2022-09-01"
+		"tested": false
 	}
 ]
