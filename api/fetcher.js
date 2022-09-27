@@ -16,8 +16,12 @@ function getMensaplanHTML({ p, e }) {
 				return ins.project === p && ins.facility === e;
 			});
 			if (found) {
-				if (process.env.CACHE === 'NONE') {
-					return fetch({ p, e });
+				if (process.env.CACHE === 'none') {
+					fetchHTML({ p, e, provider: found.provider }).then(
+						(data) => {
+							resolve(data);
+						}
+					);
 				} else {
 					const cacheTimeMinutes = parseInt(
 						process.env.CACHE_TIME_MINUTES || 1
