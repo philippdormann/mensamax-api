@@ -2,10 +2,35 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.3.1](https://github.com/philippdormann/mensamax-api/compare/v2.3.0...v2.3.1)
+
+- update verified/tested institutions [`6ef7325`](https://github.com/philippdormann/mensamax-api/commit/6ef73257052bcb49675b909248e89efb0a08f5c6)
+- check for existing provider/project + cache usage [`852d0f8`](https://github.com/philippdormann/mensamax-api/commit/852d0f8e73327be2910f2f3e2818fe91d6cc7014)
+- add support for redis cache [`8920d34`](https://github.com/philippdormann/mensamax-api/commit/8920d34493f1bd7b1ae88dc0f06ab467baa0d921)
+- cleanup cache update [`b1dc484`](https://github.com/philippdormann/mensamax-api/commit/b1dc4849d8ebf9f879e2a1d3240fcc00d40a7bd3)
+- replace express.js with rayo [`27fcdbe`](https://github.com/philippdormann/mensamax-api/commit/27fcdbe74c11d221ee1d0adce6ca3dd3edf93406)
+- add full cache support in getMensaplanHTML [`eef3fdc`](https://github.com/philippdormann/mensamax-api/commit/eef3fdc8fa34dc9b3b893551d44ef4c0d5d61b05)
+- update server.js for new ESM rayo import [`1c8c4a0`](https://github.com/philippdormann/mensamax-api/commit/1c8c4a095db88fdd404a22e1ec3895a2aedeb681)
+- dependency bump [`77c5fb7`](https://github.com/philippdormann/mensamax-api/commit/77c5fb7e9b794963a64d6332e744f36e924f54d2)
+- require import institutions.json [`3bbba2a`](https://github.com/philippdormann/mensamax-api/commit/3bbba2ab7b935d425797c7cd0534057cf666404b)
+- support disabled cache [`e531893`](https://github.com/philippdormann/mensamax-api/commit/e5318930868399f0d607135cacf8afc961e26465)
+- cleanup npm package files [`8e2dc59`](https://github.com/philippdormann/mensamax-api/commit/8e2dc598432d42552556736e22971a0927699cbc)
+- updated sample env [`e1b404e`](https://github.com/philippdormann/mensamax-api/commit/e1b404efd71b3460945cbfe981ea6f1014e1507a)
+- add sample env [`ad4c4ae`](https://github.com/philippdormann/mensamax-api/commit/ad4c4ae4be942365e91bcc212e12eb6ac366b970)
+- pin node:18.12.1 [`dabf30d`](https://github.com/philippdormann/mensamax-api/commit/dabf30dfd3e1340ebf999b09399216ebefb6cc73)
+- institutions ui: show registration code if existant [`0d771c6`](https://github.com/philippdormann/mensamax-api/commit/0d771c61e97c4922c3f6b32dc53bc478f8c14918)
+- export institutions from package [`a393608`](https://github.com/philippdormann/mensamax-api/commit/a393608f1f2ff343197b7f31fd0202e83f7d785f)
+- updated dockerfile node version [`5781ef5`](https://github.com/philippdormann/mensamax-api/commit/5781ef5b5f7ac4760c5496020de6d7dab5d92665)
+- fix github link in web-template [`a767051`](https://github.com/philippdormann/mensamax-api/commit/a76705162529a3468c630c9514746c7140b9c698)
+- add npm downloads badge to README [`5bd2ddc`](https://github.com/philippdormann/mensamax-api/commit/5bd2ddc204f27c972b2bfac43d9b8c1d4fd2f3b0)
+
 #### [v2.3.0](https://github.com/philippdormann/mensamax-api/compare/v2.2.0...v2.3.0)
+
+> 1 September 2022
 
 - add mensaweb-DD111-fws to institutions [`#20`](https://github.com/philippdormann/mensamax-api/issues/20)
 - dependency bump [`cfd0b31`](https://github.com/philippdormann/mensamax-api/commit/cfd0b314340cfa713726151eb22c83233bca66cd)
+- 🚀RELEASE v2.3.0 [`0ad4fba`](https://github.com/philippdormann/mensamax-api/commit/0ad4fba2cd195ad5fddf15dd1f4df8c3d72a80fd)
 
 #### [v2.2.0](https://github.com/philippdormann/mensamax-api/compare/v2.1.0...v2.2.0)
 
