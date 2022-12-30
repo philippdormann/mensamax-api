@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.3.2](https://github.com/philippdormann/mensamax-api/compare/v2.3.1...v2.3.2)
+
+- drop String.replaceAll polyfill - vercel deployment bumped to node v18 [`f2d8c11`](https://github.com/philippdormann/mensamax-api/commit/f2d8c11c207795617ed4a03c6a8837162f69dd73)
+- add keywords to package [`dbb9b23`](https://github.com/philippdormann/mensamax-api/commit/dbb9b2347e8ee266360329df70d2aaad0d0b9202)
+- add repository and author info [`5eebe38`](https://github.com/philippdormann/mensamax-api/commit/5eebe38de727bb84e11fa687c144cf816e9ad3da)
+
 #### [v2.3.1](https://github.com/philippdormann/mensamax-api/compare/v2.3.0...v2.3.1)
+
+> 30 December 2022
 
 - update verified/tested institutions [`6ef7325`](https://github.com/philippdormann/mensamax-api/commit/6ef73257052bcb49675b909248e89efb0a08f5c6)
 - check for existing provider/project + cache usage [`852d0f8`](https://github.com/philippdormann/mensamax-api/commit/852d0f8e73327be2910f2f3e2818fe91d6cc7014)
@@ -11,6 +19,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - replace express.js with rayo [`27fcdbe`](https://github.com/philippdormann/mensamax-api/commit/27fcdbe74c11d221ee1d0adce6ca3dd3edf93406)
 - add full cache support in getMensaplanHTML [`eef3fdc`](https://github.com/philippdormann/mensamax-api/commit/eef3fdc8fa34dc9b3b893551d44ef4c0d5d61b05)
 - update server.js for new ESM rayo import [`1c8c4a0`](https://github.com/philippdormann/mensamax-api/commit/1c8c4a095db88fdd404a22e1ec3895a2aedeb681)
+- 🚀RELEASE v2.3.1 [`f8d3b11`](https://github.com/philippdormann/mensamax-api/commit/f8d3b11d78f884e336be266ca14a44930867ee77)
 - dependency bump [`77c5fb7`](https://github.com/philippdormann/mensamax-api/commit/77c5fb7e9b794963a64d6332e744f36e924f54d2)
 - require import institutions.json [`3bbba2a`](https://github.com/philippdormann/mensamax-api/commit/3bbba2ab7b935d425797c7cd0534057cf666404b)
 - support disabled cache [`e531893`](https://github.com/philippdormann/mensamax-api/commit/e5318930868399f0d607135cacf8afc961e26465)
