@@ -11,6 +11,12 @@
 		"dev": "nodemon server.js",
 		"format": "prettier --write ."
 	},
+	"files": [
+		"institutions.json",
+		"api/parser.js",
+		"api/fetcher.js",
+		"main.js"
+	],
 	"dependencies": {
 		"axios": "1.2.2",
 		"cheerio": "1.0.0-rc.12",
