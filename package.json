@@ -8,6 +8,13 @@
 		"email": "hi@philippdormann.de",
 		"url": "https://philippdormann.de"
 	},
+	"keywords": [
+		"mensamax",
+		"mensa",
+		"food",
+		"foodmenu",
+		"parser"
+	],
 	"description": "MensaMax-API. Simple APIs for using MensaMax data in modern applications",
 	"main": "main.js",
 	"scripts": {
