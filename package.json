@@ -45,5 +45,8 @@
 		"hooks": {
 			"after:bump": "auto-changelog --commit-limit false -p -u --hide-credit && prettier --write . && git add ."
 		}
+	},
+	"volta": {
+		"node": "18.12.1"
 	}
 }
