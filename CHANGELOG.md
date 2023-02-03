@@ -2,9 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.3.3](https://github.com/philippdormann/mensamax-api/compare/v2.3.2...v2.3.3)
+
+- pnpm lockfile [`8d0e619`](https://github.com/philippdormann/mensamax-api/commit/8d0e6198664ce9655dc3a5a2a9d091b1809b4234)
+- dependency bump [`59b1f2d`](https://github.com/philippdormann/mensamax-api/commit/59b1f2df0bdaea32800cf6f0c50baeb3fac1af38)
+- fix: docker build [`76f0b57`](https://github.com/philippdormann/mensamax-api/commit/76f0b57e24866b83adcfb2162c196c8a6b8536e9)
+- node:18.14.0 [`19329b5`](https://github.com/philippdormann/mensamax-api/commit/19329b5f27d8b00be95419e34f6f95059bbb9663)
+- docker: use frozen lockfile [`3a7937b`](https://github.com/philippdormann/mensamax-api/commit/3a7937bcf1b0d7363d0b6069c4488162f9145ccf)
+
 #### [v2.3.2](https://github.com/philippdormann/mensamax-api/compare/v2.3.1...v2.3.2)
 
+> 30 December 2022
+
 - drop String.replaceAll polyfill - vercel deployment bumped to node v18 [`f2d8c11`](https://github.com/philippdormann/mensamax-api/commit/f2d8c11c207795617ed4a03c6a8837162f69dd73)
+- 🚀RELEASE v2.3.2 [`aa7103f`](https://github.com/philippdormann/mensamax-api/commit/aa7103f8823cd9e1dbe758d796829b0c7e526ab6)
 - add keywords to package [`dbb9b23`](https://github.com/philippdormann/mensamax-api/commit/dbb9b2347e8ee266360329df70d2aaad0d0b9202)
 - add repository and author info [`5eebe38`](https://github.com/philippdormann/mensamax-api/commit/5eebe38de727bb84e11fa687c144cf816e9ad3da)
 
