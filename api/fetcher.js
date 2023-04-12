@@ -80,24 +80,24 @@ function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
 	console.log({ kw });
 	return new Promise(async function (resolve, reject) {
 		if (p && e) {
-			const found = institutions.find(function (ins) {
+			const f = institutions.find(function (ins) {
 				return ins.project === p && ins.facility === e;
 			});
-			if (found) {
+			if (f) {
 				let cache = undefined;
 				if (process.env.CACHE !== 'none') {
-					cache = await getCacheItem(`${p}_${e}_${found.provider}`);
+					cache = await getCacheItem(`${p}_${e}_${f.provider}_${kw}`);
 				}
 				if (cache) {
 					resolve(cache.data);
 				} else {
-					let d = await fetchHTML({
+					const d = await fetchHTML({
 						p,
 						e,
 						kw,
-						provider: found.provider
+						provider: f.provider
 					});
-					updateCacheItem(`${p}_${e}_${found.provider}`, d);
+					updateCacheItem(`${p}_${e}_${f.provider}_${kw}`, d);
 					resolve(d);
 				}
 			} else {
