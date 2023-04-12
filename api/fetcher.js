@@ -61,25 +61,21 @@ function getMensaPlanHTML({ p, e, kw }) {
 				return ins.project === p && ins.facility === e;
 			});
 			if (found) {
-				if (process.env.CACHE === 'none') {
-					resolve(
-						await fetchHTML({ p, e, kw, provider: found.provider })
-					);
+				let cache = undefined;
+				if (process.env.CACHE !== 'none') {
+					cache = await getCacheItem(`${p}_${e}_${found.provider}`);
+				}
+				if (cache) {
+					resolve(cache.data);
 				} else {
-					let cache = await getCacheItem(`${p}${e}${found.provider}`);
-					if (cache) {
-						// serve from cache
-						resolve(cache.data);
-					} else {
-						let fresh = await fetchHTML({
-							p,
-							e,
-							kw,
-							provider: found.provider
-						});
-						updateCacheItem(`${p}${e}${found.provider}`, fresh);
-						resolve(fresh);
-					}
+					let d = await fetchHTML({
+						p,
+						e,
+						kw,
+						provider: found.provider
+					});
+					updateCacheItem(`${p}_${e}_${found.provider}`, d);
+					resolve(d);
 				}
 			} else {
 				reject('404');
