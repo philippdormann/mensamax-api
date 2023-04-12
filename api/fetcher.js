@@ -123,18 +123,32 @@ async function fetchHTML({
 	provider,
 	kw = getCalendarWeek(),
 	auth = false,
+	nextWeek = false,
+	__EVENTVALIDATION = '',
 	__VIEWSTATE = '',
 	__VIEWSTATEGENERATOR = ''
 }) {
 	console.log('@@fetchHTML');
 	let requestData = undefined;
 	let requestMethod = 'GET';
+	let url = `https://${provider}/LOGINPLAN.ASPX`;
 	if (auth === true) {
-		requestData = { __VIEWSTATE, __VIEWSTATEGENERATOR, btnLogin: '' };
+		requestData = {
+			__VIEWSTATE,
+			__EVENTVALIDATION,
+			__VIEWSTATEGENERATOR,
+			btnLogin: ''
+		};
 		requestMethod = 'POST';
 	}
+	if (nextWeek) {
+		requestData.btnVor = '>';
+		requestData.__EVENTARGUMENT = '';
+		requestData.__EVENTTARGET = '';
+		url = `https://${provider}/mensamax/Wochenplan/WochenplanExtern/WochenPlanExternForm.aspx`;
+	}
 	const { data } = await client.request({
-		url: `https://${provider}/LOGINPLAN.ASPX`,
+		url,
 		params: { p, e },
 		method: requestMethod,
 		headers: {
@@ -142,20 +156,40 @@ async function fetchHTML({
 		},
 		data: requestData
 	});
-	if (data.includes(`lblWoche`)) {
-		return data;
-	}
+	const $ = cheerio.load(data);
+	__EVENTVALIDATION = $('#__EVENTVALIDATION').val();
+	__VIEWSTATE = $('#__VIEWSTATE').val();
+	__VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
 	if (data.includes('btnLogin')) {
 		console.log('login performed');
-		const $ = cheerio.load(data);
-		const __VIEWSTATE = $('#__VIEWSTATE').val();
-		const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
 		return await fetchHTML({
 			p,
 			e,
 			provider,
 			kw,
 			auth: true,
+			__EVENTVALIDATION,
+			__VIEWSTATE,
+			__VIEWSTATEGENERATOR
+		});
+	}
+	//
+	var kwText = $('#lblWoche').text();
+	console.log({ kwText });
+	if (kwText.includes(`(KW${kw})`)) {
+		console.log('kw found!');
+		// console.log(data);
+		return data;
+	} else {
+		console.log('next week...');
+		return await fetchHTML({
+			p,
+			e,
+			provider,
+			kw,
+			auth: true,
+			nextWeek: true,
+			__EVENTVALIDATION,
 			__VIEWSTATE,
 			__VIEWSTATEGENERATOR
 		});
