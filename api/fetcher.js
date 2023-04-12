@@ -17,6 +17,28 @@ if (process.env.CACHE === 'redis') {
 }
 const mensaplanCache = [];
 // =========
+function getCalendarWeek() {
+	Date.prototype.getWeek = function () {
+		var date = new Date(this.getTime());
+		date.setHours(0, 0, 0, 0);
+		// Thursday in current week decides the year.
+		date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
+		// January 4 is always in week 1.
+		var week1 = new Date(date.getFullYear(), 0, 4);
+		// Adjust to Thursday in week 1 and count number of weeks from date to week1.
+		return (
+			1 +
+			Math.round(
+				((date.getTime() - week1.getTime()) / 86400000 -
+					3 +
+					((week1.getDay() + 6) % 7)) /
+					7
+			)
+		);
+	};
+	return new Date().getWeek();
+}
+// =========
 function updateCacheItem(key, data) {
 	if (process.env.CACHE === 'redis') {
 		redisclient.set(key, data, 'EX', process.env.CACHE_TIME_MINUTES * 60);
@@ -54,7 +76,8 @@ async function getCacheItem(key) {
 /**
  * @returns {string} (cache-backed) html content of mensaplan
  */
-function getMensaPlanHTML({ p, e, kw }) {
+function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
+	console.log({ kw });
 	return new Promise(async function (resolve, reject) {
 		if (p && e) {
 			const found = institutions.find(function (ins) {
