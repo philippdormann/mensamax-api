@@ -128,7 +128,6 @@ async function fetchHTML({
 	__VIEWSTATE = '',
 	__VIEWSTATEGENERATOR = ''
 }) {
-	console.log('@@fetchHTML');
 	let requestData = undefined;
 	let requestMethod = 'GET';
 	let url = `https://${provider}/LOGINPLAN.ASPX`;
@@ -161,7 +160,6 @@ async function fetchHTML({
 	__VIEWSTATE = $('#__VIEWSTATE').val();
 	__VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
 	if (data.includes('btnLogin')) {
-		console.log('login performed');
 		return await fetchHTML({
 			p,
 			e,
@@ -174,26 +172,19 @@ async function fetchHTML({
 		});
 	}
 	//
-	var kwText = $('#lblWoche').text();
-	console.log({ kwText });
-	if (kwText.includes(`(KW${kw})`)) {
-		console.log('kw found!');
-		// console.log(data);
-		return data;
-	} else {
-		console.log('next week...');
-		return await fetchHTML({
-			p,
-			e,
-			provider,
-			kw,
-			auth: true,
-			nextWeek: true,
-			__EVENTVALIDATION,
-			__VIEWSTATE,
-			__VIEWSTATEGENERATOR
-		});
-	}
+	const kwText = $('#lblWoche').text();
+	if (kwText.includes(`(KW${kw})`)) return data;
+	return await fetchHTML({
+		p,
+		e,
+		provider,
+		kw,
+		auth: true,
+		nextWeek: true,
+		__EVENTVALIDATION,
+		__VIEWSTATE,
+		__VIEWSTATEGENERATOR
+	});
 }
 exports.getMensaPlanHTML = getMensaPlanHTML;
 exports.fetchHTML = fetchHTML;
