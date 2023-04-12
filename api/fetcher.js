@@ -28,7 +28,7 @@ function updateCacheItem(key, data) {
 		});
 	}
 }
-function getCacheItem(key) {
+async function getCacheItem(key) {
 	return new Promise(function (resolve, reject) {
 		if (process.env.CACHE === 'redis') {
 			redisclient
@@ -58,45 +58,34 @@ function getCacheItem(key) {
 	});
 }
 /**
- * @returns {string} html content of mensaplan
+ * @returns {string} (cache-backed) html content of mensaplan
  */
-function getMensaplanHTML({ p, e }) {
-	return new Promise(function (resolve, reject) {
+function getMensaPlanHTML({ p, e, kw }) {
+	return new Promise(async function (resolve, reject) {
 		if (p && e) {
 			const found = institutions.find(function (ins) {
 				return ins.project === p && ins.facility === e;
 			});
 			if (found) {
 				if (process.env.CACHE === 'none') {
-					fetchHTML({ p, e, provider: found.provider }).then(
-						(data) => {
-							resolve(data);
-						}
+					resolve(
+						await fetchHTML({ p, e, kw, provider: found.provider })
 					);
 				} else {
-					getCacheItem(`${p}${e}${found.provider}`)
-						.then((cache) => {
-							if (cache) {
-								// serve from cache
-								resolve(cache.data);
-							} else {
-								// load fresh data
-								fetchHTML({
-									p,
-									e,
-									provider: found.provider
-								}).then((data) => {
-									updateCacheItem(
-										`${p}${e}${found.provider}`,
-										data
-									);
-									resolve(data);
-								});
-							}
-						})
-						.catch((e) => {
-							reject(e);
+					let cache = await getCacheItem(`${p}${e}${found.provider}`);
+					if (cache) {
+						// serve from cache
+						resolve(cache.data);
+					} else {
+						let fresh = await fetchHTML({
+							p,
+							e,
+							kw,
+							provider: found.provider
 						});
+						updateCacheItem(`${p}${e}${found.provider}`, fresh);
+						resolve(fresh);
+					}
 				}
 			} else {
 				reject('404');
@@ -110,7 +99,7 @@ function getMensaplanHTML({ p, e }) {
 /**
  * @returns {string} html content of mensaplan
  */
-function fetchHTML({ p, e, provider }) {
+async function fetchHTML({ p, e, provider, kw }) {
 	return new Promise(function (resolve, reject) {
 		axios
 			.get(`https://${provider}/LOGINPLAN.ASPX`, {
@@ -145,9 +134,9 @@ function fetchHTML({ p, e, provider }) {
 				);
 			})
 			.catch(function (error) {
-				reject('fetch_step1');
+				reject(error);
 			});
 	});
 }
-exports.getMensaplanHTML = getMensaplanHTML;
-exports.fetcher = fetchHTML;
+exports.getMensaPlanHTML = getMensaPlanHTML;
+exports.fetchHTML = fetchHTML;
