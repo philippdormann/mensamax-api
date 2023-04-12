@@ -155,7 +155,7 @@ function recursiveFutureWeek({ body, p, e, provider, weekstogo }) {
 			{
 				followAllRedirects: true,
 				method: 'POST',
-				url: `https://mensahaus.de/mensamax/Wochenplan/WochenplanExtern/WochenPlanExternForm.aspx`,
+				url: `https://${provider}/mensamax/Wochenplan/WochenplanExtern/WochenPlanExternForm.aspx`,
 				qs: { p, e },
 				formData: {
 					__VIEWSTATE,
