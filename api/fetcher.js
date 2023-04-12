@@ -2,7 +2,11 @@ require('dotenv').config();
 const request = require('request').defaults({ jar: true });
 const cheerio = require('cheerio');
 const axios = require('axios').default;
+const { wrapper } = require('axios-cookiejar-support');
+const { CookieJar } = require('tough-cookie');
 const institutions = require('../institutions.json');
+const jar = new CookieJar();
+const client = wrapper(axios.create({ jar }));
 // =========
 process.env.CACHE_TIME_MINUTES = parseInt(process.env.CACHE_TIME_MINUTES || 1);
 // =========
@@ -114,36 +118,29 @@ function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
  */
 async function fetchHTML({ p, e, provider, kw }) {
 	return new Promise(async (resolve, reject) => {
-		const { data } = await axios.get(`https://${provider}/LOGINPLAN.ASPX`, {
-			params: { p, e },
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
-			}
-		});
-		// 
-		const $ = cheerio.load(data);
-		const __VIEWSTATE = $('#__VIEWSTATE').val();
-		const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
-		request(
+		const { data } = await client.get(
+			`https://${provider}/LOGINPLAN.ASPX`,
 			{
-				followAllRedirects: true,
-				method: 'POST',
-				url: `https://${provider}/LOGINPLAN.ASPX`,
-				qs: { p, e },
-				formData: {
-					__VIEWSTATE,
-					__VIEWSTATEGENERATOR,
-					btnLogin: ''
-				}
-			},
-			(error, response, body) => {
-				if (error) {
-					reject('fetch_step2');
-				} else {
-					resolve(body);
+				params: { p, e },
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
 				}
 			}
 		);
+		//
+		const $ = cheerio.load(data);
+		const __VIEWSTATE = $('#__VIEWSTATE').val();
+		const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
+		const resp = await client.request({
+			method: 'POST',
+			url: `https://${provider}/LOGINPLAN.ASPX`,
+			params: { p, e },
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			data: { __VIEWSTATE, __VIEWSTATEGENERATOR, btnLogin: '' }
+		});
+		resolve(resp.data);
 	});
 }
 exports.getMensaPlanHTML = getMensaPlanHTML;
