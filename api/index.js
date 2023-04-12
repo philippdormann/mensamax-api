@@ -1,8 +1,8 @@
-const { getMensaplanHTML } = require('./fetcher');
+const { getMensaPlanHTML } = require('./fetcher');
 const { parser } = require('./parser');
 module.exports = async function start_it_up(req, res) {
 	try {
-		const html = await getMensaplanHTML({ p: req.query.p, e: req.query.e });
+		const html = await getMensaPlanHTML({ p: req.query.p, e: req.query.e });
 		const parsed = await parser(html);
 		let payload = parsed.json;
 		if (req.query.details === 'true') {
