@@ -149,5 +149,108 @@ function fetchHTML({ p, e, provider }) {
 			});
 	});
 }
+
+function recursiveFutureWeek({ body, p, e, provider, weekstogo }) {
+  return new Promise(function (resolve, reject) {
+    var $ = cheerio.load(body);
+    var __VIEWSTATE = $("#__VIEWSTATE").val();
+    var __VIEWSTATEGENERATOR = $("#__VIEWSTATEGENERATOR").val();
+    var __EVENTVALIDATION = $("#__EVENTVALIDATION").val();
+
+    request(
+      {
+        followAllRedirects: true,
+        method: "POST",
+        url: `https://mensahaus.de/mensamax/Wochenplan/WochenplanExtern/WochenPlanExternForm.aspx`,
+        qs: { p, e },
+        formData: {
+          __VIEWSTATE,
+          __VIEWSTATEGENERATOR,
+          btnVor: ">",
+          btnLogin: "",
+          __SCROLLPOSITIONX: "0",
+          __SCROLLPOSITIONY: "0,",
+          __EVENTTARGET: "",
+          __EVENTARGUMENT: "",
+          __EVENTVALIDATION,
+        },
+      },
+      (error, response, body) => {
+        if (error) {
+          reject("fetch_step3");
+        } else {
+          if (weekstogo > 1) {
+            weekstogo = weekstogo - 1;
+            var body = recursiveFutureWeek({
+              body: body,
+              p: p,
+              r: e,
+              provider: provider,
+              weekstogo: weekstogo,
+            });
+            resolve(body);
+          } else {
+            resolve(body);
+          }
+        }
+      }
+    );
+  }).catch(function (error) {
+    reject("fetch_step1");
+  });
+}
+
+function fetchHTMLFutureWeek({ p, e, provider, weeksahead = 1 }) {
+  return new Promise(function (resolve, reject) {
+    axios
+      .get(`https://${provider}/LOGINPLAN.ASPX`, {
+        params: { p, e },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      })
+      .then(function (response) {
+        var $ = cheerio.load(response.data);
+        var __VIEWSTATE = $("#__VIEWSTATE").val();
+        var __VIEWSTATEGENERATOR = $("#__VIEWSTATEGENERATOR").val();
+
+        request(
+          {
+            followAllRedirects: true,
+            method: "POST",
+            url: `https://${provider}/LOGINPLAN.ASPX`,
+            qs: { p, e },
+            formData: {
+              __VIEWSTATE,
+              __VIEWSTATEGENERATOR,
+              btnLogin: "",
+            },
+          },
+          (error, response, body) => {
+            if (error) {
+              reject("fetch_step2");
+            } else {
+              var weekstogo = weeksahead - 1;
+              var body = recursiveFutureWeek({
+                body: body,
+                p: p,
+                r: e,
+                provider: provider,
+                weekstogo: weekstogo,
+              });
+              resolve(body);
+            }
+          }
+        );
+      })
+      .catch(function (error) {
+        reject("fetch_step1");
+      });
+  });
+}
+
+
 exports.getMensaplanHTML = getMensaplanHTML;
 exports.fetcher = fetchHTML;
+exports.fetcher.fetchHTMLFutureWeek = fetchHTMLFutureWeek;
+
