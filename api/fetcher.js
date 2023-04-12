@@ -29,20 +29,14 @@ function updateCacheItem(key, data) {
 	}
 }
 async function getCacheItem(key) {
-	return new Promise(function (resolve, reject) {
+	return new Promise(async (resolve, reject) => {
 		if (process.env.CACHE === 'redis') {
-			redisclient
-				.get(key)
-				.then((result) => {
-					if (result) {
-						resolve({ data: result });
-					} else {
-						resolve(undefined);
-					}
-				})
-				.catch((e) => {
-					resolve(undefined);
-				});
+			let cacheItem = await redisclient.get(key);
+			if (cacheItem) {
+				resolve({ data: cacheItem });
+			} else {
+				resolve(undefined);
+			}
 		} else {
 			const expiry =
 				Date.now() - process.env.CACHE_TIME_MINUTES * 60 * 1000;
