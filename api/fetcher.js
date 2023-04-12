@@ -113,42 +113,37 @@ function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
  * @returns {string} html content of mensaplan
  */
 async function fetchHTML({ p, e, provider, kw }) {
-	return new Promise(function (resolve, reject) {
-		axios
-			.get(`https://${provider}/LOGINPLAN.ASPX`, {
-				params: { p, e },
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
+	return new Promise(async (resolve, reject) => {
+		const { data } = await axios.get(`https://${provider}/LOGINPLAN.ASPX`, {
+			params: { p, e },
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		});
+		// 
+		const $ = cheerio.load(data);
+		const __VIEWSTATE = $('#__VIEWSTATE').val();
+		const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
+		request(
+			{
+				followAllRedirects: true,
+				method: 'POST',
+				url: `https://${provider}/LOGINPLAN.ASPX`,
+				qs: { p, e },
+				formData: {
+					__VIEWSTATE,
+					__VIEWSTATEGENERATOR,
+					btnLogin: ''
 				}
-			})
-			.then(function (response) {
-				const $ = cheerio.load(response.data);
-				const __VIEWSTATE = $('#__VIEWSTATE').val();
-				const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
-				request(
-					{
-						followAllRedirects: true,
-						method: 'POST',
-						url: `https://${provider}/LOGINPLAN.ASPX`,
-						qs: { p, e },
-						formData: {
-							__VIEWSTATE,
-							__VIEWSTATEGENERATOR,
-							btnLogin: ''
-						}
-					},
-					(error, response, body) => {
-						if (error) {
-							reject('fetch_step2');
-						} else {
-							resolve(body);
-						}
-					}
-				);
-			})
-			.catch(function (error) {
-				reject(error);
-			});
+			},
+			(error, response, body) => {
+				if (error) {
+					reject('fetch_step2');
+				} else {
+					resolve(body);
+				}
+			}
+		);
 	});
 }
 exports.getMensaPlanHTML = getMensaPlanHTML;
