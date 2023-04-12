@@ -1,10 +1,11 @@
 require('dotenv').config();
-const request = require('request').defaults({ jar: true });
+// const request = require('request').defaults({ jar: true });
 const cheerio = require('cheerio');
 const axios = require('axios').default;
 const { wrapper } = require('axios-cookiejar-support');
 const { CookieJar } = require('tough-cookie');
 const institutions = require('../institutions.json');
+const { writeFileSync } = require('fs');
 const jar = new CookieJar();
 const client = wrapper(axios.create({ jar }));
 // =========
@@ -116,32 +117,49 @@ function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
 /**
  * @returns {string} html content of mensaplan
  */
-async function fetchHTML({ p, e, provider, kw }) {
-	return new Promise(async (resolve, reject) => {
-		const { data } = await client.get(
-			`https://${provider}/LOGINPLAN.ASPX`,
-			{
-				params: { p, e },
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
-				}
-			}
-		);
-		//
+async function fetchHTML({
+	p,
+	e,
+	provider,
+	kw = getCalendarWeek(),
+	auth = false,
+	__VIEWSTATE = '',
+	__VIEWSTATEGENERATOR = ''
+}) {
+	console.log('@@fetchHTML');
+	let requestData = undefined;
+	let requestMethod = 'GET';
+	if (auth === true) {
+		requestData = { __VIEWSTATE, __VIEWSTATEGENERATOR, btnLogin: '' };
+		requestMethod = 'POST';
+	}
+	const { data } = await client.request({
+		url: `https://${provider}/LOGINPLAN.ASPX`,
+		params: { p, e },
+		method: requestMethod,
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		data: requestData
+	});
+	if (data.includes(`lblWoche`)) {
+		return data;
+	}
+	if (data.includes('btnLogin')) {
+		console.log('login performed');
 		const $ = cheerio.load(data);
 		const __VIEWSTATE = $('#__VIEWSTATE').val();
 		const __VIEWSTATEGENERATOR = $('#__VIEWSTATEGENERATOR').val();
-		const resp = await client.request({
-			method: 'POST',
-			url: `https://${provider}/LOGINPLAN.ASPX`,
-			params: { p, e },
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
-			},
-			data: { __VIEWSTATE, __VIEWSTATEGENERATOR, btnLogin: '' }
+		return await fetchHTML({
+			p,
+			e,
+			provider,
+			kw,
+			auth: true,
+			__VIEWSTATE,
+			__VIEWSTATEGENERATOR
 		});
-		resolve(resp.data);
-	});
+	}
 }
 exports.getMensaPlanHTML = getMensaPlanHTML;
 exports.fetchHTML = fetchHTML;
