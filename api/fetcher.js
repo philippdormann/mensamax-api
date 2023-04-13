@@ -90,32 +90,25 @@ function getProvider({ p, e }) {
  */
 function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
 	return new Promise(async function (resolve, reject) {
-		if (p && e) {
-			const f = institutions.find(function (ins) {
-				return ins.project === p && ins.facility === e;
-			});
-			if (f) {
-				let cache = undefined;
-				if (process.env.CACHE !== 'none') {
-					cache = await getCacheItem(`${p}_${e}_${f.provider}_${kw}`);
-				}
-				if (cache) {
-					resolve(cache.data);
-				} else {
-					const d = await fetchHTML({
-						p,
-						e,
-						kw,
-						provider: f.provider
-					});
-					updateCacheItem(`${p}_${e}_${f.provider}_${kw}`, d);
-					resolve(d);
-				}
-			} else {
-				reject('404');
-			}
+		const provider = getProvider({ p, e });
+		if (!provider) {
+			reject('404');
+		}
+		let cache = undefined;
+		if (process.env.CACHE !== 'none') {
+			cache = await getCacheItem(`${p}_${e}_${provider}_${kw}`);
+		}
+		if (cache) {
+			resolve(cache.data);
 		} else {
-			reject('parameters');
+			const d = await fetchHTML({
+				p,
+				e,
+				kw,
+				provider
+			});
+			updateCacheItem(`${p}_${e}_${provider}_${kw}`, d);
+			resolve(d);
 		}
 	});
 }
