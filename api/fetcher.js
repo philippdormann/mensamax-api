@@ -1,11 +1,9 @@
 require('dotenv').config();
-// const request = require('request').defaults({ jar: true });
 const cheerio = require('cheerio');
 const axios = require('axios').default;
 const { wrapper } = require('axios-cookiejar-support');
 const { CookieJar } = require('tough-cookie');
 const institutions = require('../institutions.json');
-const { writeFileSync } = require('fs');
 const jar = new CookieJar();
 const client = wrapper(axios.create({ jar }));
 // =========
@@ -82,7 +80,6 @@ async function getCacheItem(key) {
  * @returns {string} (cache-backed) html content of mensaplan
  */
 function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
-	console.log({ kw });
 	return new Promise(async function (resolve, reject) {
 		if (p && e) {
 			const f = institutions.find(function (ins) {
