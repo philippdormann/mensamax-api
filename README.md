@@ -22,17 +22,17 @@ yarn add @philippdormann/mensamax-api
 ```
 #### ts/ module imports
 ```ts
-import { fetcher, parser } from '@philippdormann/mensamax-api';
-const html = await fetcher({ p: 'FO111', e: 'herz' });
+import { fetchHTML, parser } from '@philippdormann/mensamax-api';
+const html = await fetchHTML({ p: 'FO111', e: 'herz', kw: 15 });
 const parsed = await parser(html);
 console.log(parsed);
 ```
 #### CommonJS imports
 ```js
-const { fetcher, parser } = require('@philippdormann/mensamax-api');
-(async function() {
+const { fetchHTML, parser } = require('@philippdormann/mensamax-api');
+(async function () {
 	try {
-		const html = await fetcher({ p: 'FO111', e: 'herz' });
+		const html = await fetchHTML({ p: 'FO111', e: 'herz', kw: 15 });
 		const parsed = await parser(html);
 		console.log(parsed);
 	} catch (e) {

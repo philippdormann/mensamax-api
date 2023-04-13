@@ -1,26 +1,11 @@
 const { fetchHTML } = require('./api/fetcher');
-const { parser, getMensaPlanHTML } = require('./main');
-const fs = require('fs');
-
-(async function test() {
+const { parser } = require('./main');
+(async function () {
 	try {
-		const html = await fetchHTML({
-			p: 'FO111',
-			e: 'herz',
-			kw: 17,
-			provider: 'mensadigital.de'
-		});
-		if (html.includes('Klicken Sie hier um sich neu anzumelden')) {
-			console.log('FAIL');
-		} else {
-			console.log('SUCCESS');
-		}
-		// console.log(html);
-		fs.writeFileSync('./out.html', html);
-		// const parsed = await parser(html);
-		// console.log(parsed);
-		// fs.writeFileSync('./out.json', JSON.stringify(parsed));
-	} catch (error) {
-		console.log(error);
+		const html = await fetchHTML({ p: 'FO111', e: 'herz', kw: 15 });
+		const parsed = await parser(html);
+		console.log(parsed);
+	} catch (e) {
+		console.log(e);
 	}
 })();
