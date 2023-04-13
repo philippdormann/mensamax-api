@@ -1,4 +1,4 @@
-import { fetcher } from './api/fetcher.js';
+import { fetchHTML } from './api/fetcher.js';
 import { parser } from './api/parser.js';
 import fs from 'fs';
 let institutions = JSON.parse(fs.readFileSync('./institutions.json'));
@@ -11,7 +11,7 @@ let results = [];
 for await (let i of institutions) {
 	console.log(`starting validation for p=${i.project}&e=${i.facility}`);
 	try {
-		const html = await fetcher({ p: i.project, e: i.facility });
+		const html = await fetchHTML({ p: i.project, e: i.facility });
 		await parser(html);
 		i.tested = resultPassedString;
 	} catch (e) {
