@@ -77,6 +77,15 @@ async function getCacheItem(key) {
 	});
 }
 /**
+ * @returns {string} base url of provider
+ */
+function getProvider({ p, e }) {
+	const f = institutions.find(function (ins) {
+		return ins.project === p && ins.facility === e;
+	});
+	return f.provider;
+}
+/**
  * @returns {string} (cache-backed) html content of mensaplan
  */
 function getMensaPlanHTML({ p, e, kw = getCalendarWeek() }) {
