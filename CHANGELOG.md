@@ -2,8 +2,38 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.3.3...v3.0.0)
+
+- chore(deps): bump all dependencies [`4115657`](https://github.com/philippdormann/mensamax-api/commit/411565740e4660a0aa8fc39ba4c5dd34ff45c69f)
+- refactor!: replace deprecated request module with axios + cookie jar support [`7082745`](https://github.com/philippdormann/mensamax-api/commit/70827458c38886b84a04d264d1b03e1a1d4135db)
+- refactor(fetcher): fetchHTML improvements [`90b73a6`](https://github.com/philippdormann/mensamax-api/commit/90b73a6b7fd94c2119c4a73d34913ca0626713ab)
+- refactor(fetcher): async await in fetchHTML [`8f89e35`](https://github.com/philippdormann/mensamax-api/commit/8f89e355834edd66e9a987ba6bd4c8770eef9171)
+- refactor(fetcher): async await [`9c08508`](https://github.com/philippdormann/mensamax-api/commit/9c0850889a5845bdac0302233100c4a40173b31f)
+- feat(fetcher/fetchHTML): support searching for calendar week [`1d07d79`](https://github.com/philippdormann/mensamax-api/commit/1d07d79d9e6826fc811651f5075ca62f2c6f6b22)
+- refactor(fetcher): getMensaPlanHTML structure [`a5fc11b`](https://github.com/philippdormann/mensamax-api/commit/a5fc11b012adb740800f63cc19dc8f382779bf7b)
+- chore: update README + example [`f098fac`](https://github.com/philippdormann/mensamax-api/commit/f098fac68a25ac7b8b6ca2f19bfa0e4a2a485d15)
+- refactor(fetcher): cleanup for kw fetching [`ab79396`](https://github.com/philippdormann/mensamax-api/commit/ab7939642bdd1d71a5661e5ac500dd0b6ba58cf4)
+- refactor(fetcher): getMensaPlanHTML async await [`660e596`](https://github.com/philippdormann/mensamax-api/commit/660e596954784b46a6dca2ff6e90aeab455b4098)
+- chore: autotest update [`000a558`](https://github.com/philippdormann/mensamax-api/commit/000a55847a52d85a17b1f9e79ef95d3a2a04e73a)
+- feat(fetcher): getMensaPlanHTML use calendar week [`16fb7bc`](https://github.com/philippdormann/mensamax-api/commit/16fb7bc8e075b7d7539b232b7a8f6c95ff5734a4)
+- refactor(fetcher): getCacheItem async await [`fa5e77d`](https://github.com/philippdormann/mensamax-api/commit/fa5e77d020475164bf4e52dfed72202d5ccdc7fc)
+- feat: add example.js for development [`147ce28`](https://github.com/philippdormann/mensamax-api/commit/147ce28cebc44272cd5b1466b8454727aed9d40b)
+- refactor(fetcher): cleanup cache module [`66bb137`](https://github.com/philippdormann/mensamax-api/commit/66bb137ca4f81fe84db262b24f156e494bfa550c)
+- feat(fetcher): getProvider helper [`7ef77f7`](https://github.com/philippdormann/mensamax-api/commit/7ef77f7c2eda76bcd5ec60384512217cdea40fec)
+- chore: update readme [`bfcbc17`](https://github.com/philippdormann/mensamax-api/commit/bfcbc173c90b4b4df50c3920cc37ef212bb3fe47)
+- feat: add getMensaplanHTML to export [`ffbcb02`](https://github.com/philippdormann/mensamax-api/commit/ffbcb02926857dd1d46926c7d51f67a90d29d8b9)
+- feat(api): add support for ?kw query param [`4eb8ce8`](https://github.com/philippdormann/mensamax-api/commit/4eb8ce81dabc7081ce3d69f309129c545af78b3d)
+- feat!: update package exports [`93a6694`](https://github.com/philippdormann/mensamax-api/commit/93a669424fe36a107603d93f70785b2f7478db2a)
+- refactor(fetcher): provider resolve in fetchHTML [`d03358b`](https://github.com/philippdormann/mensamax-api/commit/d03358b573c0a990f57e99cbc1f2cfc0cbffc07e)
+- style(fetcher): cleanup code [`19758cb`](https://github.com/philippdormann/mensamax-api/commit/19758cb958d676031111917684f2cc7147e21743)
+- chore: update tested institutions [`43f841c`](https://github.com/philippdormann/mensamax-api/commit/43f841c3bc65d66373591320f8063b7ce2269343)
+- chore(deps): node@19.9.0 [`422e529`](https://github.com/philippdormann/mensamax-api/commit/422e529eac9d43cf287a6ecdc76ca1e409079c29)
+
 #### [v2.3.3](https://github.com/philippdormann/mensamax-api/compare/v2.3.2...v2.3.3)
 
+> 3 February 2023
+
+- 🚀RELEASE v2.3.3 [`fb35bc6`](https://github.com/philippdormann/mensamax-api/commit/fb35bc6e76d5d23c7118e86a24988f5a93825e0e)
 - pnpm lockfile [`8d0e619`](https://github.com/philippdormann/mensamax-api/commit/8d0e6198664ce9655dc3a5a2a9d091b1809b4234)
 - dependency bump [`59b1f2d`](https://github.com/philippdormann/mensamax-api/commit/59b1f2df0bdaea32800cf6f0c50baeb3fac1af38)
 - fix: docker build [`76f0b57`](https://github.com/philippdormann/mensamax-api/commit/76f0b57e24866b83adcfb2162c196c8a6b8536e9)
