@@ -1,8 +1,8 @@
-const { fetcher, getMensaPlanHTML } = require('./api/fetcher');
+const { fetchHTML, getMensaPlanHTML } = require('./api/fetcher');
 const { parser } = require('./api/parser');
 const institutions = require('./institutions.json');
 //
 exports.getMensaPlanHTML = getMensaPlanHTML;
-exports.fetcher = fetcher;
+exports.fetchHTML = fetchHTML;
 exports.parser = parser;
 exports.institutions = institutions;
