@@ -127,6 +127,9 @@ async function fetchHTML({
 	__VIEWSTATE = '',
 	__VIEWSTATEGENERATOR = ''
 }) {
+	if (!provider) {
+		provider = getProvider({ p, e });
+	}
 	let requestData = undefined;
 	let requestMethod = 'GET';
 	let url = `https://${provider}/LOGINPLAN.ASPX`;
