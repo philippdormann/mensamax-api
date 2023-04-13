@@ -18,7 +18,7 @@ see <https://mensa.vercel.app/institutions-ui> for API URLs
 ### npm package usage
 #### Install package
 ```bash
-yarn add @philippdormann/mensamax-api
+pnpm i @philippdormann/mensamax-api
 ```
 #### ts/ module imports
 ```ts
@@ -54,7 +54,8 @@ docker-compose up -d --build
 ## 💻 Local Development
 Either develop on your machine directly or use the provided devcontainer for VSCode
 ```
-yarn && yarn dev
+pnpm i
+pnpm dev
 ```
 
 ## 💡 How this works
@@ -88,7 +89,7 @@ yarn && yarn dev
 ## 🧠 General Knowledge
 - For some reason, MensaMax IT department decided to have **many URLs**
   - you can find a list of all known MensaMax URLS @[mensamax-urls.txt](./mensa-urls.txt)
-- These **URLs are not interchangeable** and seem to be different MensaMax versions (as of 25.06.2021)
+- These **URLs are not interchangeable** and seem to be different MensaMax versions (as of 13.04.2023)
 - There is a private/ internal GraphQL API for MensaMax which needs authentication
 
 ## 👍💰 Support this project
