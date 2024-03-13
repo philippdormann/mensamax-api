@@ -1308,5 +1308,12 @@
 		"facility": "fws",
 		"name": "Freie Waldorfschule Dresden",
 		"tested": false
+	},
+	{
+		"provider": "mensastadt.de",
+		"project": "A2366",
+		"facility": "Schule",
+		"name": "Freie Waldorfschule Augsburg",
+		"tested": "2024-03-13"
 	}
 ]
