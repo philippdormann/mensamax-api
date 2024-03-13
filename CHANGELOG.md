@@ -2,9 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v3.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.3.3...v3.0.0)
+#### [v3.0.1](https://github.com/philippdormann/mensamax-api/compare/v3.0.0...v3.0.1)
+
+- feat: add Freie Waldorfschule Augsburg [`#32`](https://github.com/philippdormann/mensamax-api/pull/32)
+- build(deps): bump follow-redirects from 1.15.2 to 1.15.4 [`#29`](https://github.com/philippdormann/mensamax-api/pull/29)
+- build(deps): bump tough-cookie from 4.1.2 to 4.1.3 [`#26`](https://github.com/philippdormann/mensamax-api/pull/26)
+
+### [v3.0.0](https://github.com/philippdormann/mensamax-api/compare/v2.3.3...v3.0.0)
+
+> 13 April 2023
 
 - chore(deps): bump all dependencies [`4115657`](https://github.com/philippdormann/mensamax-api/commit/411565740e4660a0aa8fc39ba4c5dd34ff45c69f)
+- 🚀RELEASE v3.0.0 [`d0cd9f8`](https://github.com/philippdormann/mensamax-api/commit/d0cd9f82145675fa392230d2ef3bba569279236e)
 - refactor!: replace deprecated request module with axios + cookie jar support [`7082745`](https://github.com/philippdormann/mensamax-api/commit/70827458c38886b84a04d264d1b03e1a1d4135db)
 - refactor(fetcher): fetchHTML improvements [`90b73a6`](https://github.com/philippdormann/mensamax-api/commit/90b73a6b7fd94c2119c4a73d34913ca0626713ab)
 - refactor(fetcher): async await in fetchHTML [`8f89e35`](https://github.com/philippdormann/mensamax-api/commit/8f89e355834edd66e9a987ba6bd4c8770eef9171)
